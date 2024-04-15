@@ -12,6 +12,37 @@
     "backgroundColor": "#efefef",
     "backgroundTextStyle": "dark"
   },
+  "tabBar": {
+    "selectedColor": "#FE2A6D",
+    "borderStyle": "black",
+    "position": "bottom",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/home/home",
+        "iconPath": "/assets/home.png",
+        "selectedIconPath": "/assets/selectedHome.png"
+      },
+      {
+        "text": "想看",
+        "pagePath": "pages/wantToSee/wantToSee",
+        "iconPath": "/assets/wantToSee.png",
+        "selectedIconPath": "/assets/selectWantToSee.png"
+      },
+      {
+        "text": "票夹",
+        "pagePath": "pages/ticketHolder/ticketHolder",
+        "iconPath": "/assets/ticketHolder.png",
+        "selectedIconPath": "/assets/selectTicketHolder.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/my/my",
+        "iconPath": "/assets/my.png",
+        "selectedIconPath": "/assets/selectMy.png"
+      }
+    ]
+  },
   "style": "v2",
   "componentFramework": "glass-easel",
   "sitemapLocation": "sitemap.json",
