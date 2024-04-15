@@ -1,7 +1,9 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/home/home"
+    "pages/home/home",
+    "pages/wantToSee/wantToSee",
+    "pages/ticketHolder/ticketHolder",
+    "pages/my/my"
   ],
   "window": {
     "navigationBarBackgroundColor": "#FF3474",
