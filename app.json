@@ -8,9 +8,8 @@
   "window": {
     "navigationBarBackgroundColor": "#FF3474",
     "navigationBarTitleText": "大麦",
-    "enablePullDownRefresh": true,
-    "backgroundColor": "#efefef",
-    "backgroundTextStyle": "dark"
+    "enablePullDownRefresh": false,
+    "backgroundColor": "#efefef"
   },
   "tabBar": {
     "selectedColor": "#FE2A6D",
