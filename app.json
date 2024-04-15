@@ -4,8 +4,11 @@
     "pages/home/home"
   ],
   "window": {
-    "navigationBarTextStyle": "black",
-    "navigationStyle": "custom"
+    "navigationBarBackgroundColor": "#FF3474",
+    "navigationBarTitleText": "大麦",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#efefef",
+    "backgroundTextStyle": "dark"
   },
   "style": "v2",
   "componentFramework": "glass-easel",
