@@ -1,2 +1,6 @@
 <!--pages/home/home.wxml-->
 <text>pages/home/home.wxml</text>
+<!-- 
+    新建一个盒子，宽度适配每一个手机型号都是页面的一半，使用rpx
+ -->
+ <view>rpx</view>
