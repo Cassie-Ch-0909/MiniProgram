@@ -1,9 +1,92 @@
 /* pages/home/home.wxss */
-text{
-  color: red;
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
 }
-view{
-  width: 375rpx;
-  height: 300rpx;
-  background-color: pink;
+
+.nav-main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.nav .capsule-box {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+
+  .logo {
+    width: 50rpx;
+    height: 50rpx;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .logoImg {
+      width: 85%;
+      height: 85%;
+    }
+  }
+
+  .name {
+    color: #E24B70;
+    font-weight: bold;
+    font-size: 40rpx;
+    margin-top: 5rpx;
+    margin-left: 15rpx;
+    font-family: "Linear Sans", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+  }
+
+  .btn{
+        /* 设置背景颜色为从左到右的渐变效果 */
+        background: linear-gradient(to right, 
+        #FD639E 0%,     /* 第一种颜色，起始位置为0% */
+        #AF88D7 40.33%, /* 第二种颜色，起始位置为33.33% */
+        #78A2F7 70.67%  /* 第三种颜色，起始位置为66.67% */
+        );
+/* 兼容性设置 */
+background: -webkit-linear-gradient(left, 
+        #FD639E 0%, 
+        #AF88D7 40.33%, 
+        #78A2F7 70.67%
+        );
+background: -moz-linear-gradient(left, 
+        #FD639E 0%, 
+        #AF88D7 40.33%, 
+        #78A2F7 70.67%
+        );
+background: -o-linear-gradient(left, 
+        #FD639E 0%, 
+        #AF88D7 40.33%, 
+        #78A2F7 70.67%
+        );
+    margin-left: 45rpx;
+    border-radius: 30rpx;
+    width: 350rpx;
+    height: 45rpx;
+    background-color: green;
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    font-size: 19rpx;
+    padding: 0rpx;
+    color: #fff;
+    padding-left: 25rpx;
+    .icon-guanbi{
+      font-size: 20rpx;
+      padding-left: 20rpx;
+    }
+    .icon-gongyixiangqingsangexiaoyuandian-{
+      margin-left: 5rpx;
+      margin-right: 5rpx;
+    }
+  }
 }

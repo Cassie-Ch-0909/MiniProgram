@@ -1,6 +1,18 @@
-<!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
-<!-- 
-    新建一个盒子，宽度适配每一个手机型号都是页面的一半，使用rpx
- -->
- <view>rpx</view>
+<view class="nav" style="height:{{navBarHeight}}px;">
+  <view class="nav-main">
+    <!-- 胶囊区域 -->
+    <view class="capsule-box" style="height:{{menuHeight}}px; min-height:{{menuHeight}}px; line-height:{{menuHeight}}px; bottom:{{menuBotton}}px;left:{{menuRight}}px;">
+      <!-- 导航内容区域 -->
+      <view class="logo">
+        <image class="logoImg" src="/assets/home/logo.png" mode="aspectFit" />
+      </view>
+      <text class="name">大麦</text>
+      <button class="btn">
+          点击 
+          <view class="iconfont icon-gongyixiangqingsangexiaoyuandian-"></view>
+          添加小程序，购票更便捷
+          <view class="iconfont icon-guanbi"></view>
+      </button>
+    </view>
+  </view>
+</view>
