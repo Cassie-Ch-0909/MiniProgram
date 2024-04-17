@@ -1,39 +1,40 @@
 <view class="container">
-  <view class="topView">
-    <!-- 自定义导航栏 -->
-    <view class="nav" style="height:{{navBarHeight}}px;">
-      <view class="nav-main">
-        <!-- 胶囊区域 -->
-        <view class="capsule-box" style="height:{{menuHeight}}px; min-height:{{menuHeight}}px; line-height:{{menuHeight}}px; bottom:{{menuBotton}}px;left:{{menuRight}}px;">
-          <!-- 导航内容区域 -->
-          <view class="logo">
-            <image class="logoImg" src="/assets/home/logo.png" mode="aspectFit" />
-          </view>
-          <text class="name">大麦</text>
-          <button class="btn">
-            点击
-            <view class="iconfont icon-gongyixiangqingsangexiaoyuandian-"></view>
-            添加小程序，购票更便捷
-            <view class="iconfont icon-guanbi"></view>
-          </button>
+  <!-- 自定义导航栏 -->
+  <view class="nav" style="height:{{navBarHeight}}px;">
+    <view class="nav-main">
+      <!-- 胶囊区域 -->
+      <view class="capsule-box" style="height:{{menuHeight}}px; min-height:{{menuHeight}}px; line-height:{{menuHeight}}px; bottom:{{menuBotton}}px;left:{{menuRight}}px;">
+        <!-- 导航内容区域 -->
+        <view class="logo">
+          <image class="logoImg" src="/assets/home/logo.png" mode="aspectFit" />
         </view>
-      </view>
-    </view>
-    <!-- 搜索框 -->
-    <view class="search">
-      <view type="text" class="input_search">
-        <view class="left">
-          <view class="iconfont icon-sousuo"></view>
-          <text class="star">周杰伦</text>
-        </view>
-        <view class="right">
-          <view class="shu"></view>
-          <image class="position" src="/assets/home/position.png" mode="aspectFit" />
-          <text>宁波</text>
-        </view>
+        <text class="name">大麦</text>
+        <button class="btn">
+          点击
+          <view class="iconfont icon-gongyixiangqingsangexiaoyuandian-"></view>
+          添加小程序，购票更便捷
+          <view class="iconfont icon-guanbi"></view>
+        </button>
       </view>
     </view>
   </view>
-  <view class="third">
+  <!-- 搜索框 -->
+  <view class="search" style="top: {{navBarHeight}}px;">
+    <view type="text" class="input_search">
+      <view class="left">
+        <view class="iconfont icon-sousuo"></view>
+        <text class="star">周杰伦</text>
+      </view>
+      <view class="right">
+        <view class="shu"></view>
+        <image class="position" src="/assets/home/position.png" mode="aspectFit" />
+        <text>宁波</text>
+      </view>
+    </view>
+  </view>
+  <view class="third" style="margin-top: calc({{navBarHeight}}px + 75rpx);">
+    <view class="four">
+      ss
+    </view>
   </view>
 </view>
