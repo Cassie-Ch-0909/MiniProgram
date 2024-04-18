@@ -8,7 +8,14 @@ Page({
   data: {
     navBarHeight: app.globalData.navBarHeight,//导航栏高度
     menuBotton: app.globalData.menuBotton,//导航栏距离顶部距离
-    menuHeight: app.globalData.menuHeight //导航栏高度
+    menuHeight: app.globalData.menuHeight, //导航栏高度
+    broadcasts: [
+      { watchCount: "14万", activityName: "张学友重庆" },
+      { watchCount: "22.9万", activityName: "梦想未来•闪" },
+      { watchCount: "9.4万", activityName: "全国热抢演出" },
+      { watchCount: "6.3万", activityName: "潘玮柏上海开" },
+      { watchCount: "今天17:17", activityName: "薛之谦太原开" },
+    ]
   },
 
   /**

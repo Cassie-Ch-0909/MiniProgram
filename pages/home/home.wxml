@@ -32,48 +32,73 @@
       </view>
     </view>
   </view>
+  <!-- 滚动视图区域 -->
   <view class="scrollView" style="margin-top: calc({{navBarHeight}}px + 85rpx);">
+    <!-- 分类 -->
     <view class="directory">
-        <view class="type">
-          <image class="pic" src="/assets/home/directory/vocalConcert2.png" mode="aspectFit" style="transform: rotate(315deg); " />
-          <text>演唱会</text>
-        </view>
-        <view class="type">
-          <image class="pic" src="/assets/home/directory/musicFestival.png" mode="aspectFit" />
-          <text>音乐节</text>
-        </view>
-        <view class="type">
-          <image class="pic" src="/assets/home/directory/guitar.png" mode="aspectFit" />
-          <text>Livehouse</text>
-        </view>
-        <view class="type">
-          <image class="pic" src="/assets/home/directory/musicPlay.png" mode="aspectFit" />
-          <text>话剧音乐剧</text>
-        </view>
-        <view class="type">
-          <image class="pic" src="/assets/home/directory/talkShow.png" mode="aspectFit" />
-          <text>脱口秀</text>
-        </view>
-        <view class="type">
-          <image class="pic" src="/assets/home/directory/exhibit.png" mode="aspectFit" />
-          <text>展览</text>
-        </view>
-        <view class="type">
-          <image class="pic" src="/assets/home/directory/parenting.png" mode="aspectFit" />
-          <text>儿童亲子</text>
-        </view>
-        <view class="type">
-          <image class="pic" src="/assets/home/directory/crossTalk.png" mode="aspectFit" />
-          <text>相声</text>
-        </view>
-        <view class="type">
-          <image class="pic" src="/assets/home/directory/concert.png" mode="aspectFit" />
-          <text>音乐会</text>
-        </view>
-        <view class="type">
-          <image class="pic" src="/assets/home/directory/all.png" mode="aspectFit" />
-          <text>全部</text>
+      <view class="type">
+        <image class="pic" src="/assets/home/directory/vocalConcert2.png" mode="aspectFit" style="transform: rotate(315deg); " />
+        <text>演唱会</text>
+      </view>
+      <view class="type">
+        <image class="pic" src="/assets/home/directory/musicFestival.png" mode="aspectFit" />
+        <text>音乐节</text>
+      </view>
+      <view class="type">
+        <image class="pic" src="/assets/home/directory/guitar.png" mode="aspectFit" />
+        <text>Livehouse</text>
+      </view>
+      <view class="type">
+        <image class="pic" src="/assets/home/directory/musicPlay.png" mode="aspectFit" />
+        <text>话剧音乐剧</text>
+      </view>
+      <view class="type">
+        <image class="pic" src="/assets/home/directory/talkShow.png" mode="aspectFit" />
+        <text>脱口秀</text>
+      </view>
+      <view class="type">
+        <image class="pic" src="/assets/home/directory/exhibit.png" mode="aspectFit" />
+        <text>展览</text>
+      </view>
+      <view class="type">
+        <image class="pic" src="/assets/home/directory/parenting.png" mode="aspectFit" />
+        <text>儿童亲子</text>
+      </view>
+      <view class="type">
+        <image class="pic" src="/assets/home/directory/crossTalk.png" mode="aspectFit" />
+        <text>相声</text>
+      </view>
+      <view class="type">
+        <image class="pic" src="/assets/home/directory/concert.png" mode="aspectFit" />
+        <text>音乐会</text>
+      </view>
+      <view class="type">
+        <image class="pic" src="/assets/home/directory/all.png" mode="aspectFit" />
+        <text>全部</text>
+      </view>
+    </view>
+    <!-- 抢票播报站和今日秒杀 -->
+    <view class="info">
+      <!-- 抢票情报站 -->
+      <view class="broadcasting">
+        <view class="top">
+          <!-- 左边图片 -->
+          <image class="img" src="/assets/home/qiangpiaobobao.png" mode="aspectFit" />
+          <!-- 右边轮播 -->
+          <view class="swiper-container">
+            <swiper class="swiper" vertical indicator-dots="{{false}}" autoplay interval="{{8000}}">
+              <swiper-item wx:for="{{broadcasts}}" wx:key="index">
+                <view class="broadcast-item">
+                  <!-- <text class="light-text">{{item.watchCount}}人围观</text> -->
+                  <text class="activity-name">{{item.activityName}}</text>
+                  <view class="iconfont icon-youjiantou"></view>
+                </view>
+              </swiper-item>
+            </swiper>
+          </view>
         </view>
       </view>
+      <view class="flashSale"></view>
+    </view>
   </view>
 </view>
