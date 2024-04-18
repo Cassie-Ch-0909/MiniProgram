@@ -81,6 +81,7 @@
     <view class="info">
       <!-- 抢票情报站 -->
       <view class="broadcasting">
+        <!-- 上面部分 -->
         <view class="top">
           <!-- 左边图片 -->
           <image class="img" src="/assets/home/qiangpiaobobao.png" mode="aspectFit" />
@@ -96,6 +97,28 @@
               </swiper-item>
             </swiper>
           </view>
+        </view>
+        <!-- 中间部分 -->
+        <view class="middle">
+          <view class="left">
+            <view class="circle">
+              <image src="https://intercms.damai.cn/artist/pic/1688481912236/1688481912236-main.jpg" mode="aspectFill" class="img" />
+            </view>
+            <view class="name">
+              陈奕迅
+            </view>
+          </view>
+          <view class="right">
+            【杭州】陈奕迅 FEAR and DREAMS 世界巡回演唱会-杭州站
+          </view>
+        </view>
+        <!-- 底部 -->
+        <view class="bottom">
+            <view class="ad">
+              <text>3.5万人热抢中</text>
+              <view class="iconfont icon-shandian"></view>
+              <view class="iconfont icon-qiang"></view>
+            </view>
         </view>
       </view>
       <view class="flashSale"></view>
