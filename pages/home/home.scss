@@ -215,8 +215,11 @@
     margin-left: 1%;
     margin-right: 1%;
     height: 220rpx;
+    display: flex;
+    justify-content: space-between;
 
-    .broadcasting {
+    .broadcasting,
+    .flashSale {
       border-radius: 5rpx;
       width: 49%;
       height: 100%;
@@ -236,6 +239,12 @@
         .img {
           width: 45%;
           height: 100%;
+          font-size: 28rpx;
+          // background-color: red;
+          font-weight: bold;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
         }
 
         .swiper-container {
@@ -331,16 +340,11 @@
 
         .right {
           flex: 1;
-          height: 66%;
+          // height: 50%;
           // background-color: skyblue;
           font-size: 24rpx;
           box-sizing: border-box;
           padding-left: 20rpx;
-          display: -webkit-box;
-          -webkit-box-orient: vertical;
-          -webkit-line-clamp: 2;
-          /* 显示两行 */
-          overflow: hidden;
         }
       }
 
@@ -350,6 +354,7 @@
         // background-color: pink;
         display: flex;
         justify-content: flex-end;
+
         .ad {
           width: 58%;
           height: 65%;
@@ -386,13 +391,93 @@
           border-top-right-radius: 10rpx;
           /* 右上角圆角半径为 10rpx */
           border-bottom-right-radius: 10rpx;
+
           /* 右下角圆角半径为 10rpx */
-          .icon-shandian{
+          .icon-shandian {
             color: #FED68E;
             font-size: 35rpx;
           }
-          .icon-qiang{
+
+          .icon-qiang {
             font-size: 37rpx;
+          }
+        }
+      }
+    }
+
+    .flashSale {
+      background-image: linear-gradient(to right, #fff, #FCF8E5);
+
+      .broadcast-item {
+        width: 100%;
+        height: 50%;
+        // background-color: green;
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        overflow: hidden;
+        justify-content: space-evenly;
+        background-color: #fff;
+        border-radius: 30rpx;
+        font-size: 18rpx;
+
+        .activity-name {
+          color: #FFC655;
+        }
+
+        .icon-youjiantou {
+          font-size: 14rpx;
+          color: #FFC655;
+        }
+      }
+
+      .bom {
+        width: 100%;
+        flex: 1;
+        // background-color: skyblue;
+        display: flex;
+        justify-content: space-evenly;
+
+        .every {
+          width: 28%;
+          position: relative;
+          height: 86%;
+          margin-top: 8rpx;
+          // background-color:pink;
+          .img {
+            width: 100%;
+            height: 100%;
+          }
+
+          .activity {
+            background: rgba(0, 0, 0, .8);
+            border-radius: 6rpx;
+            color: #fff;
+            position: absolute;
+            width: 70%;
+            height: 28rpx;
+            line-height: 28rpx;
+            font-size: 18rpx;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            right: 0;
+            top: 0;
+          }
+          .fullSub{
+            // background: rgba(0, 0, 0, .8);
+            border-radius: 6rpx;
+            color: #fff;
+            position: absolute;
+            width: 40%;
+            height: 28rpx;
+            line-height: 28rpx;
+            font-size: 18rpx;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            left: 5%;
+            bottom: 5rpx;
           }
         }
       }

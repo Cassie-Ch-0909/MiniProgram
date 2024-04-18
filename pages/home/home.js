@@ -15,6 +15,20 @@ Page({
       { watchCount: "9.4万", activityName: "全国热抢演出" },
       { watchCount: "6.3万", activityName: "潘玮柏上海开" },
       { watchCount: "今天17:17", activityName: "薛之谦太原开" },
+    ],
+    imageList: [
+      {
+        img:"https://gw.alicdn.com/bao/uploaded/i3/2251059038/O1CN01tcNq1I2GdSaXaCVsI_!!0-item_pic.jpg_q60.jpg",
+        type:"演唱会"
+      },
+      {
+        img:"https://gw.alicdn.com/bao/uploaded/https:img.alicd…/O1CN012K2mOx2GdSaEwon0z_!!2251059038.jpg_q60.jpg",
+        type:"音乐节"
+      },
+      {
+        img:"https://gw.alicdn.com/bao/uploaded/i3/2251059038/O1CN01fNGpi12GdSaZkAQPd_!!0-item_pic.jpg_q60.jpg",
+        type:"音乐节"
+      },
     ]
   },
 

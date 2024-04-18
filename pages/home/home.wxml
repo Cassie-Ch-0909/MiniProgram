@@ -109,19 +109,41 @@
             </view>
           </view>
           <view class="right">
-            【杭州】陈奕迅 FEAR and DREAMS 世界巡回演唱会-杭州站
+            【杭州】陈奕迅 FEAR and DREAMS...
           </view>
         </view>
         <!-- 底部 -->
         <view class="bottom">
-            <view class="ad">
-              <text>3.5万人热抢中</text>
-              <view class="iconfont icon-shandian"></view>
-              <view class="iconfont icon-qiang"></view>
-            </view>
+          <view class="ad">
+            <text>3.5万人热抢中</text>
+            <view class="iconfont icon-shandian"></view>
+            <view class="iconfont icon-qiang"></view>
+          </view>
         </view>
       </view>
-      <view class="flashSale"></view>
+      <!-- 今日秒杀 -->
+      <view class="flashSale">
+        <!-- 上面部分 -->
+        <view class="top">
+          <!-- 左边图片 -->
+          <text class="img">今日秒杀</text>
+          <!-- 右边轮播 -->
+          <view class="swiper-container">
+            <view class="broadcast-item">
+              <text class="activity-name">限时限量更优惠</text>
+              <view class="iconfont icon-youjiantou"></view>
+            </view>
+          </view>
+        </view>
+        <!-- 下面部分 -->
+        <view class="bom">
+          <view wx:for="{{imageList}}" wx:key="index" class="every">
+            <image class="img" src="{{item.img}}" mode="aspectFill" />
+            <view class="activity">{{item.type}}</view>
+            <view class="fullSub">满减</view>
+          </view>
+        </view>
+      </view>
     </view>
   </view>
 </view>
