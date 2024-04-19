@@ -153,5 +153,11 @@
       <performance title="20元" content="拼团领券" isHidden="{{false}}" isBorder="{{true}}">
       </performance>
     </view>
+    <!-- 扁平轮播图 -->
+    <swiper class="swiper" indicator-dots="{{true}}" autoplay="{{true}}" interval="{{3000}}" duration="{{1000}}" circular="{{true}}" indicator-color="#ffffff">
+      <swiper-item wx:for="{{swiperList}}" wx:key="index">
+        <image class="img" src="{{item}}" mode="aspectFill" />
+      </swiper-item>
+    </swiper>
   </view>
 </view>
