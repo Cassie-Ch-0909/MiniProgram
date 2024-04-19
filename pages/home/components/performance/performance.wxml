@@ -1,0 +1,18 @@
+<!--pages/home/components/performance/performance.wxml-->
+<view class="p">
+  <view class="top">
+    {{title}}
+  </view>
+  <text class="bottom">{{content}}</text>
+  <image class="img" src="{{img}}" mode="aspectFit" />
+  <view wx:if="{{isHidden}}" class="hot">
+    <text>hot</text>
+  </view>
+  <view class="{{isBorder ? 'border' : ''}}"></view>
+  <view class="{{isBorder ? 'right' : ''}}">
+    <view class="rounded">
+      <view class="{{isBorder ? 'iconfont icon-youjiantou' : ''}}"></view>
+    </view>
+    <view class="download-btn-ani" style="display: inline;"></view>
+  </view>
+</view>

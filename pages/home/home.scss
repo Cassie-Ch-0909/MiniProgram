@@ -483,4 +483,20 @@
       }
     }
   }
+
+  // <!-- 演出日历、演出攻略、拼团领券 -->
+  .performance{
+    // box-shadow: 0 .4vmin 1.6vmin 0 rgba(106, 122, 153, .15);
+    height: 110rpx;
+    width: 98%;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 20rpx;
+    // background-color: skyblue;
+    display: flex;
+    justify-content: space-between;
+    .hot{
+      position: absolute;
+    }
+  }
 }

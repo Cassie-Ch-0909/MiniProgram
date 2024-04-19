@@ -145,5 +145,13 @@
         </view>
       </view>
     </view>
+    <!-- 演出日历、演出攻略、拼团领券 -->
+    <view class="performance">
+      <performance title="演出日历" content="近期好演出" img="/assets/home/日历.png" isHidden="{{false}}"></performance>
+      <performance title="演出攻略" content="帮你挑演出" img="/assets/home/攻略.png" isHidden="{{true}}">
+      </performance>
+      <performance title="20元" content="拼团领券" isHidden="{{false}}" isBorder="{{true}}">
+      </performance>
+    </view>
   </view>
 </view>

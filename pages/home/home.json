@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "performance":"./components/performance/performance"
+  },
   "navigationStyle": "custom"
 }
