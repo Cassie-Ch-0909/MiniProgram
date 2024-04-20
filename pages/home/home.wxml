@@ -159,5 +159,36 @@
         <image class="img" src="{{item}}" mode="aspectFill" />
       </swiper-item>
     </swiper>
+    <!-- scroll-x 本周演出 -->
+    <view class="thisWeek">
+      <view class="title">
+        <!-- <image src="/assets/home/闹钟.png" mode="aspectFit" class="img"/> -->
+        <view class="clock">⏰</view>
+        <text class="text">本周演出</text>
+      </view>
+      <scroll-view class="scroll-x" scroll-x="true" style="white-space: nowrap">
+        <view wx:for="{{thisWeekScrollXList}}" wx:key="index" class="every">
+          <view class="imgView">
+            <image class="img" src="{{item.img}}" mode="aspectFill" />
+          </view>
+          <view class="info">
+            {{item.info}}
+          </view>
+          <view class="position">
+            {{item.position}}
+          </view>
+          <view class="price">
+            <view class="fuhao">
+              ￥
+            </view>
+            <view class="pink">
+              {{item.price}}
+            </view>
+            起
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+
   </view>
 </view>

@@ -40,6 +40,69 @@ Page({
       "https://gw.alicdn.com/imgextra/i1/O1CN0105shrH1t9161vfSNn_!!6000000005858-0-tps-1404-320.jpg_Q30.jpg",
       "https://gw.alicdn.com/imgextra/i1/O1CN01MjBW8c1E4WxjP1bS2_!!6000000000298-0-tps-1404-320.jpg_Q30.jpg",
       "https://gw.alicdn.com/imgextra/i4/O1CN01LyqLy61FocRfBnh3I_!!6000000000534-0-tps-1404-320.jpg_Q30.jpg",
+    ],
+    // 本周演出scroll-x的数组
+    thisWeekScrollXList:[
+      {
+        img:"https://img.alicdn.com/bao/uploaded/i1/2251059038/O1CN01SwGBKy2GdSaQ78f78_!!0-item_pic.jpg",
+        info:"棱镜「多少年·多少面」2024巡回演唱会—北京站",
+        position:"华熙LIVE·五棵松",
+        price:"380"
+      },
+      {
+        img:"https://img.alicdn.com/bao/uploaded/https://img.al…51059038/O1CN01aZ35xy2GdSabqhDh8_!!2251059038.jpg",
+        info:"2024北京无限音乐节",
+        position:"北京通州区城市绿心森林公园南门(绿创空间对面)",
+        price:"380"
+      },
+      {
+        img:"https://img.alicdn.com/bao/uploaded/https://img.al…51059038/O1CN01hFwRF32GdSaOCEPTm_!!2251059038.png",
+        info:"苏有朋在多重宇宙中遇见你演唱会-北京站",
+        position:"首都体育馆",
+        price:"380"
+      },
+      {
+        img:"https://img.alicdn.com/bao/uploaded/https://img.al…51059038/O1CN01MV6J3g2GdSZ4qiOyn_!!2251059038.png",
+        info:"2024中超联赛天津津门虎主场赛事（年票）",
+        position:"天津泰达足球场",
+        price:"680"
+      },
+      {
+        img:"https://img.alicdn.com/bao/uploaded/i3/2251059038/O1CN01FT1QXb2GdSZujlBWG_!!2-item_pic.png",
+        info:"2023-2024WCBA 山西竹叶青女篮季后赛（套票）",
+        position:"山西体育中心体育馆",
+        price:"179"
+      },
+      {
+        img:"https://img.alicdn.com/bao/uploaded/i1/2251059038/O1CN01SwGBKy2GdSaQ78f78_!!0-item_pic.jpg",
+        info:"棱镜「多少年·多少面」2024巡回演唱会—北京站",
+        position:"华熙LIVE·五棵松",
+        price:"380"
+      },
+      {
+        img:"https://img.alicdn.com/bao/uploaded/https://img.al…51059038/O1CN01aZ35xy2GdSabqhDh8_!!2251059038.jpg",
+        info:"2024北京无限音乐节",
+        position:"北京通州区城市绿心森林公园南门(绿创空间对面)",
+        price:"380"
+      },
+      {
+        img:"https://img.alicdn.com/bao/uploaded/https://img.al…51059038/O1CN01hFwRF32GdSaOCEPTm_!!2251059038.png",
+        info:"苏有朋在多重宇宙中遇见你演唱会-北京站",
+        position:"首都体育馆",
+        price:"380"
+      },
+      {
+        img:"https://img.alicdn.com/bao/uploaded/https://img.al…51059038/O1CN01MV6J3g2GdSZ4qiOyn_!!2251059038.png",
+        info:"2024中超联赛天津津门虎主场赛事（年票）",
+        position:"天津泰达足球场",
+        price:"680"
+      },
+      {
+        img:"https://img.alicdn.com/bao/uploaded/i3/2251059038/O1CN01FT1QXb2GdSZujlBWG_!!2-item_pic.png",
+        info:"2023-2024WCBA 山西竹叶青女篮季后赛（套票）",
+        position:"山西体育中心体育馆",
+        price:"179"
+      },
     ]
   },
 
