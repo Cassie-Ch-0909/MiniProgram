@@ -42,7 +42,6 @@
       }
     ]
   },
-  "style": "v2",
   "componentFramework": "glass-easel",
   "sitemapLocation": "sitemap.json",
   "lazyCodeLoading": "requiredComponents",
@@ -62,5 +61,9 @@
         "goodModule"
       ]
     }
-  }
+  },
+"usingComponents": {
+  "van-button": "@vant/weapp/button/index"
+}
+
 }
