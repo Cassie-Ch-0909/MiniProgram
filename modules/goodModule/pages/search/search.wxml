@@ -1,2 +1,34 @@
 <!--modules/goodModule/pages/search/search.wxml-->
-<text>modules/goodModule/pages/search/search.wxml</text>
+<!-- 搜索框 -->
+<view class="box">
+  <view class="search">
+    <view type="text" class="input_search">
+      <view class="iconfont icon-sousuo"></view>
+      <text class="star">周杰伦</text>
+    </view>
+    <!-- 点击取消返回首页 -->
+    <text class="cancle">取消</text>
+  </view>
+  <!-- 全国热搜榜和同城热搜 -->
+  <scroll-view scroll-x="true" style="white-space: nowrap" class="hotSearch" scrollbar="false">
+    <view class="country">
+      <view class="title">全国热搜榜</view>
+      <view class="content">
+        <view wx:for="{{countryHotSearchList}}" wx:key="index" class="every">
+          <text class="id {{ index === 0 ? 'hotpink' : '' }} {{ index === 1 ? 'orange' : '' }} {{ index === 2 ? 'yellow' : '' }}">{{ item.id }}</text>
+          <text>{{item.name}}</text>
+          <text class="status {{ item.status === '爆' ? 'bao' : 'hot' }}">{{ item.status }}</text>
+        </view>
+      </view>
+    </view>
+    <view class="city">
+      <view class="title">同城热搜榜 · <text class="nb">宁波</text></view>
+      <view class="content">
+        <view wx:for="{{cityHotSearchList}}" wx:key="index" class="every">
+          <text class="id {{ index === 0 ? 'hotpink' : '' }} {{ index === 1 ? 'orange' : '' }} {{ index === 2 ? 'yellow' : '' }}">{{ item.id }}</text>
+          <text>{{item.content}}</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
