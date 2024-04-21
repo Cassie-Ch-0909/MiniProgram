@@ -19,19 +19,21 @@
     </view>
   </view>
   <!-- 搜索框 -->
-  <view class="search" style="top: {{navBarHeight}}px;">
-    <view type="text" class="input_search">
-      <view class="left">
-        <view class="iconfont icon-sousuo"></view>
-        <text class="star">周杰伦</text>
-      </view>
-      <view class="right">
-        <view class="shu"></view>
-        <image class="position" src="/assets/home/position.png" mode="aspectFit" />
-        <text>宁波</text>
+  <navigator url="/modules/goodModule/pages/search/search">
+    <view class="search" style="top: {{navBarHeight}}px;">
+      <view type="text" class="input_search">
+        <view class="left">
+          <view class="iconfont icon-sousuo"></view>
+          <text class="star">周杰伦</text>
+        </view>
+        <view class="right">
+          <view class="shu"></view>
+          <image class="position" src="/assets/home/position.png" mode="aspectFit" />
+          <text>宁波</text>
+        </view>
       </view>
     </view>
-  </view>
+  </navigator>
   <!-- 滚动视图区域 -->
   <view class="scrollView" style="margin-top: calc({{navBarHeight}}px + 85rpx);">
     <!-- 分类 -->

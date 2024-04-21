@@ -2,5 +2,6 @@
   "usingComponents": {
     "performance":"./components/performance/performance"
   },
-  "navigationStyle": "custom"
+  "navigationStyle": "custom",
+  "onReachBottomDistance": 50
 }
