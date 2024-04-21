@@ -48,11 +48,19 @@
   "lazyCodeLoading": "requiredComponents",
   "subPackages": [
     {
-      "root":"modules/goodModule",
+      "root": "modules/goodModule",
       "name": "goodModule",
       "pages": [
         "pages/search/search"
       ]
     }
-  ]
+  ],
+  "preloadRule": {
+    "pages/home/home": {
+      "network": "all",
+      "packages": [
+        "goodModule"
+      ]
+    }
+  }
 }
