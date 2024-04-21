@@ -1,1 +1,26 @@
 /* pages/my/my.wxss */
+.box{
+  width: 98%;
+  padding-left: 1%;
+  padding-right: 1%;
+  .top{
+    width: 100%;
+    height: 250rpx;
+    background-color: #9DCBFC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .img{
+      width: 200rpx;
+      height: 200rpx;
+      border-radius: 50%;
+    }
+  }
+  .info{
+    width: 100%;
+    height: 80rpx;
+    border-bottom: 2rpx solid #9DCBFC;
+    display: flex;
+    align-items: center;
+  }
+}

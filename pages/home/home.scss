@@ -640,3 +640,18 @@
     display: none;
   }
 }
+// 发现好演出
+.findGoodPerform{
+  margin-top: 20rpx;
+  width: 98%;
+  padding-left: 1%;
+  padding-right: 1%;
+  background-color: skyblue;
+  height: 600rpx;
+  .title{
+    // padding-left: 20rpx;
+    box-sizing: border-box;
+    font-size: 32rpx;
+    font-weight: bold;
+  }
+}

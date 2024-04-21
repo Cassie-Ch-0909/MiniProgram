@@ -1,2 +1,22 @@
 <!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<!-- <text>pages/my/my.wxml</text> -->
+<view class="box">
+  <view class="top">
+    <image class="img" src="/assets/avatar.jpg" mode="aspectFill"/>
+  </view>
+  <view class="info">
+    姓名：Cassie燁
+  </view>
+  <view class="info">
+    年龄：22
+  </view>
+  <view class="info">
+    性别：女
+  </view>
+  <view class="info">
+    特长：绘画、书法
+  </view>
+  <view class="info">
+    爱好：编程
+  </view>
+</view>
