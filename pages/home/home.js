@@ -14,7 +14,7 @@ Page({
     // 真正需要滚动的高度
     reallyHeight: 0,
     // 筛选条是否粘性定位
-    targetElementFixed: false ,// 初始状态下 targetElement 不是 fixed
+    targetElementFixed: false,// 初始状态下 targetElement 不是 fixed
     // 抢票播报站
     broadcasts: [
       { watchCount: "14万", activityName: "张学友重庆" },
@@ -122,30 +122,37 @@ Page({
     ],
     value1: 0,
     value2: 'a',
-    result: ['a', 'b']
+    checkBoxresult: []
   },
 
   onChange(event) {
-    // console.log(event)
+    // console.log(event.detail);
+    // 如果你想要在 setData 生效后获取更新后的值，可以在 setData 的回调函数中进行操作
     this.setData({
-      result: event.detail,
+      checkBoxResult: event.detail,
+    }, () => {
+      // console.log(this.data.checkBoxResult);
     });
   },
 
+  onDropdownOpen: function () {
+    // 调用 wx.pageScrollTo 方法滚动到指定高度
+    console.log(this.data.reallyHeight,)
+  },
 
   // 当滚动距离大于筛选条所在位置时，筛选条要固定在页面
   onScrollViewScroll: function (event) {
     // 滚动事件处理逻辑
-    console.log(event.detail.scrollTop)
+    // console.log(event.detail.scrollTop)
     // console.log("23", 680 - this.data.navBarHeight)
     if (event.detail.scrollTop > this.data.reallyHeight) {
       // console.log("到啦！！！！！！！！！！！！！！")
       this.setData({
-        targetElementFixed:true
+        targetElementFixed: true
       })
-    }else {
+    } else {
       this.setData({
-        targetElementFixed:false
+        targetElementFixed: false
       })
     }
   },
@@ -160,7 +167,7 @@ Page({
             that.setData({
               reallyHeight: distanceTop
             }, () => {
-              console.log(that.data.reallyHeight); // 在 setData 回调中输出 searchHeight 的值
+              // console.log(that.data.reallyHeight); // 在 setData 回调中输出 searchHeight 的值
               resolve(); // 数据更新完成，执行 resolve
             });
           } else {
@@ -178,11 +185,11 @@ Page({
       wx.createSelectorQuery().selectViewport().scrollOffset(function (res) {
         wx.createSelectorQuery().select('.search666').boundingClientRect(function (rect) {
           if (rect) {
-            console.log(rect.height, '00000')
+            // console.log(rect.height, '00000')
             that.setData({
               searchHeight: rect.height
             }, () => {
-              console.log(that.data.searchHeight); // 在 setData 回调中输出 searchHeight 的值
+              // console.log(that.data.searchHeight); // 在 setData 回调中输出 searchHeight 的值
               resolve(); // 数据更新完成，执行 resolve
               that.getScrollToElementTop()
             });
@@ -249,7 +256,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom() {
-    console.log("监听用户上拉加载");
+    // console.log("监听用户上拉加载");
   },
 
   /**

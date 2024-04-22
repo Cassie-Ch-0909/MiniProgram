@@ -197,14 +197,20 @@
       <!-- 筛选 -->
       <view class="target-element {{targetElementFixed ? 'targetElementFixed' : ''}}" style="top: calc({{navBarHeight}}px + 65rpx)">
         <van-dropdown-menu>
-          <van-dropdown-item title="品类">
+          <van-dropdown-item title="品类" bind:open="onDropdownOpen">
             <view class="type">
-              <van-checkbox-group value="{{ result }}" bind:change="onChange">
+              <van-checkbox-group value="{{ checkBoxResult }}" bind:change="onChange">
                 <van-checkbox name="a" label-position="left" icon-size="16px" checked-color="#FC4A89">
                   音乐现场</van-checkbox>
                 <van-checkbox name="b" label-position="left" icon-size="16px" checked-color="#FC4A89">音乐会</van-checkbox>
                 <van-checkbox name="c" label-position="left" icon-size="16px" checked-color="#FC4A89">话剧音乐剧</van-checkbox>
                 <van-checkbox name="d" label-position="left" icon-size="16px" checked-color="#FC4A89">舞蹈芭蕾</van-checkbox>
+                <van-checkbox name="e" label-position="left" icon-size="16px" checked-color="#FC4A89">曲苑杂坛</van-checkbox>
+                <van-checkbox name="g" label-position="left" icon-size="16px" checked-color="#FC4A89">体育</van-checkbox>
+                <van-checkbox name="h" label-position="left" icon-size="16px" checked-color="#FC4A89">展览</van-checkbox>
+                <van-checkbox name="i" label-position="left" icon-size="16px" checked-color="#FC4A89">儿童亲子</van-checkbox>
+                <van-checkbox name="j" label-position="left" icon-size="16px" checked-color="#FC4A89">脱口秀</van-checkbox>
+                <van-checkbox name="k" label-position="left" icon-size="16px" checked-color="#FC4A89">沉浸式</van-checkbox>
               </van-checkbox-group>
             </view>
           </van-dropdown-item>
@@ -212,7 +218,6 @@
           <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" title="推荐排序" />
           <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" title="筛选" />
         </van-dropdown-menu>
-
       </view>
     </view>
   </scroll-view>
