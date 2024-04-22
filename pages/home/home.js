@@ -122,7 +122,15 @@ Page({
     ],
     value1: 0,
     value2: 'a',
-    checkBoxresult: []
+    // 品类标题
+    selectTypeTitle:"品类",
+    // 时间标题
+    selectTimePeriod:"全部时间",
+    // 复选框选中的值
+    checkBoxresult: [],
+    text: '',
+    // 日历的值
+    date: ''
   },
 
   onChange(event) {
@@ -130,6 +138,7 @@ Page({
     // 如果你想要在 setData 生效后获取更新后的值，可以在 setData 的回调函数中进行操作
     this.setData({
       checkBoxResult: event.detail,
+      selectTypeTitle:event.detail
     }, () => {
       // console.log(this.data.checkBoxResult);
     });
@@ -201,6 +210,21 @@ Page({
       }).exec();
     });
   },
+
+  //TODO: 
+  formatDate(date) {
+    date = new Date(date);
+    return `${date.getMonth() + 1}/${date.getDate()}`;
+  },
+  onConfirm(event) {
+    const [start, end] = event.detail;
+    this.setData({
+      date: `${this.formatDate(start)} - ${this.formatDate(end)}`,
+      selectTimePeriod:`${this.formatDate(start)} - ${this.formatDate(end)}`
+    });
+    console.log(this.data.date)
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

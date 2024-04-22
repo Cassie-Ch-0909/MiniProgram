@@ -197,20 +197,20 @@
       <!-- 筛选 -->
       <view class="target-element {{targetElementFixed ? 'targetElementFixed' : ''}}" style="top: calc({{navBarHeight}}px + 65rpx)">
         <van-dropdown-menu>
-          <van-dropdown-item title="品类" bind:open="onDropdownOpen">
+          <van-dropdown-item title="{{selectTypeTitle}}" bind:open="onDropdownOpen">
             <view class="type">
               <van-checkbox-group value="{{ checkBoxResult }}" bind:change="onChange">
-                <van-checkbox name="a" label-position="left" icon-size="16px" checked-color="#FC4A89">
+                <van-checkbox name="音乐现场" label-position="left" icon-size="16px" checked-color="#FC4A89">
                   音乐现场</van-checkbox>
-                <van-checkbox name="b" label-position="left" icon-size="16px" checked-color="#FC4A89">音乐会</van-checkbox>
-                <van-checkbox name="c" label-position="left" icon-size="16px" checked-color="#FC4A89">话剧音乐剧</van-checkbox>
-                <van-checkbox name="d" label-position="left" icon-size="16px" checked-color="#FC4A89">舞蹈芭蕾</van-checkbox>
-                <van-checkbox name="e" label-position="left" icon-size="16px" checked-color="#FC4A89">曲苑杂坛</van-checkbox>
-                <van-checkbox name="g" label-position="left" icon-size="16px" checked-color="#FC4A89">体育</van-checkbox>
-                <van-checkbox name="h" label-position="left" icon-size="16px" checked-color="#FC4A89">展览</van-checkbox>
-                <van-checkbox name="i" label-position="left" icon-size="16px" checked-color="#FC4A89">儿童亲子</van-checkbox>
-                <van-checkbox name="j" label-position="left" icon-size="16px" checked-color="#FC4A89">脱口秀</van-checkbox>
-                <van-checkbox name="k" label-position="left" icon-size="16px" checked-color="#FC4A89">沉浸式</van-checkbox>
+                <van-checkbox name="音乐会" label-position="left" icon-size="16px" checked-color="#FC4A89">音乐会</van-checkbox>
+                <van-checkbox name="话剧音乐剧" label-position="left" icon-size="16px" checked-color="#FC4A89">话剧音乐剧</van-checkbox>
+                <van-checkbox name="舞蹈芭蕾" label-position="left" icon-size="16px" checked-color="#FC4A89">舞蹈芭蕾</van-checkbox>
+                <van-checkbox name="曲苑杂坛" label-position="left" icon-size="16px" checked-color="#FC4A89">曲苑杂坛</van-checkbox>
+                <van-checkbox name="体育" label-position="left" icon-size="16px" checked-color="#FC4A89">体育</van-checkbox>
+                <van-checkbox name="展览" label-position="left" icon-size="16px" checked-color="#FC4A89">展览</van-checkbox>
+                <van-checkbox name="儿童亲子" label-position="left" icon-size="16px" checked-color="#FC4A89">儿童亲子</van-checkbox>
+                <van-checkbox name="脱口秀" label-position="left" icon-size="16px" checked-color="#FC4A89">脱口秀</van-checkbox>
+                <van-checkbox name="沉浸式" label-position="left" icon-size="16px" checked-color="#FC4A89">沉浸式</van-checkbox>
               </van-checkbox-group>
               <view class="btns">
                 <button plain class="reset">重置</button>
@@ -218,7 +218,11 @@
               </view>
             </view>
           </van-dropdown-item>
-          <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" title="全部时间" />
+          <van-dropdown-item title="{{selectTimePeriod}}">
+            <view class="allTime">
+              <van-calendar title="选择时间" row-height="50" poppable="{{ false }}" show-confirm="{{ false  }}" root-portal="true" color="#FD668C" type="range" class="calendar" bind:select="onConfirm" />
+            </view>
+          </van-dropdown-item>
           <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" title="推荐排序" />
           <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" title="筛选" />
         </van-dropdown-menu>

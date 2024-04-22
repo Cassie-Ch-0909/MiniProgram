@@ -67,7 +67,8 @@
   "van-dropdown-menu": "@vant/weapp/dropdown-menu/index",
   "van-dropdown-item": "@vant/weapp/dropdown-item/index",
   "van-checkbox": "@vant/weapp/checkbox/index",
-  "van-checkbox-group": "@vant/weapp/checkbox-group/index"
+  "van-checkbox-group": "@vant/weapp/checkbox-group/index",
+  "van-calendar": "@vant/weapp/calendar/index"
 }
 
 }

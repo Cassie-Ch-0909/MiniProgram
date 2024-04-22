@@ -261,7 +261,7 @@
             width: 100%;
             height: 50%;
             font-size: 20rpx;
-
+            margin-top: 0rpx;
             .broadcast-item {
               width: 100%;
               height: 100%;
@@ -676,7 +676,7 @@
       font-size: 24rpx;
       font-weight: bold;
     }
-
+    // 品类
     .type {
       width: 98%;
       margin-left: 1%;
@@ -704,7 +704,18 @@
         font-size: 26rpx;
       }
     }
-
+    // 全部时间
+    .allTime{
+      width: 98%;
+      margin-left: 1%;
+      margin-right: 1%;
+      height: 750rpx;
+      background-color: pink;
+      .calendar {
+        --calendar-height: 418px;
+        margin-bottom: 30rpx;
+      }
+    }
     .btns {
       width: 100%;
       height: 25%;
@@ -719,7 +730,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 5rpx solid #D6D6D6;
+        border: 2rpx solid #D6D6D6;
         background-color: #FFFFFF;
       }
 
@@ -732,7 +743,7 @@
         justify-content: center;
         align-items: center;
         // border: 6rpx solid #D6D6D6;
-        border: 5rpx solid #D6D6D6;
+        border: 2rpx solid #D6D6D6;
         background-image: linear-gradient(to right, #FF7FD4, #FE4B8C);
         color: #fff;
       }
