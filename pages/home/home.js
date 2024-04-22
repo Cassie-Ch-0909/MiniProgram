@@ -9,6 +9,12 @@ Page({
     navBarHeight: app.globalData.navBarHeight,//导航栏高度
     menuBotton: app.globalData.menuBotton,//导航栏距离顶部距离
     menuHeight: app.globalData.menuHeight, //导航栏高度
+    // 头部搜索框的高度
+    searchHeight: 0,
+    // 真正需要滚动的高度
+    reallyHeight: 0,
+    // 筛选条是否粘性定位
+    targetElementFixed: false ,// 初始状态下 targetElement 不是 fixed
     // 抢票播报站
     broadcasts: [
       { watchCount: "14万", activityName: "张学友重庆" },
@@ -105,7 +111,7 @@ Page({
       },
     ],
     option1: [
-      { text: '全部商品', value: 0 },
+      { text: '全部', value: 0 },
       { text: '新款商品', value: 1 },
       { text: '活动商品', value: 2 },
     ],
@@ -116,20 +122,90 @@ Page({
     ],
     value1: 0,
     value2: 'a',
+    result: ['a', 'b']
   },
 
+  onChange(event) {
+    // console.log(event)
+    this.setData({
+      result: event.detail,
+    });
+  },
+
+
+  // 当滚动距离大于筛选条所在位置时，筛选条要固定在页面
+  onScrollViewScroll: function (event) {
+    // 滚动事件处理逻辑
+    console.log(event.detail.scrollTop)
+    // console.log("23", 680 - this.data.navBarHeight)
+    if (event.detail.scrollTop > this.data.reallyHeight) {
+      // console.log("到啦！！！！！！！！！！！！！！")
+      this.setData({
+        targetElementFixed:true
+      })
+    }else {
+      this.setData({
+        targetElementFixed:false
+      })
+    }
+  },
+  // 获取滚动到筛选框时距离顶部的距离，并给reallyHeight赋值
+  getScrollToElementTop: function () {
+    var that = this;
+    return new Promise((resolve, reject) => {
+      wx.createSelectorQuery().selectViewport().scrollOffset(function (res) {
+        wx.createSelectorQuery().select('.target-element').boundingClientRect(function (rect) {
+          if (rect) {
+            var distanceTop = rect.top + res.scrollTop - that.data.navBarHeight - that.data.searchHeight
+            that.setData({
+              reallyHeight: distanceTop
+            }, () => {
+              console.log(that.data.reallyHeight); // 在 setData 回调中输出 searchHeight 的值
+              resolve(); // 数据更新完成，执行 resolve
+            });
+          } else {
+            console.error('未找到指定元素或位置信息不可用');
+          }
+        }).exec();
+      }).exec();
+    });
+  },
+  // 获取页面中顶部搜索框的高度，并给searchHeight赋值
+  // 在此处调用getScrollToElementTop函数
+  getScrollToElementTopForSearch: function () {
+    var that = this;
+    return new Promise((resolve, reject) => {
+      wx.createSelectorQuery().selectViewport().scrollOffset(function (res) {
+        wx.createSelectorQuery().select('.search666').boundingClientRect(function (rect) {
+          if (rect) {
+            console.log(rect.height, '00000')
+            that.setData({
+              searchHeight: rect.height
+            }, () => {
+              console.log(that.data.searchHeight); // 在 setData 回调中输出 searchHeight 的值
+              resolve(); // 数据更新完成，执行 resolve
+              that.getScrollToElementTop()
+            });
+          } else {
+            console.error('未找到指定元素或位置信息不可用');
+            reject(new Error('未找到指定元素或位置信息不可用'));
+          }
+        }).exec();
+      }).exec();
+    });
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    // this.getScrollToElementTop()
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady() {
-
+    this.getScrollToElementTopForSearch()
   },
 
   /**

@@ -176,7 +176,8 @@
   /*或者overflow-y: scroll;*/
   flex: 1;
   /*占满剩余高度*/
-  background-color: #F5F5F7;
+  // background-color: #F4F4F6;
+  background-image: linear-gradient(to bottom, #F4F4F6, #fff);
 
   .directory {
     box-shadow: 0 .4vmin 1.6vmin 0 rgba(106, 122, 153, .15);
@@ -640,18 +641,54 @@
     display: none;
   }
 }
+
 // 发现好演出
-.findGoodPerform{
+.findGoodPerform {
   margin-top: 20rpx;
-  width: 98%;
-  padding-left: 1%;
-  padding-right: 1%;
-  background-color: skyblue;
-  height: 600rpx;
-  .title{
-    // padding-left: 20rpx;
+  width: 100%;
+  // padding-left: 1%;
+  // padding-right: 1%;
+  // background-color: skyblue;
+  height: 1800rpx;
+
+  .title {
+    padding-left: 20rpx;
     box-sizing: border-box;
     font-size: 32rpx;
     font-weight: bold;
   }
+
+  .van-dropdown-menu {
+    height: 70rpx;
+    margin-top: 20rpx;
+    font-size: 28rpx;
+    background-image: linear-gradient(to bottom, #F4F4F6, #fff);
+    // 消除vant自带的阴影效果
+    box-shadow: unset !important;
+    .van-dropdown-menu__item {
+      width: 98%;
+      margin-left: 1%;
+      margin-right: 1%;
+    }
+
+    .van-ellipsis {
+      font-size: 24rpx;
+      font-weight: bold;
+    }
+
+    .type {
+      width: 98%;
+      margin-left: 1%;
+      margin-right: 1%;
+      height: 500rpx;
+      // background-color: pink;
+    }
+  }
+}
+
+.targetElementFixed {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
 }

@@ -20,7 +20,7 @@
   </view>
   <!-- 搜索框 -->
   <navigator url="/modules/goodModule/pages/search/search">
-    <view class="search" style="top: {{navBarHeight}}px;">
+    <view class="search search666" style="top: {{navBarHeight}}px;">
       <view type="text" class="input_search">
         <view class="left">
           <view class="iconfont icon-sousuo"></view>
@@ -35,7 +35,7 @@
     </view>
   </navigator>
   <!-- 滚动视图区域 -->
-  <view class="scrollView" style="margin-top: calc({{navBarHeight}}px + 85rpx);">
+  <scroll-view scroll-y="true" class="scrollView" style="margin-top: calc({{navBarHeight}}px + 85rpx);" bindscroll="onScrollViewScroll">
     <!-- 分类 -->
     <view class="directory">
       <view class="type">
@@ -195,14 +195,25 @@
     <view class="findGoodPerform">
       <view class="title">发现好演出</view>
       <!-- 筛选 -->
-      <view>
+      <view class="target-element {{targetElementFixed ? 'targetElementFixed' : ''}}" style="top: calc({{navBarHeight}}px + 65rpx)">
         <van-dropdown-menu>
-          <van-dropdown-item value="{{ value1 }}" options="{{ option1 }}" />
-          <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" />
-          <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" /> <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" />
+          <van-dropdown-item title="品类">
+            <view class="type">
+              <van-checkbox-group value="{{ result }}" bind:change="onChange">
+                <van-checkbox name="a" label-position="left" icon-size="16px" checked-color="#FC4A89">
+                  音乐现场</van-checkbox>
+                <van-checkbox name="b" label-position="left" icon-size="16px" checked-color="#FC4A89">音乐会</van-checkbox>
+                <van-checkbox name="c" label-position="left" icon-size="16px" checked-color="#FC4A89">话剧音乐剧</van-checkbox>
+                <van-checkbox name="d" label-position="left" icon-size="16px" checked-color="#FC4A89">舞蹈芭蕾</van-checkbox>
+              </van-checkbox-group>
+            </view>
+          </van-dropdown-item>
+          <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" title="全部时间" />
+          <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" title="推荐排序" />
+          <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" title="筛选" />
         </van-dropdown-menu>
 
       </view>
     </view>
-  </view>
+  </scroll-view>
 </view>
