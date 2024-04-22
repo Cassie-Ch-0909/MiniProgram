@@ -212,6 +212,10 @@
                 <van-checkbox name="j" label-position="left" icon-size="16px" checked-color="#FC4A89">脱口秀</van-checkbox>
                 <van-checkbox name="k" label-position="left" icon-size="16px" checked-color="#FC4A89">沉浸式</van-checkbox>
               </van-checkbox-group>
+              <view class="btns">
+                <button plain class="reset">重置</button>
+                <button plain class="confirm">确定</button>
+              </view>
             </view>
           </van-dropdown-item>
           <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" title="全部时间" />

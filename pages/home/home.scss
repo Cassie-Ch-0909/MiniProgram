@@ -665,6 +665,7 @@
     background-image: linear-gradient(to bottom, #F4F4F6, #fff);
     // 消除vant自带的阴影效果
     box-shadow: unset !important;
+
     .van-dropdown-menu__item {
       width: 98%;
       margin-left: 1%;
@@ -681,24 +682,59 @@
       margin-left: 1%;
       margin-right: 1%;
       height: 600rpx;
+
       // background-color: pink;
       // van-checkbox custom-class
-      .van-checkbox-group{
+      .van-checkbox-group {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
         width: 100%;
-        height: 80%;
+        height: 75%;
         box-sizing: border-box;
-        padding-top: 30rpx;
+        padding-top: 20rpx;
         // background-color: skyblue;
       }
-      .van-checkbox{
+
+      .van-checkbox {
         width: 330rpx;
         height: 60rpx;
         display: flex;
         justify-content: space-between;
         font-size: 26rpx;
+      }
+    }
+
+    .btns {
+      width: 100%;
+      height: 25%;
+      display: flex;
+      align-items: center;
+
+      .reset {
+        width: 30%;
+        height: 86rpx;
+        border-radius: 50rpx;
+        font-size: 30rpx;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 5rpx solid #D6D6D6;
+        background-color: #FFFFFF;
+      }
+
+      .confirm {
+        width: 60%;
+        height: 86rpx;
+        border-radius: 50rpx;
+        font-size: 30rpx;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // border: 6rpx solid #D6D6D6;
+        border: 5rpx solid #D6D6D6;
+        background-image: linear-gradient(to right, #FF7FD4, #FE4B8C);
+        color: #fff;
       }
     }
   }
