@@ -134,23 +134,14 @@ Page({
     date: ''
   },
 
-  onChange(event) {
-    // console.log(event.detail);
-    // 如果你想要在 setData 生效后获取更新后的值，可以在 setData 的回调函数中进行操作
-    this.setData({
-      checkBoxResult: event.detail,
-      selectTypeTitle:event.detail
-    }, () => {
-      // console.log(this.data.checkBoxResult);
-    });
-  },
-
   onDropdownOpen: function () {
     // 调用 wx.pageScrollTo 方法滚动到指定高度
-    console.log(this.data.reallyHeight,)
+    // console.log(this.data.reallyHeight,)
   },
 
-  // 当滚动距离大于筛选条所在位置时，筛选条要固定在页面
+  /* 
+      当滚动距离大于筛选条所在位置时，筛选条要固定在页面
+  */
   onScrollViewScroll: function (event) {
     // 滚动事件处理逻辑
     // console.log(event.detail.scrollTop)
@@ -166,7 +157,10 @@ Page({
       })
     }
   },
-  // 获取滚动到筛选框时距离顶部的距离，并给reallyHeight赋值
+  
+  /* 
+      获取滚动到筛选框时距离顶部的距离，并给reallyHeight赋值
+  */
   getScrollToElementTop: function () {
     var that = this;
     return new Promise((resolve, reject) => {
@@ -187,8 +181,11 @@ Page({
       }).exec();
     });
   },
-  // 获取页面中顶部搜索框的高度，并给searchHeight赋值
-  // 在此处调用getScrollToElementTop函数
+
+  /* 
+      获取页面中顶部搜索框的高度，并给searchHeight赋值
+      在此处调用getScrollToElementTop函数
+  */
   getScrollToElementTopForSearch: function () {
     var that = this;
     return new Promise((resolve, reject) => {
@@ -212,7 +209,24 @@ Page({
     });
   },
 
-  //TODO: 
+  /* 
+      选择品类
+  */
+  onChange(event) {
+    // console.log(event.detail);
+    // 如果你想要在 setData 生效后获取更新后的值，可以在 setData 的回调函数中进行操作
+    this.setData({
+      checkBoxResult: event.detail,
+      selectTypeTitle:event.detail
+    }, () => {
+      // console.log(this.data.checkBoxResult);
+    });
+  },
+
+
+  /* 
+      在日历上选择日期
+  */
   formatDate(date) {
     date = new Date(date);
     return `${date.getMonth() + 1}/${date.getDate()}`;
@@ -225,6 +239,10 @@ Page({
     });
     console.log(this.data.date)
   },
+
+  /* 
+      选择以什么方式排序
+  */
   handleSortChange(event) {
     // 处理选择值的变化
     console.log('选择的值是：', event.detail);
