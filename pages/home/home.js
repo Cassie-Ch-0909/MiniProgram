@@ -120,6 +120,7 @@ Page({
       { text: '热度排序', value: '热度排序' },
       { text: '开演时间', value: '开演时间' },
     ],
+
     value1: 0,
     recommendSortValue: '推荐排序',
     // 品类标题
@@ -224,7 +225,6 @@ Page({
     });
     console.log(this.data.date)
   },
-
   handleSortChange(event) {
     // 处理选择值的变化
     console.log('选择的值是：', event.detail);
@@ -297,8 +297,8 @@ Page({
   onShareAppMessage() {
 
   },
-  // 分享到朋友圈
-  onShareTimeline(){
+    // 分享到朋友圈
+    onShareTimeline(){
 
-  }
+    }
 })
