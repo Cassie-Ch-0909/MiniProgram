@@ -115,13 +115,13 @@ Page({
       { text: '新款商品', value: 1 },
       { text: '活动商品', value: 2 },
     ],
-    option2: [
-      { text: '默认排序', value: 'a' },
-      { text: '好评排序', value: 'b' },
-      { text: '销量排序', value: 'c' },
+    recommendSortOptions: [
+      { text: '推荐排序', value: '推荐排序' },
+      { text: '热度排序', value: '热度排序' },
+      { text: '开演时间', value: '开演时间' },
     ],
     value1: 0,
-    value2: 'a',
+    recommendSortValue: '推荐排序',
     // 品类标题
     selectTypeTitle:"品类",
     // 时间标题
@@ -225,6 +225,14 @@ Page({
     console.log(this.data.date)
   },
 
+  handleSortChange(event) {
+    // 处理选择值的变化
+    console.log('选择的值是：', event.detail);
+    this.setData({
+      recommendSortValue: event.detail
+    });
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -287,6 +295,10 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage() {
+
+  },
+  // 分享到朋友圈
+  onShareTimeline(){
 
   }
 })

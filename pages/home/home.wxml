@@ -196,7 +196,7 @@
       <view class="title">发现好演出</view>
       <!-- 筛选 -->
       <view class="target-element {{targetElementFixed ? 'targetElementFixed' : ''}}" style="top: calc({{navBarHeight}}px + 65rpx)">
-        <van-dropdown-menu>
+        <van-dropdown-menu active-color="#FE4F91">
           <van-dropdown-item title="{{selectTypeTitle}}" bind:open="onDropdownOpen">
             <view class="type">
               <van-checkbox-group value="{{ checkBoxResult }}" bind:change="onChange">
@@ -223,7 +223,7 @@
               <van-calendar title="选择时间" row-height="50" poppable="{{ false }}" show-confirm="{{ false  }}" root-portal="true" color="#FD668C" type="range" class="calendar" bind:select="onConfirm" />
             </view>
           </van-dropdown-item>
-          <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" title="推荐排序" />
+          <van-dropdown-item value="{{ recommendSortValue }}" options="{{ recommendSortOptions }}" title="{{recommendSortValue}}"  bind:change="handleSortChange"/>
           <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" title="筛选" />
         </van-dropdown-menu>
       </view>
