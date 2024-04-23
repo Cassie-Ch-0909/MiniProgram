@@ -722,8 +722,9 @@
       margin-left: 1%;
       margin-right: 1%;
       height: 450rpx;
-      margin: 20rpx;
-      // background-color: pink;
+      padding-top: 20rpx;
+      box-sizing: border-box;
+      // background-color: skyblue;
       .title{
         font-size: 25rpx;
         font-weight: bold;
@@ -747,9 +748,10 @@
           border: 0;
           margin-left: 0rpx;
           margin-right: 20rpx;
-          width: 120rpx;
+          width: 130rpx;
           height: 55rpx;
-          font-size: 20rpx;
+          font-size: 24rpx;
+          font-weight: bold;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -761,6 +763,8 @@
       height: 25%;
       display: flex;
       align-items: center;
+      justify-content: center;
+      // background-color: pink;
 
       .reset {
         width: 30%;

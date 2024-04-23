@@ -232,12 +232,16 @@
                 <view class="btn {{activeServiceDiscountIndex === '1' ? 'activeBgColor' : ''}}" bindtap="selectServiceAndDiscount" data-index="1">可选座</view>
                 <view class="btn {{activeServiceDiscountIndex === '2' ? 'activeBgColor' : ''}}" bindtap="selectServiceAndDiscount" data-index="2">折扣</view>
               </view>
-              <view class="priceTitle">价格</view>
+              <view class="title priceTitle">价格</view>
               <view class="serviceAndDiscount">
                 <view class="btn {{activeSelectPriceIndex === '0' ? 'activeBgColor' : ''}}" bindtap="selectPrice" data-index="0">100以内</view>
                 <view class="btn {{activeSelectPriceIndex === '1' ? 'activeBgColor' : ''}}" bindtap="selectPrice" data-index="1">100-300</view>
                 <view class="btn {{activeSelectPriceIndex === '2' ? 'activeBgColor' : ''}}" bindtap="selectPrice" data-index="2">300-500</view>
                 <view class="btn {{activeSelectPriceIndex === '3' ? 'activeBgColor' : ''}}" bindtap="selectPrice" data-index="3">500以上</view>
+              </view>
+              <view class="btns">
+                <button plain class="reset">重置</button>
+                <button plain class="confirm">确定</button>
               </view>
             </view>
           </van-dropdown-item>
