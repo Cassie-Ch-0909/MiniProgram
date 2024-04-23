@@ -115,23 +115,26 @@ Page({
       { text: '新款商品', value: 1 },
       { text: '活动商品', value: 2 },
     ],
+    // 排序的值
     recommendSortOptions: [
       { text: '推荐排序', value: '推荐排序' },
       { text: '热度排序', value: '热度排序' },
       { text: '开演时间', value: '开演时间' },
     ],
-
-    value1: 0,
-    recommendSortValue: '推荐排序',
     // 品类标题
-    selectTypeTitle:"品类",
+    selectTypeTitle: "品类",
     // 时间标题
-    selectTimePeriod:"全部时间",
+    selectTimePeriod: "全部时间",
+    // 排序标题
+    recommendSortValue: '推荐排序',
     // 复选框选中的值
     checkBoxresult: [],
-    text: '',
     // 日历的值
-    date: ''
+    date: '',
+    // 服务/折扣选中的索引
+    activeServiceDiscountIndex: -1,
+    // 选中价格的索引
+    activeSelectPriceIndex:-1
   },
 
   onDropdownOpen: function () {
@@ -157,7 +160,7 @@ Page({
       })
     }
   },
-  
+
   /* 
       获取滚动到筛选框时距离顶部的距离，并给reallyHeight赋值
   */
@@ -217,7 +220,7 @@ Page({
     // 如果你想要在 setData 生效后获取更新后的值，可以在 setData 的回调函数中进行操作
     this.setData({
       checkBoxResult: event.detail,
-      selectTypeTitle:event.detail
+      selectTypeTitle: event.detail
     }, () => {
       // console.log(this.data.checkBoxResult);
     });
@@ -235,7 +238,7 @@ Page({
     const [start, end] = event.detail;
     this.setData({
       date: `${this.formatDate(start)} - ${this.formatDate(end)}`,
-      selectTimePeriod:`${this.formatDate(start)} - ${this.formatDate(end)}`
+      selectTimePeriod: `${this.formatDate(start)} - ${this.formatDate(end)}`
     });
     console.log(this.data.date)
   },
@@ -250,6 +253,32 @@ Page({
       recommendSortValue: event.detail
     });
   },
+
+  /* 
+      选择服务/折扣
+  */
+  selectServiceAndDiscount(event) {
+    const index = event.currentTarget.dataset.index;
+    console.log(index)
+    this.setData({
+      activeServiceDiscountIndex: index
+    }, () => {
+      // console.log(this.data.activeServiceDiscountIndex);
+    });
+  },
+
+  /* 
+      选择价格
+  */
+ selectPrice(event) {
+  const index = event.currentTarget.dataset.index;
+  // console.log(index)
+  this.setData({
+    activeSelectPriceIndex: index
+  }, () => {
+    // console.log(this.data.activeSelectPriceIndex);
+  });
+},
 
   /**
    * 生命周期函数--监听页面加载
@@ -315,8 +344,11 @@ Page({
   onShareAppMessage() {
 
   },
-    // 分享到朋友圈
-    onShareTimeline(){
 
-    }
+  /* 
+    分享到朋友圈
+  */
+  onShareTimeline() {
+
+  }
 })

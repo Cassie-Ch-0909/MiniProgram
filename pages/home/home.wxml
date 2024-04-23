@@ -223,8 +223,24 @@
               <van-calendar title="选择时间" row-height="50" poppable="{{ false }}" show-confirm="{{ false  }}" root-portal="true" color="#FD668C" type="range" class="calendar" bind:select="onConfirm" />
             </view>
           </van-dropdown-item>
-          <van-dropdown-item value="{{ recommendSortValue }}" options="{{ recommendSortOptions }}" title="{{recommendSortValue}}"  bind:change="handleSortChange"/>
-          <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" title="筛选" />
+          <van-dropdown-item value="{{ recommendSortValue }}" options="{{ recommendSortOptions }}" title="{{recommendSortValue}}" bind:change="handleSortChange" />
+          <van-dropdown-item title="筛选" options="{{ option2 }}">
+            <view class="selectPrice">
+              <view class="title">服务/折扣</view>
+              <view class="serviceAndDiscount">
+                <view class="btn {{activeServiceDiscountIndex === '0' ? 'activeBgColor' : ''}}" bindtap="selectServiceAndDiscount" data-index="0">有票</view>
+                <view class="btn {{activeServiceDiscountIndex === '1' ? 'activeBgColor' : ''}}" bindtap="selectServiceAndDiscount" data-index="1">可选座</view>
+                <view class="btn {{activeServiceDiscountIndex === '2' ? 'activeBgColor' : ''}}" bindtap="selectServiceAndDiscount" data-index="2">折扣</view>
+              </view>
+              <view class="priceTitle">价格</view>
+              <view class="serviceAndDiscount">
+                <view class="btn {{activeSelectPriceIndex === '0' ? 'activeBgColor' : ''}}" bindtap="selectPrice" data-index="0">100以内</view>
+                <view class="btn {{activeSelectPriceIndex === '1' ? 'activeBgColor' : ''}}" bindtap="selectPrice" data-index="1">100-300</view>
+                <view class="btn {{activeSelectPriceIndex === '2' ? 'activeBgColor' : ''}}" bindtap="selectPrice" data-index="2">300-500</view>
+                <view class="btn {{activeSelectPriceIndex === '3' ? 'activeBgColor' : ''}}" bindtap="selectPrice" data-index="3">500以上</view>
+              </view>
+            </view>
+          </van-dropdown-item>
         </van-dropdown-menu>
       </view>
     </view>
