@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "performance":"./components/performance/performance"
+    "performance":"./components/performance/performance",
+    "ticket":"./components/ticket/ticket"
   },
   "navigationStyle": "custom",
   "onReachBottomDistance": 50

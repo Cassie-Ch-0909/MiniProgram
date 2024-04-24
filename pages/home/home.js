@@ -134,7 +134,102 @@ Page({
     // 服务/折扣选中的索引
     activeServiceDiscountIndex: -1,
     // 选中价格的索引
-    activeSelectPriceIndex:-1
+    activeSelectPriceIndex:-1,
+    // 本周演出scroll-x的数组
+    ticketList: [
+      {
+        img: "https://img.alicdn.com/bao/uploaded/i1/2251059038/O1CN01SwGBKy2GdSaQ78f78_!!0-item_pic.jpg",
+        title: "棱镜「多少年·多少面」2024巡回演唱会—北京站",
+        position: "华熙LIVE·五棵松",
+        price: "380",
+        time:"2024.05.11 周六 19:30"
+      },
+      {
+        img: "https://img.alicdn.com/bao/uploaded/https://img.al…51059038/O1CN01aZ35xy2GdSabqhDh8_!!2251059038.jpg",
+        title: "2024北京无限音乐节",
+        position: "北京通州区城市绿心森林公园南门(绿创空间对面)",
+        price: "380",
+        time:"2024.05.11 周六 19:30"
+      },
+      {
+        img: "https://img.alicdn.com/bao/uploaded/https://img.al…51059038/O1CN01hFwRF32GdSaOCEPTm_!!2251059038.png",
+        title: "苏有朋在多重宇宙中遇见你演唱会-北京站",
+        position: "首都体育馆",
+        price: "380",
+        time:"2024.05.11 周六 19:30"
+      },
+      {
+        img: "https://img.alicdn.com/bao/uploaded/https://img.al…51059038/O1CN01MV6J3g2GdSZ4qiOyn_!!2251059038.png",
+        title: "2024中超联赛天津津门虎主场赛事（年票）",
+        position: "天津泰达足球场",
+        price: "680",
+        time:"2024.05.11 周六 19:30"
+      },
+      {
+        img: "https://img.alicdn.com/bao/uploaded/i3/2251059038/O1CN01FT1QXb2GdSZujlBWG_!!2-item_pic.png",
+        title: "2023-2024WCBA 山西竹叶青女篮季后赛（套票）",
+        position: "山西体育中心体育馆",
+        price: "179",
+        time:"2024.05.11 周六 19:30"
+      },
+      {
+        img: "https://img.alicdn.com/bao/uploaded/i1/2251059038/O1CN01SwGBKy2GdSaQ78f78_!!0-item_pic.jpg",
+        title: "棱镜「多少年·多少面」2024巡回演唱会—北京站",
+        position: "华熙LIVE·五棵松",
+        price: "380",
+        time:"2024.05.11 周六 19:30"
+      },
+      {
+        img: "https://img.alicdn.com/bao/uploaded/https://img.al…51059038/O1CN01aZ35xy2GdSabqhDh8_!!2251059038.jpg",
+        title: "2024北京无限音乐节",
+        position: "北京通州区城市绿心森林公园南门(绿创空间对面)",
+        price: "380",
+        time:"2024.05.11 周六 19:30"
+      },
+      {
+        img: "https://img.alicdn.com/bao/uploaded/https://img.al…51059038/O1CN01hFwRF32GdSaOCEPTm_!!2251059038.png",
+        title: "苏有朋在多重宇宙中遇见你演唱会-北京站",
+        position: "首都体育馆",
+        price: "380",
+        time:"2024.05.11 周六 19:30"
+      },
+      {
+        img: "https://img.alicdn.com/bao/uploaded/https://img.al…51059038/O1CN01MV6J3g2GdSZ4qiOyn_!!2251059038.png",
+        title: "2024中超联赛天津津门虎主场赛事（年票）",
+        position: "天津泰达足球场",
+        price: "680",
+        time:"2024.05.11 周六 19:30"
+      },
+      {
+        img: "https://img.alicdn.com/bao/uploaded/i3/2251059038/O1CN01FT1QXb2GdSZujlBWG_!!2-item_pic.png",
+        title: "2023-2024WCBA 山西竹叶青女篮季后赛（套票）",
+        position: "山西体育中心体育馆",
+        price: "179",
+        time:"2024.05.11 周六 19:30"
+      },
+      {
+        img: "https://img.alicdn.com/bao/uploaded/i3/2251059038/O1CN01FT1QXb2GdSZujlBWG_!!2-item_pic.png",
+        title: "2023-2024WCBA 山西竹叶青女篮季后赛（套票）",
+        position: "山西体育中心体育馆",
+        price: "179",
+        time:"2024.05.11 周六 19:30"
+      },
+      {
+        img: "https://img.alicdn.com/bao/uploaded/i3/2251059038/O1CN01FT1QXb2GdSZujlBWG_!!2-item_pic.png",
+        title: "2023-2024WCBA 山西竹叶青女篮季后赛（套票）",
+        position: "山西体育中心体育馆",
+        price: "179",
+        time:"2024.05.11 周六 19:30"
+      },
+      {
+        img: "https://img.alicdn.com/bao/uploaded/i3/2251059038/O1CN01FT1QXb2GdSZujlBWG_!!2-item_pic.png",
+        title: "2023-2024WCBA 山西竹叶青女篮季后赛（套票）",
+        position: "山西体育中心体育馆",
+        price: "179",
+        time:"2024.05.11 周六 19:30"
+      },
+      
+    ]
   },
 
   onDropdownOpen: function () {
@@ -150,7 +245,7 @@ Page({
     // console.log(event.detail.scrollTop)
     // console.log("23", 680 - this.data.navBarHeight)
     if (event.detail.scrollTop > this.data.reallyHeight) {
-      // console.log("到啦！！！！！！！！！！！！！！")
+      console.log("到啦！！！！！！！！！！！！！！")
       this.setData({
         targetElementFixed: true
       })
@@ -174,7 +269,7 @@ Page({
             that.setData({
               reallyHeight: distanceTop
             }, () => {
-              // console.log(that.data.reallyHeight); // 在 setData 回调中输出 searchHeight 的值
+              console.log(that.data.reallyHeight); // 在 setData 回调中输出 searchHeight 的值
               resolve(); // 数据更新完成，执行 resolve
             });
           } else {
