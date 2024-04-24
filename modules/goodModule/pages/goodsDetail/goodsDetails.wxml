@@ -1,0 +1,26 @@
+<!--modules/goodModule/pages/goodsDetail/goodsDetails.wxml-->
+<view class="container">
+  <!-- 图片、名称、价格区间 -->
+  <view class="imgTitlePrice">
+    <image class="img" src="https://img.alicdn.com/bao/uploaded/i4/2251059038/O1CN01CWDYvN2GdSaVTRLQC_!!2-item_pic.png" mode="aspectFit" />
+    <view class="details">
+      <view class="title">
+        【宁波】2024中国新乡村音乐节·走进咸祥 ———— 鲜2°音乐嘉年华
+      </view>
+      <view class="info">
+        ￥<view class="price">39.90</view>
+        -￥<view class="price">99</view>
+      </view>
+    </view>
+  </view>
+  <!-- scroll-x站台轮播 -->
+  <scroll-view scroll-x="true" style="white-space: nowrap" class="scroll-x">
+    <view wx:for="{{cityPlatformList}}" wx:key="index"
+    class="everyCity {{activeCityPlatform === index ? 'activeBgColor' : ''}}" 
+    bindtap="changeActiveCityPlatform" data-indexValue="{{index}}"
+    >
+      <text>{{item.place}}</text>
+      <text class="time">{{item.time}}</text>
+    </view>
+  </scroll-view>
+</view>

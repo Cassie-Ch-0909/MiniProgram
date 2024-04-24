@@ -1,0 +1,88 @@
+/* modules/goodModule/pages/goodsDetail/goodsDetails.wxss */
+.container {
+  height: 100vh;
+  // width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  .imgTitlePrice {
+    width: 98%;
+    height: 280rpx;
+    margin-left: 1%;
+    margin-right: 1%;
+    // background-color: skyblue;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+
+    .img {
+      width: 190rpx;
+      height: 300rpx;
+    }
+
+    .details {
+      flex: 1;
+      height: 100%;
+      // background-color: pink;
+      box-sizing: border-box;
+      padding-top: 15rpx;
+      padding-bottom: 15rpx;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .info {
+        display: flex;
+        color: #FF3474;
+        font-weight: bold;
+        font-size: 26rpx;
+        align-items: center;
+
+        .price {
+          font-size: 34rpx;
+        }
+      }
+    }
+  }
+
+  .scroll-x {
+    // white-space: nowrap ; /* 防止内容换行 */
+    overflow-x: auto;
+    /* 允许横向滚动 */
+    width: 98%;
+    margin-left: 1%;
+    height: 96rpx;
+    // background-color: skyblue;
+    margin-top: 20rpx;
+    box-sizing: border-box;
+
+    .everyCity {
+      width: 300rpx;
+      height: 100%;
+      border: 3rpx solid black;
+      background-color: #fff;
+      box-sizing: border-box;
+      border-radius: 15rpx;
+      display: inline-flex; /* 使用 inline-flex，使得每个城市卡片水平排列 */
+      // display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-right: 20rpx;
+      .place {
+        font-size: 26rpx;
+        font-weight: bold;
+      }
+
+      .time {
+        font-size: 22rpx;
+        color: #C0C0C0;
+      }
+    }
+    .activeBgColor{
+      background-color: #F8F8F8;
+      border: 3rpx solid #b1afaf;
+    }
+  }
+}

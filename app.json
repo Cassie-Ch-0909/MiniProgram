@@ -50,7 +50,8 @@
       "root": "modules/goodModule",
       "name": "goodModule",
       "pages": [
-        "pages/search/search"
+        "pages/search/search",
+        "pages/goodsDetail/goodsDetails"
       ]
     }
   ],
