@@ -6,6 +6,7 @@
   flex-direction: column;
   overflow: hidden;
 
+  // 图片、名称、价格区间
   .imgTitlePrice {
     width: 98%;
     height: 280rpx;
@@ -19,6 +20,7 @@
     .img {
       width: 190rpx;
       height: 300rpx;
+      margin-right: 20rpx;
     }
 
     .details {
@@ -46,6 +48,7 @@
     }
   }
 
+  // scroll-x站台轮播
   .scroll-x {
     // white-space: nowrap ; /* 防止内容换行 */
     overflow-x: auto;
@@ -60,29 +63,174 @@
     .everyCity {
       width: 300rpx;
       height: 100%;
-      border: 3rpx solid black;
-      background-color: #fff;
+      background-color: #F8F8F8;
+      border: 3rpx solid #b1afaf;
       box-sizing: border-box;
       border-radius: 15rpx;
-      display: inline-flex; /* 使用 inline-flex，使得每个城市卡片水平排列 */
+      display: inline-flex;
+      /* 使用 inline-flex，使得每个城市卡片水平排列 */
       // display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       margin-right: 20rpx;
-      .place {
-        font-size: 26rpx;
-        font-weight: bold;
-      }
-
+      font-size: 28rpx;
+      font-weight: bold;
       .time {
         font-size: 22rpx;
         color: #C0C0C0;
+        font-weight: normal;
       }
     }
-    .activeBgColor{
-      background-color: #F8F8F8;
-      border: 3rpx solid #b1afaf;
+
+    .activeBgColor {
+      border: 3rpx solid black;
+      background-color: #fff;
+    }
+  }
+
+  // 演出时间和演出时长
+  // 演出时间和演出时长
+  .timeInfo{
+      width: 98%;
+      margin-left: 1%;
+      margin-right: 1%;
+      height: 96rpx;
+      // background-color: skyblue;
+      margin-top: 20rpx;
+      display: flex;
+      flex-direction: column;
+      border-bottom: 3rpx solid #F2F2F2;
+      .date{
+          font-size: 26rpx;
+          font-weight: bold;
+      }
+      .time{
+        font-size: 24rpx;
+        color: #868383;
+        margin-top: 5rpx;
+      }
+  }
+  .place,.things,.ten{
+    display: flex;
+    width: 98%;
+    margin-left: 1%;
+    margin-right: 1%;
+    height: 116rpx;
+    // background-color: skyblue;
+    margin-top: 20rpx;
+    border-bottom: 3rpx solid #F2F2F2;
+    justify-content: space-between;
+    .left{
+      width: 81%;
+      height: 100%;
+      // background-color: pink;
+    }
+    .place1{
+        font-size: 26rpx;
+        font-weight: bold;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .place2{
+      font-size: 24rpx;
+      color: #868383;
+      margin-top: 15rpx;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .right{
+      width: 50rpx;
+      margin-right: 50rpx;
+      height: 100rpx;
+      // background-color: pink;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: -10rpx;
+      .img{
+        width: 100rpx;
+        height: 60rpx;
+      }
+      .distance{
+        font-size: 22rpx;
+        color: #868383;
+      }
+    }
+    .infos{
+      display: flex;
+      align-items: center;
+      font-size: 24rpx;
+      .icon-dagougou{
+        color: #ACB8ED;
+      }
+      .icon-gantanhao{
+        color: #E48893;
+      }
+      .iconfont{
+        font-size: 22rpx;
+        margin-right: 10rpx;
+      }
+      .text{
+        margin-right: 30rpx;
+      }
+    }
+  }
+  .things,.ten{
+    height: 100rpx;
+    margin-top: 0;
+    border-bottom: 18rpx solid #F7F7F7;
+    .img{
+      width: 80rpx;
+      height: 80rpx;
+    }
+  }
+  .ten{
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .wantToSee{
+    width: 98%;
+    margin-left: 1%;
+    margin-right: 1%;
+    height: 300rpx;
+    // background-color: skyblue;
+    display: flex;
+    justify-content: space-between;
+    .left{
+      width: 65%;
+      height: 100%;
+      // background-color: pink;
+      display: flex;
+      flex-direction: column;
+      .people{
+        font-weight: bold;
+      }
+      .bottom{
+        font-size: 52rpx;
+        color: #FE8B40;
+        font-weight: bold;
+        width: 100%;
+        height: 100rpx;
+        // background-color: skyblue;
+        display: flex;
+        align-items: center;
+        .img{
+          width: 55rpx;
+          height: 55rpx;
+          border-radius: 50%;
+        }
+      }
+    }
+    .right{
+      flex: 1;
+      height: 100%;
+      font-size: 24rpx;
+      display: flex;
+      justify-content: flex-end;
     }
   }
 }

@@ -15,12 +15,65 @@
   </view>
   <!-- scroll-x站台轮播 -->
   <scroll-view scroll-x="true" style="white-space: nowrap" class="scroll-x">
-    <view wx:for="{{cityPlatformList}}" wx:key="index"
-    class="everyCity {{activeCityPlatform === index ? 'activeBgColor' : ''}}" 
-    bindtap="changeActiveCityPlatform" data-indexValue="{{index}}"
-    >
-      <text>{{item.place}}</text>
+    <view wx:for="{{cityPlatformList}}" wx:key="index" class="everyCity {{activeCityPlatform === index ? 'activeBgColor' : ''}}" bindtap="changeActiveCityPlatform" data-indexValue="{{index}}">
+      <text class="position">{{item.place}}</text>
       <text class="time">{{item.time}}</text>
     </view>
   </scroll-view>
+  <!-- 演出时间和演出时长 -->
+  <view class="timeInfo">
+    <view class="date">2024.05.16-05.19</view>
+    <view class="time">以现场为准</view>
+  </view>
+  <!-- 演出地点 -->
+  <view class="place">
+    <view class="left">
+      <view class="place1">福州市 | 福州海峡奥林匹克体育中心体育场福州海峡奥林匹克体育中心体育场福州海峡奥林匹克体育中心体育场</view>
+      <view class="place2">福建省福州市仓山区东陵路333号福州海峡奥体中滚福建省福州市仓山区东陵路333号福州海峡奥体中滚</view>
+    </view>
+    <view class="right">
+      <image class="img" src="/assets/home/position.png" mode="aspectFit" />
+      <text class="distance">41.1km</text>
+    </view>
+  </view>
+  <!-- 演出事项 -->
+  <view class="things">
+    <view class="infos">
+        <view class="iconfont icon-dagougou"></view>
+        <view class="text">重要通知</view>
+        <view class="iconfont icon-gantanhao"></view>
+        <view class="text">条件退</view>
+        <view class="iconfont icon-dagougou"></view>
+        <view class="text">实名制购票和入场</view>
+    </view>
+  </view>
+  <!-- 演出榜前十 -->
+  <view class="ten">
+      <image class="img" src="/assets/goodsDetails/榜单.png" mode="aspectFit"/>
+      <view style="display: flex;margin-left: 20rpx;font-size: 26rpx;">
+          演出榜单新邦<view style="color: #FF4878;font-weight: bold;">前十</view>
+      </view>
+  </view>
+  <!-- 想看人数 -->
+  <view class="wantToSee">
+      <view class="left">
+        <view class="people">想看人数</view>
+        <view class="bottom">
+            <text>251.7</text>
+            <text style="font-size: 26rpx;margin-top: 10rpx;">万人</text>
+            <image class="img" src="https://q1.itc.cn/q_70/images03/20240320/fcf023d835c54f78bac6c7efc98fbb4c.jpeg" mode="aspectFit"
+            style="margin-left:20rpx;"
+            />
+            <image class="img" src="https://q4.itc.cn/q_70/images03/20240405/39ec09deda3a41d79e03897b0fdf68a0.jpeg" mode="aspectFit"
+            style="margin-left:-15rpx;"
+            />
+            <image class="img" src="https://q5.itc.cn/q_70/images03/20240402/3a1b55723376460494a5e0011a9328a2.jpeg" mode="aspectFit"
+            style="margin-left:-15rpx;"
+            />
+        </view>
+      </view>
+      <view class="right">
+        超过99%同类演出
+      </view>
+  </view>
 </view>
