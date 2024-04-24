@@ -195,7 +195,7 @@
     <view class="findGoodPerform">
       <view class="title">发现好演出</view>
     </view>
-    <!-- 筛选 -->
+    <!-- 筛选条 -->
     <view class="target-element {{targetElementFixed ? 'targetElementFixed' : ''}}" style="top: calc({{navBarHeight}}px + 65rpx);z-index: 999;">
       <van-dropdown-menu active-color="#FE4F91">
         <van-dropdown-item title="{{selectTypeTitle}}" bind:open="onDropdownOpen">
@@ -249,6 +249,9 @@
       </van-dropdown-menu>
     </view>
     <!-- wx：for 票s -->
-    <ticket wx:for="{{ticketList}}" wx:key="index" img="{{item.img}}" title="{{item.title}}" position="{{item.position}}" time="{{item.time}}" price="{{item.price}}" class=" {{targetElementFixed ? 'marginTop' : ''}}"></ticket>
+    <view class="{{targetElementFixed ? 'ttop' : ''}}">
+      <ticket wx:for="{{ticketList}}" wx:key="index" img="{{item.img}}" title="{{item.title}}" position="{{item.position}}" time="{{item.time}}" price="{{item.price}}">
+      </ticket>
+    </view>
   </scroll-view>
 </view>
