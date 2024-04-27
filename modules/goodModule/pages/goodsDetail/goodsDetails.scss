@@ -258,11 +258,50 @@
   }
   .fixedBottom{
     width: 100%;
-    height: 130rpx;
-    background-color:skyblue;
+    height: 100rpx;
+    background-color:#fff;
     position: fixed;
     bottom: 0;
     left: 0;
     z-index: 999;
+    display: flex;
+    align-items: center;
+    .left{
+      width: 18%;
+      height: 100%;
+      // background-color: blue;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .img{
+        width: 50rpx;
+        height: 50rpx;
+      }
+    }
+    .share,.buy{
+      border: 0rpx;
+      font-size: 32rpx;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80rpx;
+    }
+    .share{
+      width: 150rpx;
+      border-radius: 40rpx;
+      background-color: #fff;
+      border: 3rpx solid #FC2D6E;
+      color: #FC2D6E;
+      margin-left: 60rpx;
+    }
+    .buy{
+      width: 300rpx;
+      border-radius: 40rpx;
+      background-color: #FC2D6E;
+      border: 3rpx solid #FC2D6E;
+      color: #fff;
+      margin-left: 70rpx;
+    }
   }
 }

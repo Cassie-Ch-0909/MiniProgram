@@ -96,6 +96,11 @@
   </view>
   <!-- 底部特惠购买 -->
   <view class="fixedBottom">
-    432343
+    <view class="left">
+        <image class="img" src="/assets/goodsDetails/爱心 (1).png" mode="aspectFill"/>
+        <view style="font-size: 23rpx;">想看</view>
+    </view>
+    <view class="share">分享</view>
+    <view class="buy">特惠购买</view>
   </view>
 </scroll-view>
