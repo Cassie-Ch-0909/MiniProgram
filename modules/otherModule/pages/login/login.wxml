@@ -1,2 +1,20 @@
 <!--modules/otherModule/pages/login/login.wxml-->
-<text>modules/otherModule/pages/login/login.wxml</text>
+<view class="box">
+  <view class="country">
+    <view>国家/地区</view>
+    <view class="area">
+      +86
+      <view class="iconfont icon-youjiantou"></view>
+    </view>
+  </view>
+  <view class="phoneNumber">
+    <input type="text" placeholder="请输入手机号" />
+  </view>
+  <view class="verificationCode">
+    <input type="text" placeholder="输入短信校验码" />
+    <button class="btn">获取校验码</button>
+  </view>
+  <view class="confirm">
+    确定
+  </view>
+</view>
