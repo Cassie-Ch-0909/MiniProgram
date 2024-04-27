@@ -1,9 +1,14 @@
 //app.js
+// import { toast } from './utils/extendApi'
+import './utils/extendApi'
 App({
   onLaunch: function () {
     this.setNavBarInfo()
   },
 
+  /* 
+      全局共享的数据
+  */
   globalData: {
     //全局数据管理
     navBarHeight: 0, // 导航栏高度
@@ -25,5 +30,31 @@ App({
     this.globalData.menuBotton = menuButtonInfo.top - systemInfo.statusBarHeight;
     this.globalData.menuRight = systemInfo.screenWidth - menuButtonInfo.right;
     this.globalData.menuHeight = menuButtonInfo.height;
+  },
+
+  /* 
+      全局共享方法
+  */
+  setToken(token) {
+    // 如果想获取token，可以使用this的方式进行获取
+    this.globalData.token = token
+  },
+
+  onShow() {
+    // wx.showToast({
+    //   // 提示的内容
+    //   title: "消息提示框",
+    //   // 提示的图标
+    //   // success成功 error失败 loading加载 none不显示任何图标
+    //   icon: 'success',
+    //   // 提示延迟的时间
+    //   duration: 2000,
+    //   // 是否显示透明蒙层，防止触摸穿透
+    //   mask: true
+    // })
+    wx.toast({
+      title: "数据加载完毕...",
+      icon: "success"
+    })
   }
 })
