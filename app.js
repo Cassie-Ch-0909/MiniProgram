@@ -40,7 +40,7 @@ App({
     this.globalData.token = token
   },
 
-  onShow() {
+  async onShow() {
     // wx.showToast({
     //   // 提示的内容
     //   title: "消息提示框",
@@ -52,9 +52,17 @@ App({
     //   // 是否显示透明蒙层，防止触摸穿透
     //   mask: true
     // })
-    wx.toast({
-      title: "数据加载完毕...",
-      icon: "success"
+
+    //  ***********************
+    // wx.toast({
+    //   title: "数据加载完毕...",
+    //   icon: "success"
+    // })
+
+    const res = await wx.modal({
+      title: "新的提示",
+      // showCancel: false
     })
+    console.log(res)
   }
 })
