@@ -53,6 +53,13 @@
         "pages/search/search",
         "pages/goodsDetail/goodsDetails"
       ]
+    },
+    {
+      "root": "modules/otherModule",
+      "name": "otherModule",
+      "pages": [
+        "pages/login/login"
+      ]
     }
   ],
   "preloadRule": {
