@@ -1,8 +1,8 @@
 //app.js
 // import { toast } from './utils/extendApi'
 import './utils/extendApi'
-import {setStorage ,getStorage,removeStorage,clearStorage}
-from './utils/storage'
+import { asyncSetStorage, asyncGetStorage, asyncRemoveStorage, asyncClearStorage }
+  from './utils/storage'
 App({
   onLaunch: function () {
     this.setNavBarInfo()
@@ -73,5 +73,21 @@ App({
     // console.log(name)
     // removeStorage('name')
     // clearStorage()
+
+    // asyncSetStorage('name','Cassie燁').then(res=>{
+    //   console.log(res)
+    // })
+
+    // asyncGetStorage('name').then(res=>{
+    //   console.log(res.data)
+    // })
+
+    // asyncRemoveStorage('name').then(res=>{
+    //   console.log(res)
+    // })
+
+    // asyncClearStorage().then(res => {
+    //   console.log(res)
+    // })
   }
 })
