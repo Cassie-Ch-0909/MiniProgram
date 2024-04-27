@@ -1,6 +1,8 @@
 //app.js
 // import { toast } from './utils/extendApi'
 import './utils/extendApi'
+import {setStorage ,getStorage,removeStorage,clearStorage}
+from './utils/storage'
 App({
   onLaunch: function () {
     this.setNavBarInfo()
@@ -59,10 +61,17 @@ App({
     //   icon: "success"
     // })
 
-    const res = await wx.modal({
-      title: "新的提示",
-      // showCancel: false
-    })
-    console.log(res)
+    // const res = await wx.modal({
+    //   title: "新的提示",
+    //   // showCancel: false
+    // })
+    // console.log(res)
+
+
+    // setStorage('name','Cassie燁')
+    // const name = getStorage('name')
+    // console.log(name)
+    // removeStorage('name')
+    // clearStorage()
   }
 })
