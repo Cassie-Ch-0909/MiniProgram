@@ -1,6 +1,6 @@
 <!--pages/home/components/ticket/ticket.wxml-->
 <view class="box">
-    <image class="img" src="{{img}}" mode="aspectFit"/>
+    <image class="img" src="{{img}}" mode="aspectFill"/>
     <view class="details">
         <view class="title">
           {{title}}
