@@ -1,5 +1,5 @@
 <!--modules/goodModule/pages/goodsDetail/goodsDetails.wxml-->
-<view class="container">
+<scroll-view scroll-y="true" class="container">
   <!-- 图片、名称、价格区间 -->
   <view class="imgTitlePrice">
     <image class="img" src="https://img.alicdn.com/bao/uploaded/i4/2251059038/O1CN01CWDYvN2GdSaVTRLQC_!!2-item_pic.png" mode="aspectFit" />
@@ -39,41 +39,63 @@
   <!-- 演出事项 -->
   <view class="things">
     <view class="infos">
-        <view class="iconfont icon-dagougou"></view>
-        <view class="text">重要通知</view>
-        <view class="iconfont icon-gantanhao"></view>
-        <view class="text">条件退</view>
-        <view class="iconfont icon-dagougou"></view>
-        <view class="text">实名制购票和入场</view>
+      <view class="iconfont icon-dagougou"></view>
+      <view class="text">重要通知</view>
+      <view class="iconfont icon-gantanhao"></view>
+      <view class="text">条件退</view>
+      <view class="iconfont icon-dagougou"></view>
+      <view class="text">实名制购票和入场</view>
     </view>
   </view>
   <!-- 演出榜前十 -->
   <view class="ten">
-      <image class="img" src="/assets/goodsDetails/榜单.png" mode="aspectFit"/>
-      <view style="display: flex;margin-left: 20rpx;font-size: 26rpx;">
-          演出榜单新邦<view style="color: #FF4878;font-weight: bold;">前十</view>
-      </view>
+    <image class="img" src="/assets/goodsDetails/榜单.png" mode="aspectFit" />
+    <view style="display: flex;margin-left: 20rpx;font-size: 26rpx;">
+      演出榜单新邦<view style="color: #FF4878;font-weight: bold;">前十</view>
+    </view>
   </view>
   <!-- 想看人数 -->
   <view class="wantToSee">
-      <view class="left">
-        <view class="people">想看人数</view>
-        <view class="bottom">
-            <text>251.7</text>
-            <text style="font-size: 26rpx;margin-top: 10rpx;">万人</text>
-            <image class="img" src="https://q1.itc.cn/q_70/images03/20240320/fcf023d835c54f78bac6c7efc98fbb4c.jpeg" mode="aspectFit"
-            style="margin-left:20rpx;"
-            />
-            <image class="img" src="https://q4.itc.cn/q_70/images03/20240405/39ec09deda3a41d79e03897b0fdf68a0.jpeg" mode="aspectFit"
-            style="margin-left:-15rpx;"
-            />
-            <image class="img" src="https://q5.itc.cn/q_70/images03/20240402/3a1b55723376460494a5e0011a9328a2.jpeg" mode="aspectFit"
-            style="margin-left:-15rpx;"
-            />
-        </view>
+    <view class="left">
+      <view class="people">想看人数</view>
+      <view class="bottom">
+        <text>251.7</text>
+        <text style="font-size: 26rpx;margin-top: 10rpx;">万人</text>
+        <image class="img" src="https://q1.itc.cn/q_70/images03/20240320/fcf023d835c54f78bac6c7efc98fbb4c.jpeg" mode="aspectFit" style="margin-left:20rpx;" />
+        <image class="img" src="https://q4.itc.cn/q_70/images03/20240405/39ec09deda3a41d79e03897b0fdf68a0.jpeg" mode="aspectFit" style="margin-left:-15rpx;" />
+        <image class="img" src="https://q5.itc.cn/q_70/images03/20240402/3a1b55723376460494a5e0011a9328a2.jpeg" mode="aspectFit" style="margin-left:-15rpx;" />
       </view>
-      <view class="right">
-        超过99%同类演出
-      </view>
+    </view>
+    <view class="right">
+      超过99%同类演出
+    </view>
   </view>
-</view>
+  <!-- 观演须知 -->
+  <view class="needKnow">
+    <view class="title">观演须知</view>
+    <view class="care">
+      <view>
+        <view>演出时长</view>
+        <view class="bom">约240分钟，以现场为...</view>
+      </view>
+      <view>
+        <view>入场时间</view>
+        <view class="bom">请于演出前约30分钟入场</view>
+      </view>
+    </view>
+    <view class="care">
+      <view>
+        <view>禁止携带物品</view>
+        <view class="bom">由于安保和版权的原因...</view>
+      </view>
+      <view>
+        <view>寄存说明</view>
+        <view class="bom">有寄存处，具体位置请联...</view>
+      </view>
+    </view>
+  </view>
+  <!-- 底部特惠购买 -->
+  <view class="fixedBottom">
+    432343
+  </view>
+</scroll-view>
