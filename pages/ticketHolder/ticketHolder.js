@@ -1,4 +1,5 @@
 // pages/ticketHolder/ticketHolder.js
+import instance from '../../utils/request'
 Page({
 
   /**
@@ -6,6 +7,23 @@ Page({
    */
   data: {
 
+  },
+
+  async handler() {
+    // 第一种调用方法，.then的方式进行调用
+    instance.request({
+      url: 'https://gmall-prod.atguigu.cn/mall-api/index/findBanner',
+      method: "GET"
+    }).then((res) => {
+      console.log(res)
+    })
+
+    // 第二种调用方式，async和await的方式进行调用
+    const res = await instance.request({
+      url: 'https://gmall-prod.atguigu.cn/mall-api/index/findBanner',
+      method: "GET"
+    })
+    console.log(res)
   },
 
   /**

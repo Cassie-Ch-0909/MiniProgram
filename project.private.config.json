@@ -10,7 +10,7 @@
       "list": [
         {
           "name": "",
-          "pathName": "modules/goodModule/pages/selectTicketFile/selectTicketFile",
+          "pathName": "pages/ticketHolder/ticketHolder",
           "query": "",
           "launchMode": "default",
           "scene": null
