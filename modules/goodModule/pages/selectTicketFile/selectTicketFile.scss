@@ -1,0 +1,128 @@
+/* modules/goodModule/pages/selectTicketFile/selectTicketFile.wxss */
+.box {
+  width: 100%;
+  height: 100vh;
+
+  .top {
+    width: 100%;
+    height: 200rpx;
+    background-color: #FF6285;
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+    box-sizing: border-box;
+    color: #fff;
+
+    .place {
+      font-size: 24rpx;
+      margin-top: 15rpx;
+    }
+  }
+
+  .venue {
+    width: 100%;
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+    box-sizing: border-box;
+    margin-top: 20rpx;
+
+    .venueTitle {
+      display: flex;
+      font-size: 27rpx;
+      margin-bottom: 20rpx;
+
+      .desc {
+        color: grey;
+        margin-left: 20rpx;
+      }
+    }
+
+    .canSelect {
+      margin-top: 20rpx;
+      width: 500rpx;
+      height: 80rpx;
+      background-color: #F6F7F9;
+      border: 2rpx solid #E9EAEA;
+      border-radius: 10rpx;
+      display: flex;
+      // justify-content: center;
+      align-items: center;
+      padding-left: 20rpx;
+      box-sizing: border-box;
+      font-size: 27rpx;
+      position: relative;
+
+      .hotpink {
+        width: 60rpx;
+        height: 30rpx;
+        border: 1px solid #FF6FC1;
+        position: absolute;
+        bottom: 20rpx;
+        right: 60rpx;
+        font-size: 20rpx;
+        color: #FF6FC1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10rpx;
+      }
+    }
+
+    .activeSelectSession {
+      border: 2rpx solid black;
+      background-color: #fff;
+    }
+  }
+
+  .ticketFile {
+    width: 100%;
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+    box-sizing: border-box;
+    margin-top: 20rpx;
+
+    .ticketFileTitle {
+      display: flex;
+      font-size: 27rpx;
+      margin-top: 50rpx;
+      margin-bottom: 20rpx;
+    }
+    .selectTicketFile{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .every{
+      margin-right: 50rpx;
+      width: 300rpx;
+      margin-top: 20rpx;
+      height: 80rpx;
+      background-color: #F6F7F9;
+      border: 2rpx solid #E9EAEA;
+      border-radius: 10rpx;
+      display: flex;
+      // justify-content: center;
+      align-items: center;
+      padding-left: 20rpx;
+      box-sizing: border-box;
+      font-size: 27rpx;
+      position: relative;
+      .selectSite {
+        width: 70rpx;
+        height: 30rpx;
+        border: 1px solid #FF6FC1;
+        position: absolute;
+        bottom: 20rpx;
+        right: 30rpx;
+        font-size: 20rpx;
+        color: #FF6FC1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10rpx;
+      }
+    }
+    .activeSelectTicketFile {
+      border: 2rpx solid black;
+      background-color: #fff;
+    }
+  }
+}

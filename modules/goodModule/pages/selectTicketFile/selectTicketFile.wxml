@@ -1,0 +1,42 @@
+<!--modules/goodModule/pages/selectTicketFile/selectTicketFile.wxml-->
+<view class="box">
+  <view class="top">
+    <view class="concertName">
+      【宁波】2024中国新乡村音乐节 走进咸祥 ———— 鲜2°音乐嘉年华
+    </view>
+    <view class="place">
+      宁波市|宁波市鄞州区·实力填海·现象批示（中国现象行囧哥飞行营地动力）
+    </view>
+  </view>
+  <!-- 场次 -->
+  <view class="venue">
+    <view class="venueTitle">
+      场次
+      <view class="desc">
+        场次时间均为演出当地时间
+      </view>
+    </view>
+    <view wx:for="{{selectSession}}" wx:key="index" data-id="{{index}}" bind:tap="changeActiveSelectSessionIndex" class="canSelect {{activeSelectSessionIndex == index ? 'activeSelectSession' : ''}}">
+      {{item.time}}
+      <view class="hotpink">
+        售票
+      </view>
+    </view>
+  </view>
+  <!-- 票档 -->
+  <view class="ticketFile">
+    <view class="ticketFileTitle">
+      票档
+    </view>
+    <view class="selectTicketFile">
+      <view wx:for="{{ticketFileList}}" wx:key="index" data-id="{{index}}" bind:tap="changeActiveSelectTicketFileIndex" class="every {{activeSelectTicketFileIndex == index ? 'activeSelectTicketFile' : ''}}">
+        <view class="value">
+          {{item.value}}
+          <view class="selectSite">
+            可选座
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

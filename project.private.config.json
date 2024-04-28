@@ -10,7 +10,7 @@
       "list": [
         {
           "name": "",
-          "pathName": "modules/goodModule/pages/starHome/starHome",
+          "pathName": "modules/goodModule/pages/selectTicketFile/selectTicketFile",
           "query": "",
           "launchMode": "default",
           "scene": null
