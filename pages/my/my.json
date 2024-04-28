@@ -1,7 +1,4 @@
 {
   "usingComponents": {},
-  "navigationBarTitleText": "weixin",
-  "navigationBarBackgroundColor": "#fff",
-  "navigationBarTextStyle": "black",
-  "backgroundTextStyle": "dark"
+  "navigationStyle": "custom"
 }

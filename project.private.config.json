@@ -10,7 +10,7 @@
       "list": [
         {
           "name": "",
-          "pathName": "modules/otherModule/pages/login/login",
+          "pathName": "pages/my/my",
           "query": "",
           "launchMode": "default",
           "scene": null
