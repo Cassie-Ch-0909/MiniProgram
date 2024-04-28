@@ -51,7 +51,8 @@
       "name": "goodModule",
       "pages": [
         "pages/search/search",
-        "pages/goodsDetail/goodsDetails"
+        "pages/goodsDetail/goodsDetails",
+        "pages/starHome/starHome"
       ]
     },
     {

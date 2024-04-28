@@ -1,0 +1,88 @@
+<!--modules/goodModule/pages/starHome/starHome.wxml-->
+<scroll-view scroll-y="true" class="box">
+  <!-- 明星海报 -->
+  <view class="posters">
+    <image class="img" src="https://intercms.damai.cn/artist/pic/1684752526102/1684752526102-main.jpg?x-oss-process=image/resize,w_1200/format,webp" mode="aspectFill" />
+    <view class="introduce">
+      <image class="img" src="https://intercms.damai.cn/artist/pic/1684752526102/1684752526102-main.jpg?x-oss-process=image/resize,w_1200/format,webp" mode="aspectFit" />
+      <view class="starInfo">
+        <view class="starName">薛之谦</view>
+        <view class="starFansAndShows">
+          <view class="fans">1763.2万粉丝</view>
+          <view class="shows">
+            <view class="num">6场</view>在售演出
+          </view>
+        </view>
+      </view>
+      <view class="follow">
+        <view class="addFollow">
+          +关注
+        </view>
+        <!-- <view class="alreadyFollow">
+          已关注
+        </view> -->
+      </view>
+    </view>
+  </view>
+  <!-- 2024最新演出动向一网打尽 -->
+  <view class="sentence">
+    <image class="img" src="/assets/star/远点.png" mode="" />
+    <view class="year">2024</view>
+    <view class="content">最新演出动向一网打尽</view>
+  </view>
+  <!-- 演唱会场次 -->
+  <view class="concert">
+    <view class="top">
+      <image src="https://intercms.damai.cn/ip/pic/1676340999701/1676340999701-main.jpg?x-oss-process=image/resize,w_320,h_320/quality,Q_75/format,webp" class="img" mode="aspectFill" />
+      <view class="concertInfos">
+        <view class="concertName">
+          薛之谦“天外来物”巡回演唱会
+        </view>
+        <view class="citys">
+          2个城市巡演中
+          2个城市筹备中
+        </view>
+        <view class="star">
+          <view class="number">1475.7万</view>
+          人想看
+        </view>
+      </view>
+    </view>
+    <view class="bottom">
+      <view class="every">
+          <view class="cityName">太原</view>
+          <view class="time">05.6-06.02</view>
+          <view class="status">缺货登记</view>
+      </view>
+      <view class="every">
+          <view class="cityName">太原</view>
+          <view class="time">05.6-06.02</view>
+          <view class="status">缺货登记</view>
+      </view>
+      <view class="every">
+          <view class="cityName">太原</view>
+          <view class="time">05.6-06.02</view>
+          <view class="status">缺货登记</view>
+      </view>
+      <view class="every">
+          <view class="cityName">太原</view>
+          <view class="time">05.6-06.02</view>
+          <view class="status">缺货登记</view>
+      </view>
+      <view class="every">
+          <view class="cityName">太原</view>
+          <view class="time">05.6-06.02</view>
+          <view class="status">缺货登记</view>
+      </view>
+      <view class="every">
+          <view class="cityName">太原</view>
+          <view class="time">05.6-06.02</view>
+          <view class="status">缺货登记</view>
+      </view>
+      <view class="every">
+          <view class="add">+</view>
+          <view class="time">求加场</view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
