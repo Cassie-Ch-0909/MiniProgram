@@ -35,7 +35,8 @@ class WxRequest {
     // 注意：需要先和并完成的请求地址(baseURL+url)
     options.url = this.defaults.baseURL + options.url
     // 合并请求参数
-    options = {...this.defaults,...options}
+    options = { ...this.defaults, ...options }
+    console.log(options)
 
     // 需要使用promise封装wx.request，处理异步请求
     // resolve() 和 reject() 是 Promise 对象中的两个重要方法，它们用于改变 Promise 对象的状态并传递相应的结果或错误信息。
@@ -58,6 +59,44 @@ class WxRequest {
         }
       })
     })
+  }
+
+  /* 
+      封装GET实例方法
+  */
+  get(url, data = {}, config = {}) {
+    //  需要调用request请求方法发送请求，只需要组织好参数，传递给request请求方法即可
+    // 当调用get方法时，需要将request方法的返回值return出去
+    return this.request(Object.assign({
+      url, data, method: 'GET'
+    }, config))
+  }
+
+  /* 
+      封装DELETE实例方法
+  */
+  delete(url, data = {}, config = {}) {
+    return this.request(Object.assign({
+      url, data, method: 'DELETE'
+    }, config))
+  }
+
+  /* 
+      封装POST实例方法
+  */
+  post(url, data = {}, config = {}) {
+    return this.request(Object.assign({
+      url, data, method: 'POST'
+    }, config))
+  }
+
+  /* 
+      封装PUT实例方法
+  */
+  put(url, data = {}, config = {}) {
+    return this.request(Object.assign({
+      url, data, method: 'PUT'
+    }, config))
   }
 }
 
