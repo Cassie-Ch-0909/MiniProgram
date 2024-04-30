@@ -63,12 +63,12 @@ class WxRequest {
         ...options,
         // 当接口调用成功时会触发success回调函数, 使用 resolve 返回成功的结果
         success: (res) => {
-          const mergeRes = Object.assign({}, res, { config: options })
+          const mergeRes = Object.assign({}, res, { config: options, isSuccess: true })
           resolve(this.interceptors.response(mergeRes))
         },
         // 当接口调用失败时会触发fail回调函数, 使用 reject 返回错误信息。
         fail: (err) => {
-          const mergeErr = Object.assign({}, err, { config: options })
+          const mergeErr = Object.assign({}, err, { config: options, isSuccess: false })
           resolve(this.interceptors.response(mergeErr))
           reject(err)
         }
@@ -122,8 +122,22 @@ instance.interceptors.request = (config) => {
 
 // 配置响应拦截器
 instance.interceptors.response = (response) => {
+  // 从response中解构isSuccess
+  const { isSuccess,data } = response
+  // 如果isSuccess为false,说明执行了fail回调函数
+  // 这时候就说明网络异常,需要给用户提示网络异常
+  if (!isSuccess) {
+    wx.showToast({
+      title: '网络异常请重试',
+      icon: 'error'
+    })
+    return response
+  }
   // 对服务器响应数据做点什么......
-  return response
+  // console.log(response)
+  // 如果网络请求执行成功到这里,那么我们直接把data进行返回即可
+  // return response
+  return data
 }
 
 // 将WxRequest实例暴露出去，方便在其他文件中进行使用

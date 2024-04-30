@@ -25,7 +25,7 @@ Page({
     // })
     // console.log(res)
 
-    const res = await instance.get('/index/findBanner', { test: 111 }, { timeout: 20000 })
+    const res = await instance.get('/index/findBanner')
     console.log(res)
   },
 
