@@ -2,11 +2,43 @@
 // 通过类的方式来进行封装，会让代码更加具有复用性
 // 也可以方便添加新的属性和方法
 class WxRequest {
+
+  // 定义实例属性，用来设置默认请求参数
+  defaults = {
+    // 请求基地址
+    baseURL: '',
+    // 请求路径
+    url: '',
+    // 请求参数
+    data: null,
+    // 默认的请求方法
+    method: 'GET',
+    // 请求头
+    header: {
+      // 设置数据的交互格式
+      'Content-type': 'application/json'
+    },
+    // 默认的超时时长，小程序默认的超时时长是1分钟
+    timeout: 60000
+  }
+
   // 用于创建和初始化类的属性和方法
-  constructor() { }
+  // 在实例化时传入的参数，会被constructor形参进行接收
+  constructor(params = {}) {
+    // 从右往左 params覆盖this.defaults，再将this.defaults和{}进行合并
+    // 通过Object.assign方法合并请求参数 注意：需要传入的参数，覆盖默认的参数，因此传入的参数需要放到最后
+    this.defaults = Object.assign({}, this.defaults, params)
+  }
   // request 实例方法接收一个对象类型的参数
   // 属性值和wx.request方法调用时传递的参数保持一致
   request(options) {
+
+    // 注意：需要先合并完成的请求地址 baseURL+url
+    options.url = this.defaults.baseURL + options.url
+
+    // 合并请求参数
+    options = { ...this.defaults, ...options }
+
     // 需要使用Promise封装wx.request处理异步请求
     return new Promise((resolve, reject) => {
       wx.request({
@@ -26,6 +58,10 @@ class WxRequest {
 }
 
 // 对WxRequest进行实例化
-const instance = new WxRequest()
+// 现在会执行 constructor 中的代码
+const instance = new WxRequest({
+  baseURL: 'https://gmall-prod.atguigu.cn/mall-api',
+  timeout: 15000
+})
 // 将WxRequest实例暴露出去，方便在其他文件中进行使用
 export default instance
