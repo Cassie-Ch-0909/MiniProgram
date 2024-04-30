@@ -1,5 +1,5 @@
 // pages/ticketHolder/ticketHolder.js
-import instance from '../../utils/request'
+import instance from '../../utils/http'
 Page({
 
   /**
