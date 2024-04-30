@@ -25,7 +25,7 @@ Page({
     // })
     // console.log(res)
 
-    const res = await instance.get('/index/findBanner')
+    const res = await instance.get('/cart/getCartList2222')
     console.log(res)
   },
 

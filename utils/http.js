@@ -1,5 +1,6 @@
 import WxRequest from './request'
-import { getStorage } from './storage'
+import { getStorage, clearStorage } from './storage'
+import {modal,toast} from './extendApi'
 // 对WxRequest进行实例化
 // 现在会执行 constructor 中的代码
 const instance = new WxRequest({
@@ -22,7 +23,7 @@ instance.interceptors.request = (config) => {
 }
 
 // 配置响应拦截器
-instance.interceptors.response = (response) => {
+instance.interceptors.response = async (response) => {
   // 从response中解构isSuccess
   const { isSuccess, data } = response
   // 如果isSuccess为false,说明执行了fail回调函数
@@ -36,6 +37,35 @@ instance.interceptors.response = (response) => {
   }
   // 对服务器响应数据做点什么......
   // console.log(response)
+
+  // 判断服务器响应的业务状态码
+  switch (data.code) {
+    // 如果后端返回的业务状态码等于200,说明请求成功,服务器成功响应了数据
+    case 200:
+      // 对服务器响应数据做点什么......
+      return data
+    // 如果返回的业务状态码等于208,说明没有token,或者token失效
+    // 就需要让用户登录或者重新登陆
+    case 208:
+      const res = await modal({
+        content: "鉴权失败,请重新登录",
+        showCancel: false // 不显示取消按钮
+      })
+      if (res) {
+        // 消除之前失效的token,同时需要清除本地存储的全部信息
+        clearStorage()
+        wx.navigateTo({
+          url: '/modules/otherModule/pages/login/login',
+        })
+      }
+      return Promise.reject(response)
+    default:
+      toast({
+        title: "程序出现异常,请联系客服或稍后重试"
+      })
+      return Promise.reject(response)
+  }
+
   // 如果网络请求执行成功到这里,那么我们直接把data进行返回即可
   // return response
   return data
