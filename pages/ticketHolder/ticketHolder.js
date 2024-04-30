@@ -29,6 +29,23 @@ Page({
     console.log(res)
   },
 
+  handler1() {
+    wx.request({
+      url: 'https://gmall-prod.atguigu.cn/mall-api/index/findBanner888',
+      method: 'GET',
+      success: (res) => {
+        // 在使用wx.request发送请求时，只要成功接收到服务器返回的结果
+        // 无论statusCode状态码是多少，都会执行success
+        // 开发者需要根据业务逻辑，自己来进行相关的判断处理
+        console.log('虽然接口出错了，但是我依然会走success')
+        console.log(res)
+      },
+      fail: (err) => {
+        console.log(err)
+      }
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
