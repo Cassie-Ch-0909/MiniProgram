@@ -19,10 +19,13 @@ Page({
     // })
 
     // 第二种调用方式，async和await的方式进行调用
-    const res = await instance.request({
-      url: '/index/findBanner',
-      method: "GET"
-    })
+    // const res = await instance.request({
+    //   url: '/index/findBanner',
+    //   method: "GET"
+    // })
+    // console.log(res)
+
+    const res = await instance.get('/index/findBanner', { test: 111 }, { timeout: 20000 })
     console.log(res)
   },
 

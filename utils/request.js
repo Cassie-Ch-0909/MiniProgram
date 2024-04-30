@@ -39,6 +39,8 @@ class WxRequest {
     // 合并请求参数
     options = { ...this.defaults, ...options }
 
+    console.log(options)
+
     // 需要使用Promise封装wx.request处理异步请求
     return new Promise((resolve, reject) => {
       wx.request({
@@ -54,6 +56,36 @@ class WxRequest {
         }
       })
     })
+  }
+
+  /* 
+      封装GET实例方法
+  */
+  get(url, data = {}, config = {}) {
+    // 需要调用request请求方法发送请求，只需要组织好参数，传递给request请求方法即可
+    //  当调用get方法时，需要将request方法的返回值return出去
+    return this.request(Object.assign({ url, data, method: 'GET' }, config))
+  }
+
+  /* 
+      封装POST实例方法
+  */
+  post(url, data = {}, config = {}) {
+    return this.request(Object.assign({ url, data, method: 'POST' }, config))
+  }
+
+  /* 
+      封装DELETE实例方法
+  */
+  delete(url, data = {}, config = {}) {
+    return this.request(Object.assign({ url, data, method: 'DELETE' }, config))
+  }
+
+  /* 
+    封装PUT实例方法
+  */
+  put(url, data = {}, config = {}) {
+    return this.request(Object.assign({ url, data, method: 'PUT' }, config))
   }
 }
 
