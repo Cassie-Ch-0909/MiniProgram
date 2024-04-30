@@ -46,6 +46,19 @@ Page({
     })
   },
 
+  async allHandler() {
+    // 演示通过async和await方式同时发起多个请求
+    // async和await能够控制异步任务以同步的流程来执行
+    // await instance.get('/index/findBanner')
+    // await instance.get('/index/findCategory1')
+    // await instance.get('/index/findBanner')
+    // await instance.get('/index/findCategory1')
+
+    // 演示通过Promise.all同时发起多个请求
+    // Promise.all 能够将多个请求同时进行发送
+    await Promise.all([instance.get('/index/findBanner'),instance.get('/index/findCategory1'),instance.get('/index/findBanner'),instance.get('/index/findCategory1')])
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
