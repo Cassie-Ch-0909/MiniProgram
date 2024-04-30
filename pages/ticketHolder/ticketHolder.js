@@ -25,7 +25,7 @@ Page({
     // })
     // console.log(res)
 
-    const res = await instance.get('/cart/getCartList2222')
+    const res = await instance.get('/cart/getCartList')
     console.log(res)
   },
 
@@ -56,7 +56,9 @@ Page({
 
     // 演示通过Promise.all同时发起多个请求
     // Promise.all 能够将多个请求同时进行发送
-    await Promise.all([instance.get('/index/findBanner'),instance.get('/index/findCategory1'),instance.get('/index/findBanner'),instance.get('/index/findCategory1')])
+    // await Promise.all([instance.get('/index/findBanner'),instance.get('/index/findCategory1'),instance.get('/index/findBanner'),instance.get('/index/findCategory1')])
+    const res = await instance.all(instance.get('/index/findBanner'),instance.get('/index/findCategory1'),instance.get('/index/findBanner'),instance.get('/index/findCategory1'))
+    console.log(res)
   },
 
   /**

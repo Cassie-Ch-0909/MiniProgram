@@ -51,6 +51,9 @@ class WxRequest {
     // 合并请求参数
     options = { ...this.defaults, ...options }
 
+    // 在请求发送之前,添加loading效果
+    wx.showLoading()
+
     // console.log(options)
 
     // 在请求发送之前，调用请求拦截器，新增和修改请求参数
@@ -71,6 +74,11 @@ class WxRequest {
           const mergeErr = Object.assign({}, err, { config: options, isSuccess: false })
           resolve(this.interceptors.response(mergeErr))
           reject(err)
+        },
+        // 接口调用结束的回调函数(调用成功 失败都会执行)
+        complete: () => {
+          // 不管请求是成功还是失败,都需要隐藏loading
+          wx.hideLoading()
         }
       })
     })
@@ -104,6 +112,16 @@ class WxRequest {
   */
   put(url, data = {}, config = {}) {
     return this.request(Object.assign({ url, data, method: 'PUT' }, config))
+  }
+
+  /* 
+    封装all方法用来处理并发请求
+  */
+  all(...promise) {
+    console.log(promise)
+    //  通过展开运算符接受传递的参数
+    // 那么展开运算符会将传入的参数转成数组
+    return Promise.all(promise)
   }
 }
 
