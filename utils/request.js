@@ -22,6 +22,18 @@ class WxRequest {
     timeout: 60000
   }
 
+  // 定义拦截器对象
+  // 需要包含请求拦截器以及响应拦截器，方便在请求之前以及相应之后进行逻辑处理
+  interceptors = {
+    // 请求拦截器
+    // 在请求发送之前，对请求参数进行新增或者修改
+    request: (config) => config,
+
+    // 响应拦截器
+    // 在服务器响应数据以后，对服务器响应的数据进行逻辑处理
+    response: (response) => response
+  }
+
   // 用于创建和初始化类的属性和方法
   // 在实例化时传入的参数，会被constructor形参进行接收
   constructor(params = {}) {
@@ -39,7 +51,10 @@ class WxRequest {
     // 合并请求参数
     options = { ...this.defaults, ...options }
 
-    console.log(options)
+    // console.log(options)
+
+    // 在请求发送之前，调用请求拦截器，新增和修改请求参数
+    options = this.interceptors.request(options)
 
     // 需要使用Promise封装wx.request处理异步请求
     return new Promise((resolve, reject) => {
@@ -48,10 +63,13 @@ class WxRequest {
         ...options,
         // 当接口调用成功时会触发success回调函数, 使用 resolve 返回成功的结果
         success: (res) => {
-          resolve(res)
+          const mergeRes = Object.assign({}, res, { config: options })
+          resolve(this.interceptors.response(mergeRes))
         },
         // 当接口调用失败时会触发fail回调函数, 使用 reject 返回错误信息。
         fail: (err) => {
+          const mergeErr = Object.assign({}, err, { config: options })
+          resolve(this.interceptors.response(mergeErr))
           reject(err)
         }
       })
@@ -95,5 +113,18 @@ const instance = new WxRequest({
   baseURL: 'https://gmall-prod.atguigu.cn/mall-api',
   timeout: 15000
 })
+
+// 配置请求拦截器
+instance.interceptors.request = (config) => {
+  // 在请求发送之前做点什么......
+  return config
+}
+
+// 配置响应拦截器
+instance.interceptors.response = (response) => {
+  // 对服务器响应数据做点什么......
+  return response
+}
+
 // 将WxRequest实例暴露出去，方便在其他文件中进行使用
 export default instance
