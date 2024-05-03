@@ -201,17 +201,17 @@
         <van-dropdown-item title="{{selectTypeTitle}}" bind:open="onDropdownOpen">
           <view class="type">
             <van-checkbox-group value="{{ checkBoxResult }}" bind:change="onChange">
-              <van-checkbox name="音乐现场" label-position="left" icon-size="16px" checked-color="#FC4A89">
-                音乐现场</van-checkbox>
-              <van-checkbox name="音乐会" label-position="left" icon-size="16px" checked-color="#FC4A89">音乐会</van-checkbox>
+              <van-checkbox name="演唱会" label-position="left" icon-size="16px" checked-color="#FC4A89">
+                演唱会</van-checkbox>
+              <van-checkbox name="音乐节" label-position="left" icon-size="16px" checked-color="#FC4A89">音乐节</van-checkbox>
+              <van-checkbox name="Livehouse" label-position="left" icon-size="16px" checked-color="#FC4A89">Livehouse</van-checkbox>
               <van-checkbox name="话剧音乐剧" label-position="left" icon-size="16px" checked-color="#FC4A89">话剧音乐剧</van-checkbox>
-              <van-checkbox name="舞蹈芭蕾" label-position="left" icon-size="16px" checked-color="#FC4A89">舞蹈芭蕾</van-checkbox>
-              <van-checkbox name="曲苑杂坛" label-position="left" icon-size="16px" checked-color="#FC4A89">曲苑杂坛</van-checkbox>
-              <van-checkbox name="体育" label-position="left" icon-size="16px" checked-color="#FC4A89">体育</van-checkbox>
-              <van-checkbox name="展览" label-position="left" icon-size="16px" checked-color="#FC4A89">展览</van-checkbox>
-              <van-checkbox name="儿童亲子" label-position="left" icon-size="16px" checked-color="#FC4A89">儿童亲子</van-checkbox>
               <van-checkbox name="脱口秀" label-position="left" icon-size="16px" checked-color="#FC4A89">脱口秀</van-checkbox>
-              <van-checkbox name="沉浸式" label-position="left" icon-size="16px" checked-color="#FC4A89">沉浸式</van-checkbox>
+              <van-checkbox name="展览" label-position="left" icon-size="16px" checked-color="#FC4A89">展览</van-checkbox>
+              <van-checkbox name="相声" label-position="left" icon-size="16px" checked-color="#FC4A89">相声</van-checkbox>
+              <van-checkbox name="戏曲" label-position="left" icon-size="16px" checked-color="#FC4A89">戏曲</van-checkbox>
+              <van-checkbox name="音乐会" label-position="left" icon-size="16px" checked-color="#FC4A89">音乐会</van-checkbox>
+              <van-checkbox name="舞蹈舞剧" label-position="left" icon-size="16px" checked-color="#FC4A89">舞蹈舞剧</van-checkbox>
             </van-checkbox-group>
             <view class="btns">
               <button plain class="reset">重置</button>

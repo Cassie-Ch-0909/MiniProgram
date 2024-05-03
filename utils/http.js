@@ -4,9 +4,9 @@ import { modal, toast } from './extendApi'
 // 对WxRequest进行实例化
 // 现在会执行 constructor 中的代码
 const instance = new WxRequest({
-  baseURL: 'https://gmall-prod.atguigu.cn/mall-api',
+  baseURL: 'http://127.0.0.1:8805/tickets',
   timeout: 15000,
-  isLoading: false
+  isLoading: true
 })
 
 // 配置请求拦截器

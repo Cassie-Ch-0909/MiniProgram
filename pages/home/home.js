@@ -317,7 +317,7 @@ Page({
       checkBoxResult: event.detail,
       selectTypeTitle: event.detail
     }, () => {
-      // console.log(this.data.checkBoxResult);
+      console.log(this.data.checkBoxResult);
     });
   },
 
