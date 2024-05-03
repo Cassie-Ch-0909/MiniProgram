@@ -19,7 +19,9 @@ class WxRequest {
       'Content-type': 'application/json'
     },
     // 默认的超时时长，小程序默认的超时时长是1分钟
-    timeout: 60000
+    timeout: 60000,
+    // 控制是否适用默认的loading,默认值是true 表示使用默认的loading
+    isLoading: true
   }
 
   // 定义拦截器对象
@@ -34,6 +36,11 @@ class WxRequest {
     response: (response) => response
   }
 
+  // 定义数组队列
+  // 初始值需要是一个空数组,用来存储请求队列\存储请求标识
+  queue = []
+
+
   // 用于创建和初始化类的属性和方法
   // 在实例化时传入的参数，会被constructor形参进行接收
   constructor(params = {}) {
@@ -44,6 +51,8 @@ class WxRequest {
   // request 实例方法接收一个对象类型的参数
   // 属性值和wx.request方法调用时传递的参数保持一致
   request(options) {
+    // 如果有新的请求,就清除上一次的定时器
+    this.timeId && clearTimeout(this.timeId)
 
     // 注意：需要先合并完成的请求地址 baseURL+url
     options.url = this.defaults.baseURL + options.url
@@ -52,7 +61,16 @@ class WxRequest {
     options = { ...this.defaults, ...options }
 
     // 在请求发送之前,添加loading效果
-    wx.showLoading()
+    // wx.showLoading()
+
+    if (options.isLoading) {
+      // 判断queue队列是否为空,如果是空,就显示loading
+      // 如果不是空,就不显示loading,不调用wx.showLoading()
+      this.queue.length === 0 && wx.showLoading()
+      // 然后立即向queue数组队列中添加请求标识
+      // 每个标识代表是一个请求,标识是自定义的
+      this.queue.push('request')
+    }
 
     // console.log(options)
 
@@ -77,8 +95,24 @@ class WxRequest {
         },
         // 接口调用结束的回调函数(调用成功 失败都会执行)
         complete: () => {
-          // 不管请求是成功还是失败,都需要隐藏loading
-          wx.hideLoading()
+          if (options.isLoading) {
+            // 不管请求是成功还是失败,都需要隐藏loading
+            // wx.hideLoading()
+
+            // 在每一个请求结束以后,都会执行complete回调函数
+            // 每次从queue队列中删除一个标识
+            this.queue.pop()
+
+            this.queue.length === 0 && this.queue.push('request')
+            this.timeId = setTimeout(() => {
+              this.queue.pop()
+              // 在删除标识之后,需要判断目前queue数组是否为空
+              // 如果是空,说明并发请求完成了
+              // 就需要隐藏loading,要调用wx.hideLoading()
+              this.queue.length === 0 && wx.hideLoading()
+              clearTimeout(this.timeId)
+            }, 1);
+          }
         }
       })
     })

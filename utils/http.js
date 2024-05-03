@@ -1,11 +1,12 @@
 import WxRequest from './request'
 import { getStorage, clearStorage } from './storage'
-import {modal,toast} from './extendApi'
+import { modal, toast } from './extendApi'
 // 对WxRequest进行实例化
 // 现在会执行 constructor 中的代码
 const instance = new WxRequest({
   baseURL: 'https://gmall-prod.atguigu.cn/mall-api',
-  timeout: 15000
+  timeout: 15000,
+  isLoading: false
 })
 
 // 配置请求拦截器

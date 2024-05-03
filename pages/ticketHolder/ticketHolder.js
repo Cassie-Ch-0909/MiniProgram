@@ -25,26 +25,34 @@ Page({
     // })
     // console.log(res)
 
-    const res = await instance.get('/cart/getCartList')
+    // const res = await instance.get('/cart/getCartList')
+    // console.log(res)
+    // instance.get('/cart/getCartList').then(()=>{
+    //   instance.get('/cart/getCartList').then(()=>{})
+    // })
+
+    const res = await instance.get('/index/findBanner', null, {
+      isLoading: true
+    })
     console.log(res)
   },
 
-  handler1() {
-    wx.request({
-      url: 'https://gmall-prod.atguigu.cn/mall-api/index/findBanner',
-      method: 'GET',
-      success: (res) => {
-        // 在使用wx.request发送请求时，只要成功接收到服务器返回的结果
-        // 无论statusCode状态码是多少，都会执行success
-        // 开发者需要根据业务逻辑，自己来进行相关的判断处理
-        console.log(res)
-      },
-      // 一般在网络出现异常时(网络超时)，就会执行fail
-      fail: (err) => {
-        console.log(err)
-      }
-    })
-  },
+  // handler1() {
+  //   wx.request({
+  //     url: 'https://gmall-prod.atguigu.cn/mall-api/index/findBanner',
+  //     method: 'GET',
+  //     success: (res) => {
+  //       // 在使用wx.request发送请求时，只要成功接收到服务器返回的结果
+  //       // 无论statusCode状态码是多少，都会执行success
+  //       // 开发者需要根据业务逻辑，自己来进行相关的判断处理
+  //       console.log(res)
+  //     },
+  //     // 一般在网络出现异常时(网络超时)，就会执行fail
+  //     fail: (err) => {
+  //       console.log(err)
+  //     }
+  //   })
+  // },
 
   async allHandler() {
     // 演示通过async和await方式同时发起多个请求
@@ -57,7 +65,7 @@ Page({
     // 演示通过Promise.all同时发起多个请求
     // Promise.all 能够将多个请求同时进行发送
     // await Promise.all([instance.get('/index/findBanner'),instance.get('/index/findCategory1'),instance.get('/index/findBanner'),instance.get('/index/findCategory1')])
-    const res = await instance.all(instance.get('/index/findBanner'),instance.get('/index/findCategory1'),instance.get('/index/findBanner'),instance.get('/index/findCategory1'))
+    const res = await instance.all(instance.get('/index/findBanner'), instance.get('/index/findCategory1'), instance.get('/index/findBanner'), instance.get('/index/findCategory1'))
     console.log(res)
   },
 
