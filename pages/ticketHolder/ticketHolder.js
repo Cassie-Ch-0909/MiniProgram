@@ -1,6 +1,5 @@
 // pages/ticketHolder/ticketHolder.js
 import instance from '../../utils/http'
-import {reqSwiperData} from '../../api/home'
 Page({
 
   /**

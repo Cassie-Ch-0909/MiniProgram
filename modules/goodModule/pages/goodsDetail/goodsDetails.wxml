@@ -14,7 +14,7 @@
     </view>
   </view>
   <!-- scroll-x站台轮播 -->
-  <scroll-view scroll-x="true" style="white-space: nowrap" class="scroll-x">
+  <scroll-view wx:if="{{goodsDetailObj.showDetailInfoList.length>1}}" scroll-x="true" style="white-space: nowrap" class="scroll-x">
     <view wx:for="{{cityPlatformList}}" wx:key="index" class="everyCity {{activeCityPlatform === index ? 'activeBgColor' : ''}}" bindtap="changeActiveCityPlatform" data-indexValue="{{index}}">
       <text class="position">{{item.place}}</text>
       <text class="time">{{item.time}}</text>
@@ -97,8 +97,8 @@
   <!-- 底部特惠购买 -->
   <view class="fixedBottom">
     <view class="left">
-        <image class="img" src="/assets/goodsDetails/爱心 (1).png" mode="aspectFill"/>
-        <view style="font-size: 23rpx;">想看</view>
+      <image class="img" src="/assets/goodsDetails/爱心 (1).png" mode="aspectFill" />
+      <view style="font-size: 23rpx;">想看</view>
     </view>
     <view class="share">分享</view>
     <view class="buy">特惠购买</view>

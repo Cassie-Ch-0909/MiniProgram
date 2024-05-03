@@ -8,13 +8,16 @@
     </view>
   </view>
   <view class="phoneNumber">
-    <input type="text" placeholder="请输入手机号" />
+    <input type="text" placeholder="请输入手机号" bindinput="phoneNumber" />
   </view>
   <view class="verificationCode">
-    <input type="text" placeholder="输入短信校验码" />
-    <button class="btn">获取校验码</button>
+    <input type="text" placeholder="输入短信校验码" bindinput="messageCode" />
+    <button class="btn" bind:tap="getCode" style="color:{{codeColor}};">{{codeText}}</button>
   </view>
-  <view class="confirm">
+  <view class="confirm" bind:tap="login">
     确定
+  </view>
+  <view style="margin-top: 200rpx;">
+      短信验证码：{{rightMessageCode}}
   </view>
 </view>

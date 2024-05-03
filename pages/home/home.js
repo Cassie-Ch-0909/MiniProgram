@@ -1,6 +1,6 @@
 // pages/home/home.js
 let app = getApp();
-import { getGoodsInfoListAPI } from '../../api/home'
+import { getGoodsInfoListAPI } from '../../api/goods'
 Page({
 
   /**

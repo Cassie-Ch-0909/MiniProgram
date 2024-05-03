@@ -10,7 +10,7 @@
   <!-- 未登录状态 -->
   <view wx:else class="logout">
     <image src="/assets/my/默认头像.png" alt="" mode="aspectFit" class="img" />
-    <view class="loginOrRegister">登录/注册</view>
+    <view class="loginOrRegister" bind:tap="navigateToLoginPage">登录/注册</view>
   </view>
   <!-- 想看的演出 关注 我的评价 优惠券 -->
   <view wx:if="{{isLogin}}" class="count">

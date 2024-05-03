@@ -1,5 +1,5 @@
 // modules/goodModule/pages/goodsDetail/goodsDetails.js
-import { getGoodsInfoByIdAPI } from '../../../../api/home'
+import { getGoodsInfoByIdAPI } from '../../../../api/goods'
 Page({
 
   /**

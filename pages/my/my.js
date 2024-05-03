@@ -8,6 +8,12 @@ Page({
 
   },
 
+  navigateToLoginPage() {
+    wx.navigateTo({
+      url: '/modules/otherModule/pages/login/login' // 指定要跳转到的页面路径  
+    });
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
