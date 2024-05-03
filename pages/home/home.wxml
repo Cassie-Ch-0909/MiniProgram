@@ -250,7 +250,9 @@
     </view>
     <!-- wx：for 票s -->
     <view class="{{targetElementFixed ? 'ttop' : ''}}">
-      <ticket wx:for="{{ticketList}}" wx:key="index" img="{{item.img}}" title="{{item.title}}" position="{{item.position}}" time="{{item.time}}" price="{{item.price}}">
+      <ticket wx:for="{{ticketList}}" wx:key="index" img="{{item.img}}" title="{{item.title}}" position="{{item.showDetailInfoList[0].venue}}" time="{{item.dateMin}}" price="{{item.priceMin}}"
+      bind:tap="gotoGoodsDetails" data-id="{{item.goodsId}}"
+      >
       </ticket>
     </view>
   </scroll-view>

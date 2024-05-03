@@ -1,4 +1,5 @@
 // modules/goodModule/pages/goodsDetail/goodsDetails.js
+import { getGoodsInfoByIdAPI } from '../../../../api/home'
 Page({
 
   /**
@@ -29,24 +30,41 @@ Page({
         place: '福州站',
         time: '05.16-05.19'
       }
-    ]
+    ],
+    // 本页商品详情信息对象
+    goodsDetailObj: {}
   },
 
   /* 
       点击选择哪个城市站
   */
- changeActiveCityPlatform(e){
-  //  console.log(e.currentTarget.dataset.indexvalue)
-   this.setData({
-    activeCityPlatform:e.currentTarget.dataset.indexvalue
-   })
- },
+  changeActiveCityPlatform(e) {
+    //  console.log(e.currentTarget.dataset.indexvalue)
+    this.setData({
+      activeCityPlatform: e.currentTarget.dataset.indexvalue
+    })
+  },
+
+  /* 
+      调用接口根据商品Id查询商品详情
+  */
+  async getGoodsInfoById(goodsId) {
+    const res = await getGoodsInfoByIdAPI(goodsId)
+    console.log(res)
+    this.setData({
+      goodsDetailObj: res.data
+    }, () => {
+      // console.log(this.data.goodsDetailObj)
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    // 打印传递过来的参数  
+    // console.log(options);
+    this.getGoodsInfoById(options.goodsId)
   },
 
   /**

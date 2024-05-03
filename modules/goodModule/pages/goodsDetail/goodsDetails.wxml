@@ -2,14 +2,14 @@
 <scroll-view scroll-y="true" class="container">
   <!-- 图片、名称、价格区间 -->
   <view class="imgTitlePrice">
-    <image class="img" src="https://img.alicdn.com/bao/uploaded/i4/2251059038/O1CN01CWDYvN2GdSaVTRLQC_!!2-item_pic.png" mode="aspectFit" />
+    <image class="img" src="{{goodsDetailObj.img}}" mode="aspectFit" />
     <view class="details">
       <view class="title">
-        【宁波】2024中国新乡村音乐节·走进咸祥 ———— 鲜2°音乐嘉年华
+        {{goodsDetailObj.title}}
       </view>
       <view class="info">
-        ￥<view class="price">39.90</view>
-        -￥<view class="price">99</view>
+        ￥<view class="price">{{goodsDetailObj.priceMin}}</view>
+        -￥<view class="price">{{goodsDetailObj.priceMax}}</view>
       </view>
     </view>
   </view>
@@ -22,14 +22,14 @@
   </scroll-view>
   <!-- 演出时间和演出时长 -->
   <view class="timeInfo">
-    <view class="date">2024.05.16-05.19</view>
-    <view class="time">以现场为准</view>
+    <view class="date">{{goodsDetailObj.dateMin}}</view>
+    <view class="time">以现场为准，大约{{goodsDetailObj.duration}}分钟</view>
   </view>
   <!-- 演出地点 -->
   <view class="place">
     <view class="left">
-      <view class="place1">福州市 | 福州海峡奥林匹克体育中心体育场福州海峡奥林匹克体育中心体育场福州海峡奥林匹克体育中心体育场</view>
-      <view class="place2">福建省福州市仓山区东陵路333号福州海峡奥体中滚福建省福州市仓山区东陵路333号福州海峡奥体中滚</view>
+      <view class="place1">{{goodsDetailObj.showDetailInfoList[0].venue}}</view>
+      <view class="place2">{{goodsDetailObj.showDetailInfoList[0].addressDetail}}</view>
     </view>
     <view class="right">
       <image class="img" src="/assets/home/position.png" mode="aspectFit" />
@@ -51,7 +51,7 @@
   <view class="ten">
     <image class="img" src="/assets/goodsDetails/榜单.png" mode="aspectFit" />
     <view style="display: flex;margin-left: 20rpx;font-size: 26rpx;">
-      演出榜单新邦<view style="color: #FF4878;font-weight: bold;">前十</view>
+      {{goodsDetailObj.type}}榜单新邦<view style="color: #FF4878;font-weight: bold;">No.1</view>
     </view>
   </view>
   <!-- 想看人数 -->
@@ -59,7 +59,7 @@
     <view class="left">
       <view class="people">想看人数</view>
       <view class="bottom">
-        <text>251.7</text>
+        <text>{{goodsDetailObj.showDetailInfoList[0].collectNum}}</text>
         <text style="font-size: 26rpx;margin-top: 10rpx;">万人</text>
         <image class="img" src="https://q1.itc.cn/q_70/images03/20240320/fcf023d835c54f78bac6c7efc98fbb4c.jpeg" mode="aspectFit" style="margin-left:20rpx;" />
         <image class="img" src="https://q4.itc.cn/q_70/images03/20240405/39ec09deda3a41d79e03897b0fdf68a0.jpeg" mode="aspectFit" style="margin-left:-15rpx;" />
@@ -76,7 +76,7 @@
     <view class="care">
       <view>
         <view>演出时长</view>
-        <view class="bom">约240分钟，以现场为...</view>
+        <view class="bom">约{{goodsDetailObj.duration}}分钟，以现场为...</view>
       </view>
       <view>
         <view>入场时间</view>
