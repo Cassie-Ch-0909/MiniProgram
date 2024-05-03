@@ -42,7 +42,7 @@ instance.interceptors.response = async (response) => {
   // 判断服务器响应的业务状态码
   switch (data.code) {
     // 如果后端返回的业务状态码等于200,说明请求成功,服务器成功响应了数据
-    case 200:
+    case 'T0000':
       // 对服务器响应数据做点什么......
       return data
     // 如果返回的业务状态码等于208,说明没有token,或者token失效
