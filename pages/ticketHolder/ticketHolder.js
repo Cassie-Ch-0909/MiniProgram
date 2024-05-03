@@ -1,5 +1,6 @@
 // pages/ticketHolder/ticketHolder.js
 import instance from '../../utils/http'
+import {reqSwiperData} from '../../api/index'
 Page({
 
   /**
@@ -31,9 +32,12 @@ Page({
     //   instance.get('/cart/getCartList').then(()=>{})
     // })
 
-    const res = await instance.get('/index/findBanner', null, {
-      isLoading: true
-    })
+    // const res = await instance.get('/index/findBanner', null, {
+    //   isLoading: true
+    // })
+    // console.log(res)
+
+    const res = await reqSwiperData()
     console.log(res)
   },
 
