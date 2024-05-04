@@ -1,7 +1,13 @@
 <!--pages/ticketHolder/ticketHolder.wxml-->
 <view class="box">
   <view wx:if="{{isLogin}}">
-    已登录
+    <view wx:if="{{haveTickets}}">
+      有票
+    </view>
+    <view wx:else class="noTickets">
+      <image src="https://img.alicdn.com/tfs/TB11puPCgmTBuNjy1XbXXaMrVXa-238-168.png" mode="aspectFill" class="img"/>
+      <view style="margin-top: -100rpx;">暂无演出票</view>
+    </view>
   </view>
   <view wx:else class="logout">
     <image src="/assets/home/logo.png" mode="aspectFill" class="img" />
@@ -9,4 +15,5 @@
     <view style="font-size:26rpx;color:grey;margin-top:20rpx">官方渠道票源 现场演出等你哦</view>
     <view class="btn" bind:tap="navigateToLoginPage">登录</view>
   </view>
+
 </view>

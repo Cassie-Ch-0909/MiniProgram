@@ -6,7 +6,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    isLogin:false
+    // 是否登录
+    isLogin:true,
+    // 是否有票
+    haveTickets:false
   },
 
   navigateToLoginPage() {

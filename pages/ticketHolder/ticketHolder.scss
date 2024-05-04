@@ -2,6 +2,17 @@
   width: 100%;
   height: 100vh;
   // background-color: pink;
+  .noTickets{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .img{
+      width: 100%;
+      padding-top: 150rpx;
+    }
+  }
   .logout{
     width: 100%;
     height: 100%;
