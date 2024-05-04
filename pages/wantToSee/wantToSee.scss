@@ -3,6 +3,32 @@
   width: 100%;
   height: 100vh;
   // background-color: pink;
+  .noCollect{
+    width: 100%;
+    // height: 100vh;
+    // background-color: pink;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    padding-top: 250rpx;
+    .img{
+      width: 200rpx;
+      height: 200rpx;
+    }
+    .btn{
+      margin-top: 50rpx;
+      width: 200rpx;
+      height: 50rpx;
+      background-image: linear-gradient(to right,#FF7982,#FF3277);
+      border-radius: 20rpx;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-size: 22rpx;
+    }
+  }
   .logout{
     width: 100%;
     height: 100%;

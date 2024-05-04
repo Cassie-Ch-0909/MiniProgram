@@ -5,12 +5,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-      isLogin:false
+      isLogin:true,
+      haveCollectConcert:false
   },
 
   navigateToLoginPage() {
     wx.navigateTo({
       url: '/modules/otherModule/pages/login/login' // 指定要跳转到的页面路径  
+    });
+  },
+  switchTabToHomePage() {
+    wx.switchTab({
+      url: '/pages/home/home' // 指定要跳转到的页面路径  
     });
   },
 

@@ -1,7 +1,15 @@
 <!--pages/wantToSee/wantToSee.wxml-->
 <view class="box">
   <view wx:if="{{isLogin}}">
-    已登录
+    <view wx:if="{{haveCollectConcert}}">
+      有收藏
+    </view>
+    <view wx:else class="noCollect">
+      <image class="img" src="/assets/空空如也.png" mode="aspectFill" />
+      <view style="margin-top: 40rpx; font-weight: bold;">买票上大麦</view>
+      <view style="font-size:26rpx;color:grey;margin-top:20rpx">官方渠道票源 现场演出等你哦</view>
+      <view class="btn" bind:tap="switchTabToHomePage">去找更多演出</view>
+    </view>
   </view>
   <view wx:else class="logout">
     <image src="/assets/home/logo.png" mode="aspectFill" class="img" />
