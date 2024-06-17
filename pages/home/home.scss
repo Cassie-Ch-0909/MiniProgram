@@ -236,7 +236,6 @@
         display: flex;
         justify-content: space-evenly;
         padding-left: 5%;
-
         .img {
           width: 45%;
           height: 100%;
@@ -527,7 +526,7 @@
   margin-left: 1%;
   margin-right: 1%;
   margin-top: 20rpx;
-  height: 440rpx;
+  height: 400rpx;
   // background-color: skyblue;
   border-radius: 10rpx;
   overflow: hidden;
@@ -632,6 +631,7 @@
     // white-space: nowrap ; /* 防止内容换行 */
     overflow-x: auto;
     /* 允许横向滚动 */
+    // background-color:pink;
   }
 
   /* 去除scroll-view产生的横向滚动条 */
@@ -640,6 +640,14 @@
     height: 0;
     color: transparent;
     display: none;
+  }
+
+  .every{
+    // background-color:pink;
+    .info{
+      // background-color: blue;
+      height: 68rpx;
+    }
   }
 }
 
@@ -813,4 +821,11 @@
 
 .ttop {
   margin-top: 140rpx;
+}
+
+.zbClass{
+  font-size: 28rpx;
+  // background-color: red;
+  font-weight: bold;
+  margin-top: 5rpx;
 }

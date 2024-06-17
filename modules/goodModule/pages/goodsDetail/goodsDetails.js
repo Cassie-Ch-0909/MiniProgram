@@ -58,6 +58,13 @@ Page({
     })
   },
 
+  // 跳转到选择票档页面
+  gotoSelectTickets(){
+    wx.navigateTo({  
+      url: '/modules/goodModule/pages/selectTicketFile/selectTicketFile' // 目标页面的路径  
+    });
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

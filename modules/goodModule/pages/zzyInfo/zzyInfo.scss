@@ -1,0 +1,35 @@
+/* modules/goodModule/pages/zzyInfo/zzyInfo.wxss */
+video{
+  width: 100vw;
+}
+input{
+  border: 1rpx  solid #ccc;
+  margin: 20rpx;
+}
+button{
+  background-color: rgb(76, 250, 114);
+}
+button{
+  margin-bottom: 10rpx;
+}
+.title_text{
+  margin: 26rpx;
+  font-size: large;
+  font-weight: 600;
+}
+.time_text{
+  margin-left: 26rpx;
+  color: #888;
+  font-size: small;
+}
+.s_title{
+  margin: 10rpx;
+  background: rgba(235, 231, 231, 0.5);
+  padding: 6rpx;
+}
+.m_title{
+  margin: 20rpx;
+  background: rgba(235, 231, 231, 0.5);
+  padding: 20rpx;
+  flex: 1;
+}

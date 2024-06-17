@@ -34,6 +34,16 @@
       flex-direction: column;
       justify-content: space-between;
 
+      .title {
+        font-size: 45rpx;
+      }
+
+      .image {
+        width: 100%;
+        height: 450rpx;
+        // background-color: pink;
+      }
+
       .info {
         display: flex;
         color: #FF3474;
@@ -76,6 +86,7 @@
       margin-right: 20rpx;
       font-size: 28rpx;
       font-weight: bold;
+
       .time {
         font-size: 22rpx;
         color: #C0C0C0;
@@ -91,49 +102,57 @@
 
   // 演出时间和演出时长
   // 演出时间和演出时长
-  .timeInfo{
-      width: 98%;
-      margin-left: 1%;
-      margin-right: 1%;
-      height: 96rpx;
-      // background-color: skyblue;
-      margin-top: 20rpx;
-      display: flex;
-      flex-direction: column;
-      border-bottom: 3rpx solid #F2F2F2;
-      .date{
-          font-size: 26rpx;
-          font-weight: bold;
-      }
-      .time{
-        font-size: 24rpx;
-        color: #868383;
-        margin-top: 5rpx;
-      }
+  .timeInfo {
+    width: 98%;
+    margin-left: 1%;
+    margin-right: 1%;
+    height: 96rpx;
+    // background-color: skyblue;
+    margin-top: 20rpx;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 3rpx solid #F2F2F2;
+
+    .date {
+      font-size: 26rpx;
+      font-weight: bold;
+    }
+
+    .time {
+      font-size: 24rpx;
+      color: #868383;
+      margin-top: 5rpx;
+    }
   }
-  .place,.things,.ten{
+
+  .place,
+  .things,
+  .ten {
     display: flex;
     width: 98%;
     margin-left: 1%;
     margin-right: 1%;
     height: 116rpx;
     // background-color: skyblue;
-    margin-top: 20rpx;
+    margin-top: 200rpx;
     border-bottom: 3rpx solid #F2F2F2;
     justify-content: space-between;
-    .left{
+
+    .left {
       width: 81%;
       height: 100%;
       // background-color: pink;
     }
-    .place1{
-        font-size: 26rpx;
-        font-weight: bold;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+
+    .place1 {
+      font-size: 26rpx;
+      font-weight: bold;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
-    .place2{
+
+    .place2 {
       font-size: 24rpx;
       color: #868383;
       margin-top: 15rpx;
@@ -141,7 +160,8 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
-    .right{
+
+    .right {
       width: 50rpx;
       margin-right: 50rpx;
       height: 100rpx;
@@ -151,48 +171,60 @@
       justify-content: center;
       align-items: center;
       margin-top: -10rpx;
-      .img{
+
+      .img {
         width: 100rpx;
         height: 60rpx;
       }
-      .distance{
+
+      .distance {
         font-size: 22rpx;
         color: #868383;
       }
     }
-    .infos{
+
+    .infos {
       display: flex;
       align-items: center;
       font-size: 24rpx;
-      .icon-dagougou{
+
+      .icon-dagougou {
         color: #ACB8ED;
       }
-      .icon-gantanhao{
+
+      .icon-gantanhao {
         color: #E48893;
       }
-      .iconfont{
+
+      .iconfont {
         font-size: 22rpx;
         margin-right: 10rpx;
       }
-      .text{
+
+      .text {
         margin-right: 30rpx;
       }
     }
   }
-  .things,.ten{
+
+  .things,
+  .ten {
     height: 100rpx;
     margin-top: 0;
     border-bottom: 18rpx solid #F7F7F7;
-    .img{
+
+    .img {
       width: 80rpx;
       height: 80rpx;
     }
   }
-  .ten{
+
+  .ten {
     justify-content: flex-start;
     align-items: center;
   }
-  .wantToSee{
+
+  .wantToSee {
     width: 98%;
     margin-left: 1%;
     margin-right: 1%;
@@ -201,16 +233,19 @@
     display: flex;
     justify-content: space-between;
     padding-top: 15rpx;
-    .left{
+
+    .left {
       width: 65%;
       height: 100%;
       // background-color: pink;
       display: flex;
       flex-direction: column;
-      .people{
+
+      .people {
         font-weight: bold;
       }
-      .bottom{
+
+      .bottom {
         font-size: 52rpx;
         color: #FE8B40;
         font-weight: bold;
@@ -219,14 +254,16 @@
         // background-color: skyblue;
         display: flex;
         align-items: center;
-        .img{
+
+        .img {
           width: 55rpx;
           height: 55rpx;
           border-radius: 50%;
         }
       }
     }
-    .right{
+
+    .right {
       flex: 1;
       height: 100%;
       font-size: 24rpx;
@@ -234,39 +271,45 @@
       justify-content: flex-end;
     }
   }
-  .needKnow{
+
+  .needKnow {
     width: 98%;
     margin-left: 1%;
     margin-right: 1%;
     height: 450rpx;
+
     // background-color: pink;
     // margin-bottom: 130rpx;
-    .title{
+    .title {
       font-weight: bold;
     }
-    .care{
+
+    .care {
       width: 100%;
       margin-top: 30rpx;
       font-size: 28rpx;
       display: flex;
       justify-content: space-between;
     }
-    .bom{
+
+    .bom {
       margin-top: 5rpx;
       color: #b1afaf;
     }
   }
-  .fixedBottom{
+
+  .fixedBottom {
     width: 100%;
     height: 100rpx;
-    background-color:#fff;
+    background-color: #fff;
     position: fixed;
     bottom: 0;
     left: 0;
     z-index: 999;
     display: flex;
     align-items: center;
-    .left{
+
+    .left {
       width: 18%;
       height: 100%;
       // background-color: blue;
@@ -274,12 +317,15 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      .img{
+
+      .img {
         width: 50rpx;
         height: 50rpx;
       }
     }
-    .share,.buy{
+
+    .share,
+    .buy {
       border: 0rpx;
       font-size: 32rpx;
       display: flex;
@@ -287,7 +333,8 @@
       align-items: center;
       height: 80rpx;
     }
-    .share{
+
+    .share {
       width: 150rpx;
       border-radius: 40rpx;
       background-color: #fff;
@@ -295,7 +342,8 @@
       color: #FC2D6E;
       margin-left: 60rpx;
     }
-    .buy{
+
+    .buy {
       width: 300rpx;
       border-radius: 40rpx;
       background-color: #FC2D6E;

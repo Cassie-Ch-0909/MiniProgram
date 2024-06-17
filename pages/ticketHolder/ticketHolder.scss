@@ -1,42 +1,61 @@
-.box{
-  width: 100%;
-  height: 100vh;
-  // background-color: pink;
-  .noTickets{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .img{
-      width: 100%;
-      padding-top: 150rpx;
-    }
-  }
-  .logout{
-    width: 100%;
-    height: 100%;
-    // background-color: skyblue;
-    display: flex;
-    flex-direction: column;
-    // justify-content: center;
-    align-items: center;
-    padding-top: 320rpx;
-    .img{
-      width: 120rpx;
-      height: 120rpx;
-    }
-    .btn{
-      margin-top: 50rpx;
-      width: 100rpx;
-      height: 50rpx;
-      background-image: linear-gradient(to right,#FF7982,#FF3277);
-      border-radius: 20rpx;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #fff;
-      font-size: 22rpx;
-    }
-  }
+// .box{
+//   width: 100%;
+//   height: 100vh;
+//   // background-color: pink;
+//   .noTickets{
+//     width: 100%;
+//     height: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     .img{
+//       width: 100%;
+//       padding-top: 150rpx;
+//     }
+//   }
+//   .logout{
+//     width: 100%;
+//     height: 100%;
+//     // background-color: skyblue;
+//     display: flex;
+//     flex-direction: column;
+//     // justify-content: center;
+//     align-items: center;
+//     padding-top: 320rpx;
+//     .img{
+//       width: 120rpx;
+//       height: 120rpx;
+//     }
+//     .btn{
+//       margin-top: 50rpx;
+//       width: 100rpx;
+//       height: 50rpx;
+//       background-image: linear-gradient(to right,#FF7982,#FF3277);
+//       border-radius: 20rpx;
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       color: #fff;
+//       font-size: 22rpx;
+//     }
+//   }
+// }
+/* head */
+.head{
+  background-color: #FE2A6D;
+  display: flex;
+  color: white;
+  padding-top: 100rpx;
+}
+.pill{
+  border-radius: 1.5rem;
+  height: 68rpx;
+  width: 260rpx;
+  display: flex;
+  margin-top: 10rpx;
+  background-color: rgba(240, 234, 234, 0.3);
+}
+.pill image{
+  width: 50rpx;
+  padding: 14rpx 4rpx 14rpx 0rpx;
 }

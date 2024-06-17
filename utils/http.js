@@ -4,7 +4,8 @@ import { modal, toast } from './extendApi'
 // 对WxRequest进行实例化
 // 现在会执行 constructor 中的代码
 const instance = new WxRequest({
-  baseURL: 'http://127.0.0.1:8805/tickets',
+  // baseURL: 'http://192.168.43.108:8805/tickets',
+  baseURL:'http://127.0.0.1:8805/tickets',
   timeout: 15000,
   isLoading: true
 })

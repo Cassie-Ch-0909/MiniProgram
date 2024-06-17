@@ -44,6 +44,6 @@
     <view class="left">
         <view style="font-size: 23rpx;">请选择票档</view>
     </view>
-    <view class="buy">确定</view>
+    <view class="buy" bind:tap="gotoSelectSeat">确定</view>
   </view>
 </view>

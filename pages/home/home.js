@@ -18,25 +18,25 @@ Page({
     targetElementFixed: false,// 初始状态下 targetElement 不是 fixed
     // 抢票播报站
     broadcasts: [
-      { watchCount: "14万", activityName: "张学友重庆" },
+      { watchCount: "14万", activityName: "党纪学习教育" },
       { watchCount: "22.9万", activityName: "梦想未来•闪" },
-      { watchCount: "9.4万", activityName: "全国热抢演出" },
-      { watchCount: "6.3万", activityName: "潘玮柏上海开" },
-      { watchCount: "今天17:17", activityName: "薛之谦太原开" },
+      { watchCount: "9.4万", activityName: "2024年环境日" },
+      { watchCount: "6.3万", activityName: "党的二十大精神" },
+      { watchCount: "今天17:17", activityName: "强国时评" },
     ],
     // 今日秒杀数组
     imageList: [
       {
         img: "https://gw.alicdn.com/bao/uploaded/i3/2251059038/O1CN01tcNq1I2GdSaXaCVsI_!!0-item_pic.jpg_q60.jpg",
-        type: "演唱会"
+        type: "经济"
       },
       {
         img: "https://gw.alicdn.com/bao/uploaded/https:img.alicd…/O1CN012K2mOx2GdSaEwon0z_!!2251059038.jpg_q60.jpg",
-        type: "音乐节"
+        type: "文化"
       },
       {
         img: "https://gw.alicdn.com/bao/uploaded/i3/2251059038/O1CN01fNGpi12GdSaZkAQPd_!!0-item_pic.jpg_q60.jpg",
-        type: "音乐节"
+        type: "时政"
       },
     ],
     // 扁平轮播图数组
@@ -52,20 +52,20 @@ Page({
     thisWeekScrollXList: [
       {
         img: "https://img.alicdn.com/bao/uploaded/i1/2251059038/O1CN01SwGBKy2GdSaQ78f78_!!0-item_pic.jpg",
-        info: "棱镜「多少年·多少面」2024巡回演唱会—北京站",
+        info: "习近平结束对法国、塞尔维亚和匈牙利国事访问回到北京",
         position: "华熙LIVE·五棵松",
         price: "380"
       },
       {
         img: "https://img.alicdn.com/bao/uploaded/https://img.al…51059038/O1CN01aZ35xy2GdSabqhDh8_!!2251059038.jpg",
-        info: "2024北京无限音乐节",
-        position: "北京通州区城市绿心森林公园南门(绿创空间对面)",
+        info: "严查“蝇贪蚁腐”",
+        position: "中国纪检监察报",
         price: "380"
       },
       {
         img: "https://img.alicdn.com/bao/uploaded/https://img.al…51059038/O1CN01hFwRF32GdSaOCEPTm_!!2251059038.png",
-        info: "苏有朋在多重宇宙中遇见你演唱会-北京站",
-        position: "首都体育馆",
+        info: "把他律要求转化为内在追求",
+        position: "光明网",
         price: "380"
       },
       {
@@ -120,7 +120,7 @@ Page({
     recommendSortOptions: [
       { text: '推荐排序', value: '推荐排序' },
       { text: '热度排序', value: '热度排序' },
-      { text: '开演时间', value: '开演时间' },
+      { text: '时间排序', value: '时间排序' },
     ],
     // 品类标题
     selectTypeTitle: "品类",
@@ -140,96 +140,95 @@ Page({
     ticketList: [
       {
         img: "https://img.alicdn.com/bao/uploaded/i1/2251059038/O1CN01SwGBKy2GdSaQ78f78_!!0-item_pic.jpg",
-        title: "棱镜「多少年·多少面」2024巡回演唱会—北京站",
+        title: "中国、吉尔吉斯斯坦、乌兹别克斯坦三国元首视频祝贺中吉乌铁路项目三国政府间协定签署",
         position: "华熙LIVE·五棵松",
-        price: "380",
+        price: "3876万",
         time: "2024.05.11 周六 19:30"
       },
       {
         img: "https://img.alicdn.com/bao/uploaded/https://img.al…51059038/O1CN01aZ35xy2GdSabqhDh8_!!2251059038.jpg",
-        title: "2024北京无限音乐节",
+        title: "习近平同巴林国王哈马德会谈",
         position: "北京通州区城市绿心森林公园南门(绿创空间对面)",
-        price: "380",
+        price: "838万",
         time: "2024.05.11 周六 19:30"
       },
       {
         img: "https://img.alicdn.com/bao/uploaded/https://img.al…51059038/O1CN01hFwRF32GdSaOCEPTm_!!2251059038.png",
-        title: "苏有朋在多重宇宙中遇见你演唱会-北京站",
+        title: "中国和阿拉伯国家关于巴勒斯坦问题的联合声明（全文）",
         position: "首都体育馆",
-        price: "380",
+        price: "5746万",
         time: "2024.05.11 周六 19:30"
       },
       {
         img: "https://img.alicdn.com/bao/uploaded/https://img.al…51059038/O1CN01MV6J3g2GdSZ4qiOyn_!!2251059038.png",
-        title: "2024中超联赛天津津门虎主场赛事（年票）",
+        title: "中华人民共和国和匈牙利关于建立新时代全天候全面战略伙伴关系的联合声明",
         position: "天津泰达足球场",
-        price: "680",
+        price: "6881万",
         time: "2024.05.11 周六 19:30"
       },
       {
         img: "https://img.alicdn.com/bao/uploaded/i3/2251059038/O1CN01FT1QXb2GdSZujlBWG_!!2-item_pic.png",
-        title: "2023-2024WCBA 山西竹叶青女篮季后赛（套票）",
+        title: "习近平回信勉励四川省南充市嘉陵区之江小学学生祝全国小朋友们“六一”国际儿童节快乐",
         position: "山西体育中心体育馆",
-        price: "179",
+        price: "4637万",
         time: "2024.05.11 周六 19:30"
       },
       {
         img: "https://img.alicdn.com/bao/uploaded/i1/2251059038/O1CN01SwGBKy2GdSaQ78f78_!!0-item_pic.jpg",
-        title: "棱镜「多少年·多少面」2024巡回演唱会—北京站",
+        title: "中华人民共和国主席令（第十七号）",
         position: "华熙LIVE·五棵松",
-        price: "380",
+        price: "5647万",
         time: "2024.05.11 周六 19:30"
       },
       {
         img: "https://img.alicdn.com/bao/uploaded/https://img.al…51059038/O1CN01aZ35xy2GdSabqhDh8_!!2251059038.jpg",
-        title: "2024北京无限音乐节",
+        title: "习近平：时刻保持解决大党独有难题的清醒和坚定，把党的伟大自我革命进行到底",
         position: "北京通州区城市绿心森林公园南门(绿创空间对面)",
-        price: "380",
+        price: "380万",
         time: "2024.05.11 周六 19:30"
       },
       {
         img: "https://img.alicdn.com/bao/uploaded/https://img.al…51059038/O1CN01hFwRF32GdSaOCEPTm_!!2251059038.png",
-        title: "苏有朋在多重宇宙中遇见你演唱会-北京站",
+        title: "习近平：组织动员亿万职工积极投身强国建设、民族复兴的伟大事业",
         position: "首都体育馆",
-        price: "380",
+        price: "5638万",
         time: "2024.05.11 周六 19:30"
       },
       {
         img: "https://img.alicdn.com/bao/uploaded/https://img.al…51059038/O1CN01MV6J3g2GdSZ4qiOyn_!!2251059038.png",
-        title: "2024中超联赛天津津门虎主场赛事（年票）",
+        title: "习近平：组织动员亿万职工积极投身强国建设、民族复兴的伟大事业",
         position: "天津泰达足球场",
-        price: "680",
+        price: "4378万",
         time: "2024.05.11 周六 19:30"
       },
       {
         img: "https://img.alicdn.com/bao/uploaded/i3/2251059038/O1CN01FT1QXb2GdSZujlBWG_!!2-item_pic.png",
-        title: "2023-2024WCBA 山西竹叶青女篮季后赛（套票）",
+        title: "习近平：在二〇二四年春节团拜会上的讲",
         position: "山西体育中心体育馆",
-        price: "179",
+        price: "1791万",
         time: "2024.05.11 周六 19:30"
       },
       {
         img: "https://img.alicdn.com/bao/uploaded/i3/2251059038/O1CN01FT1QXb2GdSZujlBWG_!!2-item_pic.png",
-        title: "2023-2024WCBA 山西竹叶青女篮季后赛（套票）",
+        title: "习近平：时刻保持解决大党独有难题的清醒和坚定，把党的伟大自我革命进行到底",
         position: "山西体育中心体育馆",
-        price: "179",
+        price: "4536万",
         time: "2024.05.11 周六 19:30"
       },
       {
         img: "https://img.alicdn.com/bao/uploaded/i3/2251059038/O1CN01FT1QXb2GdSZujlBWG_!!2-item_pic.png",
-        title: "2023-2024WCBA 山西竹叶青女篮季后赛（套票）",
+        title: "习近平：时刻保持解决大党独有难题的清醒和坚定，把党的伟大自我革命进行到底",
         position: "山西体育中心体育馆",
-        price: "179",
+        price: "1794万",
         time: "2024.05.11 周六 19:30"
       },
       {
         img: "https://img.alicdn.com/bao/uploaded/i3/2251059038/O1CN01FT1QXb2GdSZujlBWG_!!2-item_pic.png",
-        title: "2023-2024WCBA 山西竹叶青女篮季后赛（套票）",
+        title: "习近平同突尼斯总统赛义德会谈",
         position: "山西体育中心体育馆",
-        price: "179",
+        price: "4637万",
         time: "2024.05.11 周六 19:30"
       },
-
     ]
   },
 
@@ -379,20 +378,20 @@ Page({
   /* 
       调用接口条件查询商品列表
   */
-  async getGoodsInfoList(data) {
-    const res = await getGoodsInfoListAPI(data)
-    console.log(res.data)
-    this.setData({
-      ticketList: res.data
-    })
-  },
+  // async getGoodsInfoList(data) {
+  //   const res = await getGoodsInfoListAPI(data)
+  //   console.log(res.data)
+  //   this.setData({
+  //     ticketList: res.data
+  //   })
+  // },
 
   /* 
       点击首页某个商品携带商品id跳转到商品详情页面
   */
   gotoGoodsDetails(e) {
     console.log(e.currentTarget.dataset.id)
-    wx.navigateTo({  
+    wx.navigateTo({
       url: `/modules/goodModule/pages/goodsDetail/goodsDetails?goodsId=${e.currentTarget.dataset.id}`
     });
   },
@@ -402,7 +401,7 @@ Page({
    */
   onLoad(options) {
     // this.getScrollToElementTop()
-    this.getGoodsInfoList()
+    // this.getGoodsInfoList()
   },
 
   /**

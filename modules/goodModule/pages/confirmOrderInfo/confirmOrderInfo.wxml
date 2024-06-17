@@ -1,0 +1,13 @@
+<!--modules/goodModule/pages/confirmOrderInfo/confirmOrderInfo.wxml-->
+<view>
+  <view class="top">
+    <view>
+    【宁波】王心凌演唱会
+    </view>
+    <view class="location">
+      宁波市|X-Tra Station（DT酒吧旁）
+    </view>
+    <view class="line">
+    </view>
+  </view>
+</view>

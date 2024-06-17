@@ -16,7 +16,7 @@
   <view wx:if="{{isLogin}}" class="count">
     <view class="showNumber">
       <view class="number">5</view>
-      <view class="type">想看的演出</view>
+      <view class="type">想看的新闻</view>
     </view>
     <view class="follow">
       <view class="number">2</view>
@@ -24,17 +24,17 @@
     </view>
     <view class="evaluate">
       <view class="number">0</view>
-      <view class="type"> 我的评价</view>
+      <view class="type"> 发布评论</view>
     </view>
     <view class="coupon">
       <view class="number">0</view>
-      <view class="type">优惠券</view>
+      <view class="type">发表文章</view>
     </view>
   </view>
   <view wx:else class="count">
     <view class="showNumber">
       <view class="number">0</view>
-      <view class="type">想看的演出</view>
+      <view class="type">想看的新闻</view>
     </view>
     <view class="follow">
       <view class="number">0</view>
@@ -42,11 +42,11 @@
     </view>
     <view class="evaluate">
       <view class="number">0</view>
-      <view class="type"> 我的评价</view>
+      <view class="type"> 我的文章</view>
     </view>
     <view class="coupon">
       <view class="number">0</view>
-      <view class="type">优惠券</view>
+      <view class="type">推送券</view>
     </view>
   </view>
   <!-- 我的订单 票夹 -->
@@ -54,17 +54,17 @@
     <view class="top">
       <view class="twoSelect">
         <view class="iconfont icon-wodedingdan"></view>
-        <view class="text">我的订单</view>
+        <view class="text">我的文章</view>
       </view>
       <view class="twoSelect">
         <view class="iconfont icon-piaojia"></view>
-        <view class="text">票夹</view>
+        <view class="text">文件夹</view>
       </view>
     </view>
     <view class="bottom">
       <view class="every">
         <image class="img" src="/assets/my/观影人数.png" mode="aspectFit" />
-        <view class="text">观演人</view>
+        <view class="text">历史记录</view>
       </view>
       <view class="every">
         <image class="img" src="/assets/my/收货地址.png" mode="aspectFit" />

@@ -6,9 +6,9 @@
     </view>
     <view wx:else class="noCollect">
       <image class="img" src="/assets/空空如也.png" mode="aspectFill" />
-      <view style="margin-top: 40rpx; font-weight: bold;">买票上大麦</view>
-      <view style="font-size:26rpx;color:grey;margin-top:20rpx">官方渠道票源 现场演出等你哦</view>
-      <view class="btn" bind:tap="switchTabToHomePage">去找更多演出</view>
+      <view style="margin-top: 40rpx; font-weight: bold;">看新闻上学习强国</view>
+      <view style="font-size:26rpx;color:grey;margin-top:20rpx">官方报道新闻 掌握第一手消息</view>
+      <view class="btn" bind:tap="switchTabToHomePage">去看更多新闻</view>
     </view>
   </view>
   <view wx:else class="logout">

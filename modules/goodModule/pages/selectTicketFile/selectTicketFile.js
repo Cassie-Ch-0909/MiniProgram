@@ -28,13 +28,13 @@ Page({
       },
       {
         value: "看台380元"
-      }, 
+      },
       {
         value: "看台380元"
-      }, 
+      },
       {
         value: "看台380元"
-      }, 
+      },
       {
         value: "看台380元"
       },
@@ -53,6 +53,12 @@ Page({
     this.setData({
       activeSelectTicketFileIndex: e.currentTarget.dataset.id
     })
+  },
+
+  gotoSelectSeat() {
+    wx.navigateTo({
+      url: '/modules/goodModule/pages/confirmOrderInfo/confirmOrderInfo' // 目标页面的路径  
+    });
   },
 
   /**

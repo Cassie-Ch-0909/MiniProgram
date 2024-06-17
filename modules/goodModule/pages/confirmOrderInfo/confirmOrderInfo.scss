@@ -1,0 +1,21 @@
+/* modules/goodModule/pages/confirmOrderInfo/confirmOrderInfo.wxss */
+.top{
+  width: 100%;
+  // height: 340rpx;
+  background-color: #DE3F65;
+  padding: 20rpx;
+  box-sizing: border-box;
+  color: #fff;
+  .location{
+    font-size: 23rpx;
+    padding-top: 20rpx;
+  }
+  .line{
+    width: 100%;
+    background-color: #EA5F7F;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+    height: 0.1rpx;
+    box-sizing: border-box;
+  }
+}

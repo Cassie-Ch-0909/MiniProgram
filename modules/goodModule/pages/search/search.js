@@ -8,87 +8,91 @@ Page({
     countryHotSearchList: [
       {
         id: 1,
-        name: "周杰伦",
+        name: "习近平",
         status: "爆"
       },
       {
         id: 2,
-        name: "周深",
+        name: "李鸿忠",
         status: "爆"
       },
       {
         id: 3,
-        name: "时代少年团",
+        name: "韩正",
         status: "热"
       },
       {
         id: 4,
-        name: "凤凰传奇",
+        name: "王东明",
         status: "热"
       },
       {
         id: 5,
-        name: "张杰",
+        name: "肖捷",
         status: "热"
       },
       {
         id: 6,
-        name: "薛之谦",
+        name: "郑建邦",
         status: "热"
       },
       {
         id: 7,
-        name: "林俊杰",
+        name: "丁仲礼",
         status: "热"
       },
       {
         id: 8,
-        name: "邓紫棋",
+        name: "郝明金",
         status: "热"
       },
       {
         id: 9,
-        name: "许嵩",
+        name: "蔡达峰",
         status: "热"
       },
       {
         id: 10,
-        name: "陈奕迅",
+        name: "何维",
         status: "热"
       },
     ],
     cityHotSearchList:[
       {
         id:1,
-        content:"王心凌 宁波"
+        content:"习近平：愿早日建成中吉乌铁路"
       },
       {
         id:2,
-        content:"周兴哲(Eric) 宁波"
+        content:"2024高考作文汇总"
       },
       {
         id:3,
-        content:"张鹤伦·郎鹤炎相声专场"
+        content:"关于高考加油的祝福"
       },
       {
         id:4,
-        content:"话剧 《2：22》"
+        content:"以色列代表发言时多国代表离席"
       },
       {
         id:5,
-        content:"话剧 《春逝》"
+        content:"俞敏洪深夜道歉"
       },
       {
         id:6,
-        content:"陈佩斯父亲首次同台"
+        content:"00后女孩勇闯非洲攒钱50万"
       },
       {
         id:7,
-        content:"GIN 宁波"
+        content:"黄仁勋称台湾为国家"
       },
       {
         id:8,
-        content:"大船文化·亲子音乐舞台剧《敦煌奇妙夜》"
+        content:"浙江发现一例稀有恐龙血"
+      },
+      {
+        id:9,
+        content:"考生考前一天还在送外卖"
       },
     ]
   },

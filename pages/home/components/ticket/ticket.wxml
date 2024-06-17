@@ -12,8 +12,8 @@
           {{position}}
         </view>
         <view class="price">
-          <view class="fuhao">￥</view>
-          <view class="number">{{price}}</view>起
+          <!-- <view class="fuhao">￥</view> -->
+          <view class="number">{{price}}</view>观看
         </view>
     </view>
 </view>

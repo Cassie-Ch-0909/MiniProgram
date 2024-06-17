@@ -17,7 +17,7 @@
   <view class="confirm" bind:tap="login">
     确定
   </view>
-  <view style="margin-top: 200rpx;">
+  <!-- <view style="margin-top: 200rpx;">
       短信验证码：{{rightMessageCode}}
-  </view>
+  </view> -->
 </view>

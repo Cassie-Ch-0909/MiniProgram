@@ -1,0 +1,68 @@
+<!--modules/goodModule/pages/zzyInfo/zzyInfo.wxml-->
+<view class="page-body">
+  <view class="page-section tc">
+    <!-- <video 
+      id="myVideo" 
+      src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" 
+      binderror="videoErrorCallback" 
+      show-center-play-btn='{{false}}' 
+      show-play-btn="{{true}}" 
+      controls
+      picture-in-picture-mode="{{['push', 'pop']}}"
+      bindenterpictureinpicture='bindVideoEnterPictureInPicture'
+      bindleavepictureinpicture='bindVideoLeavePictureInPicture'
+    ></video> -->
+    <include src="./head" />
+  <image src="/images/0.jpg" mode="widthFix" style="width: 750rpx;" />
+  </view>
+  <view style="display: flex;border-bottom: 2rpx solid gainsboro;margin-top: 10rpx;"> 
+    <image src="/images/ysjs.png" mode="widthFix" style="width: 50rpx;margin-left: 20rpx;"/>
+    <view style="flex: 1;margin-top: 5rpx;margin-left: 20rpx;">央视军事</view>
+    <image src="/images/add.png" mode="widthFix" style="width: 70rpx;margin-top: -10rpx;margin-bottom: 10rpx;margin-right: 10rpx;"/>
+  </view>
+  <view class="title_text">
+    现场视频！我海军舰艇与台艇目视距离仅0.6海里
+  </view>
+  <view class="time_text">2024-05-24</view>
+  <view style="display: flex;margin-left: 10rpx;">
+    <view class="s_title">
+      <image src="/images/quan.png" mode="widthFix" style="width: 30rpx;"/> 
+      国防军事新闻
+      <image src="/images/right.png" mode="widthFix" style="width: 30rpx;" />
+    </view>
+    <view class="s_title">
+      <image src="/images/quan.png" mode="widthFix" style="width: 30rpx;"/>
+      军事
+      <image src="/images/right.png" mode="widthFix" style="width: 30rpx;" />
+    </view>
+    <vieW class="s_title">
+      <image src="/images/quan.png" mode="widthFix" style="width: 30rpx;"/>
+      三军风采
+      <image src="/images/right.png" mode="widthFix" style="width: 30rpx;" />
+    </vieW>
+  </view>
+  <view style="display: flex;">
+    <view class="m_title">播放 855,688</view>
+    <view class="m_title">点赞 13,079<image src="/images/dz.png" mode="widthFix" style="width: 34rpx;margin-left: 80rpx;" /></view>
+  </view>
+  <view style="display: flex;margin: 40rpx 60rpx;font-size: large;">
+    进入
+    <text style="color: #FE2A6D;">国防军事新闻频道</text>
+    查看更多内容
+    <image src="/images/right.png" mode="widthFix" style="width: 30rpx;margin-top: 8rpx;margin-left: 10rpx;" />
+  </view>
+  <view style="display: flex;margin: 20rpx;border: 2rpx solid gainsboro;padding: 10rpx;">
+    <image src="/images/ysjs.png" mode="widthFix" style="width: 60rpx;margin: 10rpx;"/>
+    <view style="margin:  0 10rpx;flex: 1;">
+      <view style="font-size: large;">央视军事</view>
+      <view style="font-size: small;">中央电视台国防军事频道官方账号</view>
+    </view>
+    <view style="background: #FE2A6D;padding: 10rpx 20rpx;height: 46rpx;border-radius: 0.5rem;color: white;margin: 10rpx;">去看看</view>
+  </view>
+  <view style="display: flex;margin: 100rpx 20rpx;">
+    <view style="background: rgba(206, 206, 206, 0.5);padding: 10rpx;width: 360rpx;border-radius: 0.2rem;color: rgb(112, 110, 110);">欢迎发表你的观点</view>
+    <image src="/images/qgt_grey.png" mode="widthFix" style="width: 60rpx;margin: 0 30rpx;"/>
+    <image src="/images/sc.png" mode="widthFix" style="width: 50rpx;margin: 0 30rpx;"/>
+    <image src="/images/转发.png" mode="widthFix" style="width: 60rpx;margin: 0 30rpx;"/>
+  </view>
+</view>

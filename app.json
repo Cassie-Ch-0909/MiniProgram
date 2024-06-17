@@ -23,13 +23,13 @@
         "selectedIconPath": "/assets/selectedHome.png"
       },
       {
-        "text": "想看",
+        "text": "喜欢",
         "pagePath": "pages/wantToSee/wantToSee",
         "iconPath": "/assets/wantToSee.png",
         "selectedIconPath": "/assets/selectWantToSee.png"
       },
       {
-        "text": "票夹",
+        "text": "要闻",
         "pagePath": "pages/ticketHolder/ticketHolder",
         "iconPath": "/assets/ticketHolder.png",
         "selectedIconPath": "/assets/selectTicketHolder.png"
@@ -53,7 +53,9 @@
         "pages/search/search",
         "pages/goodsDetail/goodsDetails",
         "pages/starHome/starHome",
-        "pages/selectTicketFile/selectTicketFile"
+        "pages/selectTicketFile/selectTicketFile",
+        "pages/confirmOrderInfo/confirmOrderInfo",
+        "pages/zzyInfo/zzyInfo"
       ]
     },
     {

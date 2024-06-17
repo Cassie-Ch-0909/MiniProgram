@@ -1,5 +1,5 @@
 <!--pages/ticketHolder/ticketHolder.wxml-->
-<view class="box">
+<!-- <view class="box">
   <view wx:if="{{isLogin}}">
     <view wx:if="{{haveTickets}}">
       有票
@@ -16,4 +16,52 @@
     <view class="btn" bind:tap="navigateToLoginPage">登录</view>
   </view>
 
+</view> -->
+<view bind:tap="goToNonTabBarPage">
+  <include src="./head" />
+  <scroll-view scroll-y class="list">
+    <image src="/images/image0.jpg" mode="widthFix" style="width: 750rpx;" />
+    <view style="margin: 20rpx;">
+      <view style="font-size: 40rpx;">现场视频！我海军舰艇与台艇目视距离仅0.6海里</view>
+      <view style="display: flex;color: #888;margin-top: 20rpx;">
+        <view style="flex: 1;font-size: small;margin-top: 10rpx;">央视军事</view>
+        <image src="/images/点赞.png" mode="widthFix" style="width: 50rpx;" />
+        <view style="font-size: small;margin-top: 10rpx;">1.3万</view>
+        <image src="/images/转发.png" mode="widthFix" style="width: 50rpx;margin-left: 30rpx;" />
+      </view>
+    </view>
+    <view style="background: gainsboro;height: 4rpx; width: 100%;"></view>
+    <image src="/images/image1.jpg" mode="widthFix" style="width: 750rpx;" />
+    <view style="margin: 20rpx;">
+      <view style="font-size: 40rpx;">辽阔海天砺精兵——海军某支队作战支援训练掠影</view>
+      <view style="display: flex;color: #888;margin-top: 20rpx;">
+        <view style="flex: 1;font-size: small;margin-top: 10rpx;">解放军报</view>
+        <image src="/images/点赞.png" mode="widthFix" style="width: 50rpx;" />
+        <view style="font-size: small;margin-top: 10rpx;">4.8万</view>
+        <image src="/images/转发.png" mode="widthFix" style="width: 50rpx;margin-left: 30rpx;" />
+      </view>
+    </view>
+    <view style="background: gainsboro;height: 4rpx; width: 100%;"></view>
+    <image src="/images/image2.jpg" mode="widthFix" style="width: 750rpx;" />
+    <view style="margin: 20rpx;">
+      <view style="font-size: 40rpx;">着眼加快新质战斗力供给 大力推动国防科技高质量发展</view>
+      <view style="display: flex;color: #888;margin-top: 20rpx;">
+        <view style="flex: 1;font-size: small;margin-top: 10rpx;">2024年第5期《党建》杂志</view>
+        <image src="/images/点赞.png" mode="widthFix" style="width: 50rpx;" />
+        <view style="font-size: small;margin-top: 10rpx;">3.6万</view>
+        <image src="/images/转发.png" mode="widthFix" style="width: 50rpx;margin-left: 30rpx;" />
+      </view>
+    </view>
+    <view style="background: gainsboro;height: 4rpx; width: 100%;"></view>
+    <image src="/images/image3.jpg" mode="widthFix" style="width: 750rpx;" />
+    <view style="margin: 20rpx;">
+      <view style="font-size: 40rpx;">驰骋深蓝练攻防——海军某支队舰艇编队出海训练掠影</view>
+      <view style="display: flex;color: #888;margin-top: 20rpx;">
+        <view style="flex: 1;font-size: small;margin-top: 10rpx;">解放军报</view>
+        <image src="/images/点赞.png" style="width: 50rpx;height: 50rpx;" />
+        <view style="font-size: small;margin-top: 10rpx;">2.4万</view>
+        <image src="/images/转发.png" mode="widthFix" style="width: 50rpx;margin-left: 30rpx;" />
+      </view>
+    </view>
+  </scroll-view>
 </view>

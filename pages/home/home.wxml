@@ -8,11 +8,11 @@
         <view class="logo">
           <image class="logoImg" src="/assets/home/logo.png" mode="aspectFit" />
         </view>
-        <text class="name">大麦</text>
+        <text class="name">强国</text>
         <button class="btn">
           点击
           <view class="iconfont icon-gongyixiangqingsangexiaoyuandian-"></view>
-          添加小程序，购票更便捷
+          添加小程序，学习更便捷
           <view class="iconfont icon-guanbi"></view>
         </button>
       </view>
@@ -24,7 +24,7 @@
       <view type="text" class="input_search">
         <view class="left">
           <view class="iconfont icon-sousuo"></view>
-          <text class="star">周杰伦</text>
+          <text class="star">输入关键词</text>
         </view>
         <view class="right">
           <view class="shu"></view>
@@ -39,20 +39,20 @@
     <!-- 分类 -->
     <view class="directory">
       <view class="type">
-        <image class="pic" src="/assets/home/directory/vocalConcert2.png" mode="aspectFit" style="transform: rotate(315deg); " />
-        <text>演唱会</text>
+        <image class="pic" src="/assets/home/directory/all.png" mode="aspectFit"  />
+        <text>第一频道</text>
       </view>
       <view class="type">
-        <image class="pic" src="/assets/home/directory/musicFestival.png" mode="aspectFit" />
-        <text>音乐节</text>
+        <image class="pic" src="/assets/home/directory/19_视野_全球.png" mode="aspectFit" />
+        <text>视野</text>
       </view>
       <view class="type">
-        <image class="pic" src="/assets/home/directory/guitar.png" mode="aspectFit" />
-        <text>Livehouse</text>
+        <image class="pic" src="/assets/home/directory/电脑信号源.png" mode="aspectFit" />
+        <text>联播频道</text>
       </view>
       <view class="type">
-        <image class="pic" src="/assets/home/directory/musicPlay.png" mode="aspectFit" />
-        <text>话剧音乐剧</text>
+        <image class="pic" src="/assets/home/directory/vocalConcert2.png" mode="aspectFit" style="transform: rotate(315deg); "/>
+        <text>看文艺</text>
       </view>
       <view class="type">
         <image class="pic" src="/assets/home/directory/talkShow.png" mode="aspectFit" />
@@ -60,23 +60,23 @@
       </view>
       <view class="type">
         <image class="pic" src="/assets/home/directory/exhibit.png" mode="aspectFit" />
-        <text>展览</text>
+        <text>看科技</text>
       </view>
       <view class="type">
         <image class="pic" src="/assets/home/directory/parenting.png" mode="aspectFit" />
-        <text>儿童亲子</text>
+        <text>看人物</text>
+      </view>
+      <view class="type">
+        <image class="pic" src="/assets/home/directory/优慕课.png" mode="aspectFit" />
+        <text>看慕课</text>
+      </view>
+      <view class="type">
+        <image class="pic" src="/assets/home/directory/党员.png" mode="aspectFit" />
+        <text>看党史</text>
       </view>
       <view class="type">
         <image class="pic" src="/assets/home/directory/crossTalk.png" mode="aspectFit" />
-        <text>相声</text>
-      </view>
-      <view class="type">
-        <image class="pic" src="/assets/home/directory/concert.png" mode="aspectFit" />
-        <text>音乐会</text>
-      </view>
-      <view class="type">
-        <image class="pic" src="/assets/home/directory/all.png" mode="aspectFit" />
-        <text>全部</text>
+        <text>智能融媒</text>
       </view>
     </view>
     <!-- 抢票播报站和今日秒杀 -->
@@ -86,7 +86,8 @@
         <!-- 上面部分 -->
         <view class="top">
           <!-- 左边图片 -->
-          <image class="img" src="/assets/home/qiangpiaobobao.png" mode="aspectFit" />
+          <!-- <image class="img" src="/assets/home/qiangpiaobobao.png" mode="aspectFit" /> -->
+          <text class="zbClass">直播课堂</text>
           <!-- 右边轮播 -->
           <view class="swiper-container">
             <swiper class="swiper" vertical indicator-dots="{{false}}" autoplay interval="{{8000}}">
@@ -104,20 +105,20 @@
         <view class="middle">
           <view class="left">
             <view class="circle">
-              <image src="https://intercms.damai.cn/artist/pic/1688481912236/1688481912236-main.jpg" mode="aspectFill" class="img" />
+              <image src="https://bkimg.cdn.bcebos.com/pic/5882b2b7d0a20cf431ad7f26d25f5c36acaf2fdd3389?x-bce-process=image/format,f_auto/resize,m_lfit,limit_1,h_1080" mode="aspectFill" class="img" />
             </view>
             <view class="name">
-              陈奕迅
+              习近平
             </view>
           </view>
           <view class="right">
-            【杭州】陈奕迅 FEAR and DREAMS...
+            习近平论党风廉洁建设和反腐败斗争...
           </view>
         </view>
         <!-- 底部 -->
         <view class="bottom">
           <view class="ad">
-            <text>3.5万人热抢中</text>
+            <text>3.5万人观看中</text>
             <view class="iconfont icon-shandian"></view>
             <view class="iconfont icon-qiang"></view>
           </view>
@@ -128,11 +129,11 @@
         <!-- 上面部分 -->
         <view class="top">
           <!-- 左边图片 -->
-          <text class="img">今日秒杀</text>
+          <text class="img">今日要闻</text>
           <!-- 右边轮播 -->
           <view class="swiper-container">
             <view class="broadcast-item">
-              <text class="activity-name">限时限量更优惠</text>
+              <text class="activity-name">随时随地随心看</text>
               <view class="iconfont icon-youjiantou"></view>
             </view>
           </view>
@@ -142,17 +143,17 @@
           <view wx:for="{{imageList}}" wx:key="index" class="every">
             <image class="img" src="{{item.img}}" mode="aspectFill" />
             <view class="activity">{{item.type}}</view>
-            <view class="fullSub">满减</view>
+            <view class="fullSub">亮点</view>
           </view>
         </view>
       </view>
     </view>
     <!-- 演出日历、演出攻略、拼团领券 -->
     <view class="performance">
-      <performance title="演出日历" content="近期好演出" img="/assets/home/日历.png" isHidden="{{false}}"></performance>
-      <performance title="演出攻略" content="帮你挑演出" img="/assets/home/攻略.png" isHidden="{{true}}">
+      <performance title="党建日历" content="了解党建史" img="/assets/home/日历.png" isHidden="{{false}}"></performance>
+      <performance title="订阅攻略" content="订阅好期刊" img="/assets/home/攻略.png" isHidden="{{true}}">
       </performance>
-      <performance title="20元" content="拼团领券" isHidden="{{false}}" isBorder="{{true}}">
+      <performance title="1949年" content="学习强国" isHidden="{{false}}" isBorder="{{true}}">
       </performance>
     </view>
     <!-- 扁平轮播图 -->
@@ -161,12 +162,12 @@
         <image class="img" src="{{item}}" mode="aspectFill" />
       </swiper-item>
     </swiper>
-    <!-- scroll-x 本周演出 -->
+    <!-- scroll-x 本周要闻 -->
     <view class="thisWeek">
       <view class="title">
         <!-- <image src="/assets/home/闹钟.png" mode="aspectFit" class="img"/> -->
         <view class="clock">⏰</view>
-        <text class="text">本周演出</text>
+        <text class="text">本周要闻</text>
       </view>
       <scroll-view class="scroll-x" scroll-x="true" style="white-space: nowrap">
         <view wx:for="{{thisWeekScrollXList}}" wx:key="index" class="every">
@@ -179,7 +180,7 @@
           <view class="position">
             {{item.position}}
           </view>
-          <view class="price">
+          <!-- <view class="price">
             <view class="fuhao">
               ￥
             </view>
@@ -187,13 +188,13 @@
               {{item.price}}
             </view>
             起
-          </view>
+          </view> -->
         </view>
       </scroll-view>
     </view>
     <!-- 发现好演出 -->
     <view class="findGoodPerform">
-      <view class="title">发现好演出</view>
+      <view class="title">热点新闻</view>
     </view>
     <!-- 筛选条 -->
     <view class="target-element {{targetElementFixed ? 'targetElementFixed' : ''}}" style="top: calc({{navBarHeight}}px + 65rpx);z-index: 999;">
@@ -201,17 +202,17 @@
         <van-dropdown-item title="{{selectTypeTitle}}" bind:open="onDropdownOpen">
           <view class="type">
             <van-checkbox-group value="{{ checkBoxResult }}" bind:change="onChange">
-              <van-checkbox name="演唱会" label-position="left" icon-size="16px" checked-color="#FC4A89">
-                演唱会</van-checkbox>
-              <van-checkbox name="音乐节" label-position="left" icon-size="16px" checked-color="#FC4A89">音乐节</van-checkbox>
-              <van-checkbox name="Livehouse" label-position="left" icon-size="16px" checked-color="#FC4A89">Livehouse</van-checkbox>
-              <van-checkbox name="话剧音乐剧" label-position="left" icon-size="16px" checked-color="#FC4A89">话剧音乐剧</van-checkbox>
-              <van-checkbox name="脱口秀" label-position="left" icon-size="16px" checked-color="#FC4A89">脱口秀</van-checkbox>
-              <van-checkbox name="展览" label-position="left" icon-size="16px" checked-color="#FC4A89">展览</van-checkbox>
-              <van-checkbox name="相声" label-position="left" icon-size="16px" checked-color="#FC4A89">相声</van-checkbox>
-              <van-checkbox name="戏曲" label-position="left" icon-size="16px" checked-color="#FC4A89">戏曲</van-checkbox>
-              <van-checkbox name="音乐会" label-position="left" icon-size="16px" checked-color="#FC4A89">音乐会</van-checkbox>
-              <van-checkbox name="舞蹈舞剧" label-position="left" icon-size="16px" checked-color="#FC4A89">舞蹈舞剧</van-checkbox>
+              <van-checkbox name="思想" label-position="left" icon-size="16px" checked-color="#FC4A89">
+                思想</van-checkbox>
+              <van-checkbox name="二十大时间" label-position="left" icon-size="16px" checked-color="#FC4A89">二十大时间</van-checkbox>
+              <van-checkbox name="习近平文汇" label-position="left" icon-size="16px" checked-color="#FC4A89">习近平文汇</van-checkbox>
+              <van-checkbox name="学习理论" label-position="left" icon-size="16px" checked-color="#FC4A89">学习理论</van-checkbox>
+              <van-checkbox name="红色中国" label-position="left" icon-size="16px" checked-color="#FC4A89">红色中国</van-checkbox>
+              <van-checkbox name="学习科学" label-position="left" icon-size="16px" checked-color="#FC4A89">学习科学</van-checkbox>
+              <van-checkbox name="国际" label-position="left" icon-size="16px" checked-color="#FC4A89">国际</van-checkbox>
+              <van-checkbox name="五个一工程" label-position="left" icon-size="16px" checked-color="#FC4A89">五个一工程</van-checkbox>
+              <van-checkbox name="强军兴军" label-position="left" icon-size="16px" checked-color="#FC4A89">强军兴军</van-checkbox>
+              <van-checkbox name="学习电台" label-position="left" icon-size="16px" checked-color="#FC4A89">学习电台</van-checkbox>
             </van-checkbox-group>
             <view class="btns">
               <button plain class="reset">重置</button>
@@ -227,18 +228,18 @@
         <van-dropdown-item value="{{ recommendSortValue }}" options="{{ recommendSortOptions }}" title="{{recommendSortValue}}" bind:change="handleSortChange" />
         <van-dropdown-item title="筛选" options="{{ option2 }}">
           <view class="selectPrice">
-            <view class="title">服务/折扣</view>
+            <view class="title">来源/报道</view>
             <view class="serviceAndDiscount">
-              <view class="btn {{activeServiceDiscountIndex === '0' ? 'activeBgColor' : ''}}" bindtap="selectServiceAndDiscount" data-index="0">有票</view>
-              <view class="btn {{activeServiceDiscountIndex === '1' ? 'activeBgColor' : ''}}" bindtap="selectServiceAndDiscount" data-index="1">可选座</view>
-              <view class="btn {{activeServiceDiscountIndex === '2' ? 'activeBgColor' : ''}}" bindtap="selectServiceAndDiscount" data-index="2">折扣</view>
+              <view class="btn {{activeServiceDiscountIndex === '0' ? 'activeBgColor' : ''}}" bindtap="selectServiceAndDiscount" data-index="0">人民网</view>
+              <view class="btn {{activeServiceDiscountIndex === '1' ? 'activeBgColor' : ''}}" bindtap="selectServiceAndDiscount" data-index="1">新华网</view>
+              <view class="btn {{activeServiceDiscountIndex === '2' ? 'activeBgColor' : ''}}" bindtap="selectServiceAndDiscount" data-index="2">央视网</view>
             </view>
-            <view class="title priceTitle">价格</view>
+            <view class="title priceTitle">相关内容</view>
             <view class="serviceAndDiscount">
-              <view class="btn {{activeSelectPriceIndex === '0' ? 'activeBgColor' : ''}}" bindtap="selectPrice" data-index="0">100以内</view>
-              <view class="btn {{activeSelectPriceIndex === '1' ? 'activeBgColor' : ''}}" bindtap="selectPrice" data-index="1">100-300</view>
-              <view class="btn {{activeSelectPriceIndex === '2' ? 'activeBgColor' : ''}}" bindtap="selectPrice" data-index="2">300-500</view>
-              <view class="btn {{activeSelectPriceIndex === '3' ? 'activeBgColor' : ''}}" bindtap="selectPrice" data-index="3">500以上</view>
+              <view class="btn {{activeSelectPriceIndex === '0' ? 'activeBgColor' : ''}}" bindtap="selectPrice" data-index="0">广播剧</view>
+              <view class="btn {{activeSelectPriceIndex === '1' ? 'activeBgColor' : ''}}" bindtap="selectPrice" data-index="1">歌曲</view>
+              <view class="btn {{activeSelectPriceIndex === '2' ? 'activeBgColor' : ''}}" bindtap="selectPrice" data-index="2">图书</view>
+              <view class="btn {{activeSelectPriceIndex === '3' ? 'activeBgColor' : ''}}" bindtap="selectPrice" data-index="3">戏剧</view>
             </view>
             <view class="btns">
               <button plain class="reset">重置</button>
@@ -250,7 +251,7 @@
     </view>
     <!-- wx：for 票s -->
     <view class="{{targetElementFixed ? 'ttop' : ''}}">
-      <ticket wx:for="{{ticketList}}" wx:key="index" img="{{item.img}}" title="{{item.title}}" position="{{item.showDetailInfoList[0].venue}}" time="{{item.dateMin}}" price="{{item.priceMin}}"
+      <ticket wx:for="{{ticketList}}" wx:key="index" img="{{item.img}}" title="{{item.title}}" position="{{item.position}}" time="{{item.time}}" price="{{item.price}}"
       bind:tap="gotoGoodsDetails" data-id="{{item.goodsId}}"
       >
       </ticket>

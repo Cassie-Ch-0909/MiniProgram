@@ -1,24 +1,17 @@
-// pages/ticketHolder/ticketHolder.js
-import instance from '../../utils/http'
+// pages/bl/bl.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    // 是否登录
-    isLogin:true,
-    // 是否有票
-    haveTickets:false
+
   },
-
-  navigateToLoginPage() {
-    wx.navigateTo({
-      url: '/modules/otherModule/pages/login/login' // 指定要跳转到的页面路径  
-    });
+  goToNonTabBarPage: function() {  
+    wx.navigateTo({  
+      url: '/modules/goodModule/pages/zzyInfo/zzyInfo'  
+    });  
   },
-
-
   /**
    * 生命周期函数--监听页面加载
    */
